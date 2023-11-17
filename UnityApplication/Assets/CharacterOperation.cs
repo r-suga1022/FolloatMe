@@ -46,7 +46,7 @@ public class CharacterOperation : MonoBehaviour
             target_pos = target.transform.position;
             target_pos.z = 0f;
             // target_pos.z = -7.0f;
-            Vector3 new_pos = new Vector3(target_pos.x*pos_rate, target_pos.y*5, target_pos.z);
+            Vector3 new_pos = new Vector3(target_pos.x*pos_rate, target_pos.y*pos_rate, target_pos.z);
             Quaternion new_rot = target.transform.rotation;
             // character.Set_Position(new_pos, pos_offset);
             // character.Set_Rotation(new_rot);

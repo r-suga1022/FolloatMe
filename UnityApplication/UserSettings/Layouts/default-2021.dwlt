@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 50
+  controlID: 131
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 51
+  controlID: 132
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 52
+  controlID: 51
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 53
+  controlID: 52
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1249,23 +1249,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 645f0000
       m_LastClickedID: 0
-      m_ExpandedIDs: d8f9feff16fafeffdcfefeff0600ffff4400ffff0a05ffff2607ffff6407ffff2a0cffff780dffffb60dffff7c12ffff5215ffff9015ffff561afffff61bffff341cffff2a22ffff6225ffffa225ffff682affff5c2cffff9c2cffff9232fffff037ffff3038fffff63cffff343effff743effff3a43ffffd444ffff1445ffff0a4bffffa84effffe64effffac53ffff145fffff605fffff5665ffff826affffd06affffc670ffff7674ffffc474ffffba7affff147fffff607fffff5685ffffea8affff2a8bfffff08fffffe29fffff30a0fffff6a4ffff02a7ffff50a7ffff16acffff7cadffffcaadffff90b2ffff9ab3ffffe8b3ffffaeb8ffff04baffff52baffff48c0fffff0c5ffff3cc6ffff32ccffffe8d3ffff36d4fffffcd8ffffded9ffff2cdaffff22e0ffff38fbffffc6cd0000842d0100
+      m_ExpandedIDs: 94e6ffffd4e6ffffcaecffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: MainOperation
-        m_OriginalName: MainOperation
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 119580
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 

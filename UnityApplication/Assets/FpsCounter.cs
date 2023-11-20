@@ -43,14 +43,16 @@ public class FpsCounter : MonoBehaviour
     prevTime = 0.0f;
     Fps = 0.0f;
   }
-  void FixedUpdate()
+
+  void Update()
+  //void FixedUpdate()
   {
     if (Input.GetKeyDown(KeyCode.Alpha1))
     {
         IsFpsBeCounting1 = !IsFpsBeCounting1;
         if (!IsFpsBeCounting1) 
         {
-          _record.LogSave(_record.fps_list, "fps1-"+RecordingCount1, true);
+          _record.LogSave(_record.fps_list, "fps-FukuokaPC-DontSync"+RecordingCount1, true);
           ++RecordingCount1;
         }
         return;

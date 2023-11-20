@@ -19,12 +19,6 @@ public class Record : MonoBehaviour
         pulsewidth_list = new List<float>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddData(List<float> list, float data)
     {
         list.Add(data);

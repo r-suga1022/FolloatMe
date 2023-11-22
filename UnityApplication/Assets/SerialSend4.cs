@@ -83,10 +83,10 @@ public class SerialSend4 : MonoBehaviour
 
 
     // パルス幅を計算する
-    public void Calculate_PulseWidth() 
-    // void LateUpdate()
-    // void FixedUpdate()
-    // void Update()
+    // public void Calculate_PulseWidth() 
+    void LateUpdate()
+    //void FixedUpdate()
+    //void Update()
     {
         if (!wast_tracking_done) return;
 
@@ -134,20 +134,20 @@ public class SerialSend4 : MonoBehaviour
             {
                 ++RecordCount;
                 // _record.LogSave(_record.pulsewidth_list, "pulsewidth_normal"+RecordCount, true);
-                // _record.LogSave(_record.pulsewidth_list, "pulsewidth_afterFlag"+RecordCount, true);
-                _record.LogSave(_record.pulsewidth_list, "pulsewidth_afterEvent"+RecordCount, true);
+                 _record.LogSave(_record.pulsewidth_list, "pulsewidth_afterFlag"+RecordCount, true);
+                //_record.LogSave(_record.pulsewidth_list, "pulsewidth_afterEvent"+RecordCount, true);
             }
             IsRecording = !IsRecording;
         }
 
         // 念のため表示
         
-        // UnityEngine.Debug.Log("pulse_width = "+pulse_width+", i = "+i+", delta_ms_per_flame_i = "+delta_ms_per_flame_i+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1);
+        UnityEngine.Debug.Log("pulse_width = "+pulse_width+", i = "+i+", delta_ms_per_flame_i = "+delta_ms_per_flame_i+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1);
         /*
         Text pulse_width_text = pulsewidth_text_object.GetComponent<Text> ();
         pulse_width_text.text = ""+pulse_width;
         */
-        UnityEngine.Debug.Log("奥行き方向にキャラクターを移動");
+        // UnityEngine.Debug.Log("奥行き方向にキャラクターを移動");
         wast_tracking_done = false;
         ++i;
         if (i % n == 0) i = 0;

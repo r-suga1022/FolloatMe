@@ -37,7 +37,7 @@ public class OptitrackRigidBody : MonoBehaviour
 
     public bool NetworkCompensation = true;
     public Record _record;
-    public SerialSend4 _serialsend4;
+    public SerialSendNew _serialsend;
 
     Stopwatch stopWatch;
     float tracking_time_n, tracking_time_n_1;
@@ -90,33 +90,13 @@ public class OptitrackRigidBody : MonoBehaviour
 #endif
 
 
-    // void FixedUpdate()
-    void Update()
+    void FixedUpdate()
+    //void Update()
     {
         UnityEngine.Debug.Log(cantracking);
-        if (Input.GetKeyDown(KeyCode.A) && cantracking)
-        {
-            // LogSave(list名、ファイル名、ファイルの末尾に追加するか)
-            _record.LogSave(_record.tracking_interval_list, "tracking_interval", false);
-            // UnityEngine.Debug.Log("トラッキング停止");
-            cantracking = false;
-            return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.A) && !cantracking)
-        {
-            cantracking = true;
-        }
-
-        if (!cantracking)
-        {
-            UnityEngine.Debug.Log("in");
-            return;
-        }
-
         UpdatePose();
 
-        _serialsend4.SetWasTrackingDone(true);
+        _serialsend.SetWasTrackingDone(true);
 
         tracking_time_n_1 = tracking_time_n;
         TimeSpan elapsed = stopWatch.Elapsed;

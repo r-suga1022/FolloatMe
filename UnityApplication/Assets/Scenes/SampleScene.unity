@@ -734,7 +734,7 @@ MonoBehaviour:
   RigidBodyId: 3
   NetworkCompensation: 1
   _record: {fileID: 286224546}
-  _serialsend4: {fileID: 1069388184}
+  _serialsend: {fileID: 1069388187}
   tracking_interval: 0
   EventMethod:
     m_PersistentCalls:
@@ -1409,6 +1409,7 @@ GameObject:
   - component: {fileID: 1069388182}
   - component: {fileID: 1069388184}
   - component: {fileID: 1069388186}
+  - component: {fileID: 1069388187}
   m_Layer: 0
   m_Name: SerialSend
   m_TagString: Untagged
@@ -1486,7 +1487,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069388179}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1f495865bb47814f978a3cf0f7e5d30, type: 3}
   m_Name: 
@@ -1528,6 +1529,25 @@ MonoBehaviour:
   step_max: 0
   z_max: 0
   pos_rate: 0
+--- !u!114 &1069388187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069388179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e4baa34db232a40af4fce187e34c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serialHandler: {fileID: 233560355}
+  cube: {fileID: 0}
+  target: {fileID: 639163500}
+  _record: {fileID: 286224546}
+  MAX_PULSEWIDTH: 10000
+  MIN_PULSEWIDTH: 10
+  IsSendStop: 1
 --- !u!1 &1116657741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,7 +1593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charaope: {fileID: 762647898}
-  serisend: {fileID: 1069388184}
+  serisend: {fileID: 1069388187}
   serirece: {fileID: 1032185113}
   mouse_prototyping: 0
 --- !u!1 &1118456154

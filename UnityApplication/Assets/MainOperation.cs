@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainOperation : MonoBehaviour
 {
     public CharacterOperation charaope;
-    public SerialSend4 serisend;
+    public SerialSendNew serisend;
     public SerialReceive serirece;
 
     public bool mouse_prototyping;

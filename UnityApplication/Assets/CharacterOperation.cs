@@ -51,7 +51,7 @@ public class CharacterOperation : MonoBehaviour
             // character.Set_Position(new_pos, pos_offset);
             // character.Set_Rotation(new_rot);
             character.transform.position = new_pos + pos_offset;
-            Debug.Log("鉛直、水平方向にキャラクターを移動");
+            // Debug.Log("鉛直、水平方向にキャラクターを移動");
             // character.transform.rotation = new_rot;
         }
     }

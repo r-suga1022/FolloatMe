@@ -61,7 +61,7 @@ void setup() {
   pinMode(OutputDirMinusPin, OUTPUT);
 
   // シリアル通信設定
-  Serial.begin(921600);
+  Serial.begin(115200);
 
   // タイマー割り込みを使うとき
   add_repeating_timer_us(default_intvl_us, Generate_Pulse, NULL, &st_tm1ms);
@@ -91,11 +91,12 @@ void loop() {
     // if (DoesStop) DoesStop = false;
     direction_flag = (pulse_width > 0);
     DoesStop = (pulse_width >= MAX_PULSEWIDTH);
-    //Serial.print("from_micon = "+pulse_width);
+    //Serial.println("from_micon = "+pulse_width);
+    //Serial.println("36000");
     //Serial.println();
   }
   //Serial.println("from_micon = "+pulse_width);
-  Serial.println("10000");
+  Serial.println("36000");
 
   DoesStop = (pulse_width >= MAX_PULSEWIDTH);
   if (pulse_width > 0) Accelerate(pulse_width);

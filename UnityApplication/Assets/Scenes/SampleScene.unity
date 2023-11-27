@@ -371,8 +371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c785f211b7d45584ea0c042940a59108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM7
-  baudRate: 115200
+  portName: COM11
+  baudRate: 9600
 --- !u!1 &245546994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 639163500}
   character: {fileID: 941282159}
-  pos_offset: {x: 0.1, y: -0.5, z: 0}
+  pos_offset: {x: 0.1, y: 0.5, z: 0}
   pos_offset_mousever: {x: 0, y: 0, z: 0}
   pos_rate: 3
   IsTrackingStop: 1
@@ -1548,6 +1548,8 @@ MonoBehaviour:
   _record: {fileID: 286224546}
   MAX_PULSEWIDTH: 10000
   MIN_PULSEWIDTH: 10
+  n: 5
+  i: 0
   IsSendStop: 1
 --- !u!1 &1116657741
 GameObject:

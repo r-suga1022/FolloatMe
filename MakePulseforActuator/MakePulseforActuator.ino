@@ -91,9 +91,12 @@ void loop() {
     // if (DoesStop) DoesStop = false;
     direction_flag = (pulse_width > 0);
     DoesStop = (pulse_width >= MAX_PULSEWIDTH);
-    // Serial.println("pulse_width = "+pulse_width);
-    // Serial.println();
+    //Serial.print("from_micon = "+pulse_width);
+    //Serial.println();
   }
+  //Serial.println("from_micon = "+pulse_width);
+  Serial.println("10000");
+
   DoesStop = (pulse_width >= MAX_PULSEWIDTH);
   if (pulse_width > 0) Accelerate(pulse_width);
   else Accelerate(-pulse_width);

@@ -8,15 +8,33 @@ using System.Text;
 public class Record : MonoBehaviour
 {
     public List<float> tracking_interval_list;
+    public List<float> tracked_position_list;
     public List<float> fps_list;
     public List<float> pulsewidth_list;
+
+    bool Pulserecording = false;
 
     // Start is called before the first frame update
     void Start()
     {
         tracking_interval_list = new List<float>();
+        tracked_position_list = new List<float>();
         fps_list = new List<float>();
         pulsewidth_list = new List<float>();
+    }
+
+    void Update()
+    {
+        //
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (Pulserecording)
+            {
+                LogSave(pulsewidth_list, "pulsewidth_noisecheck2", true);
+            }
+            Pulserecording = !Pulserecording;
+        }
+        //
     }
 
     public void AddData(List<float> list, float data)

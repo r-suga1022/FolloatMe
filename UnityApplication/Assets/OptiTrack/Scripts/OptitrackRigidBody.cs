@@ -42,6 +42,8 @@ public class OptitrackRigidBody : MonoBehaviour
     Stopwatch stopWatch;
     float tracking_time_n, tracking_time_n_1;
     public float tracking_interval;
+    Vector3 tracked_position;
+    bool Recording = false;
 
 
     bool cantracking = false;
@@ -105,6 +107,17 @@ public class OptitrackRigidBody : MonoBehaviour
         // UnityEngine.Debug.Log("Measurement: Interval = "+tracking_interval.ToString());
 
         _record.tracking_interval_list.Add( tracking_interval );
+        _record.tracked_position_list.Add( tracked_position.z );
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (Recording)
+            {
+                _record.LogSave(_record.tracking_interval_list, "tracking_interval2", false);    
+                _record.LogSave(_record.tracked_position_list, "tracked_position2", false);
+            }
+            Recording = !Recording;
+        }
     }
 
     public UnityEvent EventMethod;
@@ -115,6 +128,7 @@ public class OptitrackRigidBody : MonoBehaviour
         OptitrackRigidBodyState rbState = StreamingClient.GetLatestRigidBodyState( RigidBodyId, NetworkCompensation);
         if ( rbState != null )
         {
+            tracked_position = rbState.Pose.Position;
             this.transform.localPosition = rbState.Pose.Position;
             this.transform.localRotation = rbState.Pose.Orientation;
         }

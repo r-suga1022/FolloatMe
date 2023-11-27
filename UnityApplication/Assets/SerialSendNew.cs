@@ -166,8 +166,9 @@ public class SerialSendNew : MonoBehaviour
             {
                 ++RecordCount;
                 // _record.LogSave(_record.pulsewidth_list, "pulsewidth_normal"+RecordCount, true);
-                 _record.LogSave(_record.pulsewidth_list, "pulsewidth_afterFlag"+RecordCount, true);
+                //_record.LogSave(_record.pulsewidth_list, "pulsewidth_afterFlag"+RecordCount, true);
                 //_record.LogSave(_record.pulsewidth_list, "pulsewidth_afterEvent"+RecordCount, true);
+                _record.LogSave(_record.pulsewidth_list, "pulsewidth_noisecheck"+RecordCount, true);
             }
             IsRecording = !IsRecording;
         }

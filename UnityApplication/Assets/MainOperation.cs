@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainOperation : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class MainOperation : MonoBehaviour
     public SerialReceive serirece;
 
     public bool mouse_prototyping;
+
+    public Text deltaTimeText;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,7 @@ public class MainOperation : MonoBehaviour
 
         // マウスプロトタイピングか、Optiによるトラッキングか
         charaope.mouse_prototyping = this.mouse_prototyping;
+
     }
 
     // Update is called once per frame
@@ -31,5 +35,8 @@ public class MainOperation : MonoBehaviour
             charaope.IsTrackingStop = !charaflag;
             serisend.IsSendStop = !serialflag;
         }
+
+        //Debug.Log("deltaTime = "+Time.deltaTime);
+        //deltaTimeText.text = Time.deltaTime.ToString();
     }
 }

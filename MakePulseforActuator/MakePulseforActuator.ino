@@ -44,7 +44,7 @@ int ExecutionStart = true; // 実行開始時であるか否か
 
 // --- 数値関係 ---
 int default_intvl_us = 6000; // デフォルトのパルス幅
-int pulse_width = 6000; // 現在のパルス幅
+int pulse_width = 10000; // 現在のパルス幅
 int step_count = 0; // 現在のステップ数（座標）
 int MAX_PULSEWIDTH = 10000;
 
@@ -66,8 +66,8 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 
   // シリアル通信設定
-  //Serial.begin(115200);
-  Serial.begin(921600);
+  Serial.begin(115200);
+  //Serial.begin(921600);
 
   // タイマー割り込みを使うとき
   add_repeating_timer_us(default_intvl_us, Generate_Pulse, NULL, &st_tm1ms);
@@ -103,7 +103,8 @@ void loop() {
     direction_flag = (pulse_width > 0);
     DoesStop = (pulse_width >= MAX_PULSEWIDTH);
     //Serial.println("from_micon = "+pulse_width);
-    Serial.println("from_micon = "+String(pulse_width));
+    //Serial.println("from_micon = "+String(pulse_width));
+    //Serial.println("step = "+String(step_count/2));
     //Serial.println("from_micon = 36000");
     //Serial.println("36000");
     //Serial.println();

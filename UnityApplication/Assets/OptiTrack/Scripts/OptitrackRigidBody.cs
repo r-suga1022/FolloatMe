@@ -95,7 +95,7 @@ public class OptitrackRigidBody : MonoBehaviour
     void FixedUpdate()
     //void Update()
     {
-        UnityEngine.Debug.Log(cantracking);
+        // UnityEngine.Debug.Log(cantracking);
         UpdatePose();
 
         _serialsend.SetWasTrackingDone(true);

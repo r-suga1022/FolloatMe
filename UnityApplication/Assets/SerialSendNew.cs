@@ -88,7 +88,7 @@ public class SerialSendNew : MonoBehaviour
                         acceleration();
                     */
                     iequalszero();
-                    UnityEngine.Debug.Log("pulse_width = "+pulse_width+", delta_ms_per_flame_i = "+delta_ms_per_flame_i+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1);
+                    // UnityEngine.Debug.Log("pulse_width = "+pulse_width+", delta_ms_per_flame_i = "+delta_ms_per_flame_i+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1);
                     was_tracking_done = false;
                 }
                 catch (System.Exception e)//例外をチェック
@@ -101,8 +101,8 @@ public class SerialSendNew : MonoBehaviour
 
 
     void iequalszero() {
-        UnityEngine.Debug.Log("done");
-        if (!was_tracking_done) return;
+        // UnityEngine.Debug.Log("done");
+        // if (!was_tracking_done) return;
 
         // トラッキングを行っていないとき
         /*
@@ -116,8 +116,10 @@ public class SerialSendNew : MonoBehaviour
         // 座標取得
         context.Post(__ =>
         {
-            pos = target.transform.position;
-            UnityEngine.Debug.Log("メインスレッドで座標取得, pos = "+pos);
+            //pos = target.transform.position;
+            pos = Input.mousePosition;
+            pos.z = pos.x;
+            // UnityEngine.Debug.Log("メインスレッドで座標取得, pos = "+pos);
         }, null);
 
         if (stopWatch.IsRunning) {
@@ -159,10 +161,12 @@ public class SerialSendNew : MonoBehaviour
         }
         w_i = pulse_width;
         delta_w_i = w_i - w_imin1;
-        
+    
 
         // シリアル通信で渡す
-        serialHandler.Write(pulse_width.ToString());
+        //serialHandler.Write(pulse_width.ToString()+"\n");
+        //UnityEngine.Debug.Log("10000");
+        serialHandler.Write("10000\n");
 
 
         _record.pulsewidth_list.Add(pulse_width);

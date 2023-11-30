@@ -302,8 +302,8 @@ public class OptitrackStreamingClient : MonoBehaviour
     #endregion Private fields
 
 
-    // private void Update()
-    private void FixedUpdate()
+    private void Update()
+    //private void FixedUpdate()
     {
         if (DrawMarkers)
         {

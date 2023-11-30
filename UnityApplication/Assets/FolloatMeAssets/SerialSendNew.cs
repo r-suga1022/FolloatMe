@@ -21,7 +21,7 @@ public class SerialSendNew : MonoBehaviour
     Vector3 cube_position;
 
     // オブジェクト関連のフィールド
-    public GameObject target; // トラッキング座標を有するオブジェクト
+    public OptitrackRigidBody target; // トラッキング座標を有するオブジェクト
 
     public Record _record;
 
@@ -46,6 +46,7 @@ public class SerialSendNew : MonoBehaviour
     bool Accelerated = false;
     bool IsRecording = false; // パルス幅をファイルに記録しているか否か
     bool was_tracking_done = false;
+    public bool MousePrototyping;
 
 
     int RecordCount = 0; // 記録ファイル数
@@ -53,6 +54,8 @@ public class SerialSendNew : MonoBehaviour
     float ms_per_flame_i = 0; // 実行開始からの時刻
     float ms_per_flame_imin1 = 0; // ms_per_flameの1フレーム前
     float delta_ms_per_flame_i = 0; // ms_per_flameの前フレームとの差分
+
+    float delta_t;
 
     public Text PulseWidthText;
 
@@ -76,7 +79,7 @@ public class SerialSendNew : MonoBehaviour
     void Thread_1()
     {
         context = SynchronizationContext.Current;
-        stopWatch = new Stopwatch();
+        //stopWatch = new Stopwatch();
 
         Task.Run(() =>
         {
@@ -86,6 +89,7 @@ public class SerialSendNew : MonoBehaviour
                 {
                     //if (was_tracking_done) iequalszero();
                     CalculatePulseWidth();
+                    //UnityEngine.Debug.Log("thread ID = "+Thread.CurrentThread.ManagedThreadId.ToString());
                 }
                 catch (System.Exception e)//例外をチェック
                 {
@@ -96,46 +100,68 @@ public class SerialSendNew : MonoBehaviour
     }
 
 
-    void CalculatePulseWidth() {
-        if (!was_tracking_done) return;
-
-        // 時間関係
-        if (stopWatch.IsRunning) {
-            stopWatch.Stop();
-            ms_per_flame_imin1 = ms_per_flame_i;
-            ms_per_flame_i = (float)stopWatch.ElapsedMilliseconds;
-        }
-        stopWatch.Start();
-
-        //UnityEngine.Debug.Log("done");
-
-        // トラッキングを行っていないとき
-        /*
+    public void CalculatePulseWidth() {
         if (IsSendStop) {
             IsFirstExecution = true;
             pulse_width = MAX_PULSEWIDTH;
             return;
         }
+
+        if (!was_tracking_done) return;
+
+        iequalszero();
+        //else acceleration();
+
+        WaitForStabilization();
+    
+
+        // シリアル通信で渡す
+        serialHandler.Write(pulse_width.ToString()+"\n");
+        PulseWidthWasSent = true;
+        UnityEngine.Debug.Log("pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+was_tracking_done);
+        _record.pulsewidth_list.Add(pulse_width);
+        //PulseWidthText.text = pulse_width.ToString();
+        
+        was_tracking_done = false;
+        PulseWidthWasSent = false;
+    }
+
+    void iequalszero()
+    {
+        UnityEngine.Debug.Log("done");
+        // 時間関係
+        /*
+        if (stopWatch.IsRunning) {
+            //stopWatch.Stop();
+            ms_per_flame_imin1 = ms_per_flame_i;
+            ms_per_flame_i = (float)stopWatch.ElapsedMilliseconds;
+        }
         */
+        //stopWatch.Start();
 
         
         // 座標取得
         context.Post(__ =>
         {
-            //pos = target.transform.position;
-            pos = Input.mousePosition;
-            pos.z = pos.x;
+            if (!MousePrototyping) pos = target.transform.position;
+            else 
+            {
+                pos = Input.mousePosition;
+                pos.z = pos.x;
+            }
+            delta_t = target.tracking_interval;
         }, null);
 
         // アクチュエータを動かし始めて一番最初の実行の時
         if (IsFirstExecution) {
+            //WaitForStabilization();
+
             IsFirstExecution = false;
-            x_i = -pos.z;
+            x_i = x_imin1 = -pos.z;
             pulse_width = MAX_PULSEWIDTH;
             w_i = w_imin1 = pulse_width;
-            //return;
+            return;
         }
-
 
         // 各値の更新
         // アクチュエータが普通に動いているとき
@@ -147,7 +173,7 @@ public class SerialSendNew : MonoBehaviour
         w_imin1 = pulse_width;
         delta_x_i = x_i - x_imin1;
         delta_ms_per_flame_i = ms_per_flame_i - ms_per_flame_imin1;
-        pulse_width = (int)((3f*delta_ms_per_flame_i) / (1000f*delta_x_i));
+        pulse_width = (int)((3f*delta_t) / (1000f*delta_x_i));
         if (Math.Abs((float)pulse_width) >= MAX_PULSEWIDTH) pulse_width = MAX_PULSEWIDTH;
         if (Math.Abs(delta_x_i) <= 0.0001f) pulse_width = MAX_PULSEWIDTH;
         if (Mathf.Abs((float)pulse_width) <= (float)MIN_PULSEWIDTH) {
@@ -156,40 +182,10 @@ public class SerialSendNew : MonoBehaviour
         }
         w_i = pulse_width;
         delta_w_i = w_i - w_imin1;
-    
-
-        // シリアル通信で渡す
-        serialHandler.Write(pulse_width.ToString()+"\n");
-        PulseWidthWasSent = true;
-        UnityEngine.Debug.Log("pulse_width = "+pulse_width+", delta_ms_per_flame_i = "+delta_ms_per_flame_i+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1);
-        //_record.pulsewidth_list.Add(pulse_width);
-        //PulseWidthText.text = pulse_width.ToString();
-        
-
-        was_tracking_done = false;
-        PulseWidthWasSent = false;
-
-
-        /*
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            if (IsRecording)
-            {
-                ++RecordCount;
-                // _record.LogSave(_record.pulsewidth_list, "pulsewidth_normal"+RecordCount, true);
-                //_record.LogSave(_record.pulsewidth_list, "pulsewidth_afterFlag"+RecordCount, true);
-                //_record.LogSave(_record.pulsewidth_list, "pulsewidth_afterEvent"+RecordCount, true);
-                _record.LogSave(_record.pulsewidth_list, "pulsewidth_noisecheck"+RecordCount, true);
-            }
-            IsRecording = !IsRecording;
-        }
-        */
     }
 
+
     void acceleration() {
-        // UnityEngine.Debug.Log("w_i = "+w_i);
-        // i番目の時
-        // if (Mathf.Abs(delta_w_i) <= 10f) pulse_width = w_i;
         if (delta_w_i == 0) pulse_width = w_i;
         // w_{i-1}とw_iが同符号の場合
         else if (w_imin1*w_i > 0) {
@@ -240,5 +236,10 @@ public class SerialSendNew : MonoBehaviour
     public void SetWasTrackingDone(bool flag)
     {
         was_tracking_done = flag;
+    }
+
+    void WaitForStabilization()
+    {
+        Thread.Sleep(100);
     }
 }

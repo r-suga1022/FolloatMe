@@ -16,10 +16,6 @@ public class SerialSendNew : MonoBehaviour
     // シリアル通信関係
     public SerialHandler serialHandler; // シリアル通信の核
 
-    // キューブ関係
-    public GameObject cube;
-    Vector3 cube_position;
-
     // オブジェクト関連のフィールド
     public OptitrackRigidBody target; // トラッキング座標を有するオブジェクト
 
@@ -30,7 +26,7 @@ public class SerialSendNew : MonoBehaviour
     public int MIN_PULSEWIDTH;
 
     // 座標系統
-    private Vector3 pos; // 取得座標
+    public Vector3 TrackedPosition; // 取得座標
     float x_i = 0f;
     float x_imin1 = 0f; // 前のフレームでのトラッキングx座標
     float delta_x_i; // x座標の差分
@@ -57,6 +53,8 @@ public class SerialSendNew : MonoBehaviour
     float delta_ms_per_flame_i = 0; // ms_per_flameの前フレームとの差分
 
     float delta_t;
+
+    public float a; // パルス幅計算式の係数
 
     public Text PulseWidthText;
 
@@ -107,143 +105,101 @@ public class SerialSendNew : MonoBehaviour
             return;
         }
 
-        // UnityEngine.Debug.Log("SerialSend:TrackingDone = "+TrackingDone);
+        if (IsFirstExecution) FirstExecution();
+
         // if (!TrackingDone) return;
-        if (TrackingDone) iequalszero();
+        if (TrackingDone) 
+        {
+            iequalszero();
+            //return;
+        }
         else acceleration();
 
-        // iequalszero();
-        //else acceleration();
-
-        // WaitForStabilization();
-    
-
         // シリアル通信で渡す
+        // これでは、iequalszeroで計算されたパルスを渡した後、加減速でいったんもとのパルス幅に戻り、もう一度計算されたパルス幅に戻るようになってしまう。
+        // ここを直す。
         serialHandler.Write(pulse_width.ToString()+"\n");
         PulseWidthWasSent = true;
-        // UnityEngine.Debug.Log("SerialSend:PulseWidthSend");
         _record.pulsewidth_list.Add(pulse_width);
         //PulseWidthText.text = pulse_width.ToString();
-
-        // PulseWidthWasSent = false;
     }
 
 
 
     void iequalszero()
     {
-        // UnityEngine.Debug.Log("IEqualsZero");
-        // 時間関係
-        /*
-        if (stopWatch.IsRunning) {
-            //stopWatch.Stop();
-            ms_per_flame_imin1 = ms_per_flame_i;
-            ms_per_flame_i = (float)stopWatch.ElapsedMilliseconds;
-        }
-        */
-        //stopWatch.Start();
+        //MeasureTime();
 
-        
-        // 座標取得
-        context.Post(__ =>
-        {
-            if (!MousePrototyping) pos = target.transform.position;
-            else 
-            {
-                pos = target.rbStatePosition;
-                pos.z = pos.x;
-            }
-            delta_t = target.tracking_interval;
-        }, null);
+        // トラッキングされた座標、時間を取得
+        delta_t = target.tracking_interval;
+        TrackedPosition = target.rbStatePosition;
 
-        // アクチュエータを動かし始めて一番最初の実行の時
+
+        // トラッキングし始めて一番最初の実行の時
         if (IsFirstExecution) {
-            //WaitForStabilization();
-
             IsFirstExecution = false;
-            x_i = x_imin1 = -pos.z;
+            x_i = x_imin1 = -TrackedPosition.z;
             pulse_width = MAX_PULSEWIDTH;
             w_i = w_imin1 = pulse_width;
             return;
         }
 
-        // 各値の更新
-        // アクチュエータが普通に動いているとき
+
         x_imin1 = x_i;
-        x_i = -pos.z;
+        x_i = -TrackedPosition.z;
 
         // ---- パルス幅の計算 ----
         // 簡略化した式（２変数関数）で計算
         w_imin1 = pulse_width;
         delta_x_i = x_i - x_imin1;
         delta_ms_per_flame_i = ms_per_flame_i - ms_per_flame_imin1;
-        pulse_width = (int)((3f*delta_t) / (1000f*delta_x_i));
-        // pulse_width = (int)((25000f*delta_t) / (1000f*delta_x_i));
-        if (Math.Abs((float)pulse_width) >= MAX_PULSEWIDTH) pulse_width = MAX_PULSEWIDTH;
+        pulse_width = (int)((a*delta_t) / (1000f*delta_x_i));
+
         if (Math.Abs(delta_x_i) <= 0.0001f) pulse_width = MAX_PULSEWIDTH;
-        if (Mathf.Abs((float)pulse_width) <= (float)MIN_PULSEWIDTH) {
-            if (pulse_width >= 0 ) pulse_width = MIN_PULSEWIDTH;
-            else pulse_width = -MIN_PULSEWIDTH;
-        }
+        CalculationException();
+
+
         w_i = pulse_width;
         delta_w_i = w_i - w_imin1;
 
         UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
+        i = 0;
     }
 
 
-    void acceleration() {
-
-        // UnityEngine.Debug.Log("Acceleration");
-        if (delta_w_i == 0) pulse_width = w_i;
-        // w_{i-1}とw_iが同符号の場合
-        else if (w_imin1*w_i > 0) {
-            pulse_width = (int)(w_imin1 + (float)(delta_w_i*i)/ (float)n);
-        }
-        // else if (w_imin1*w_i > 0) pulse_width = w_i;
-        // w_{i-1}とw_iが異符号の場合
-        else if (w_imin1*w_i < 0) {
-            //
-            if (w_imin1 == MAX_PULSEWIDTH) {
-                w_imin1 = -MAX_PULSEWIDTH;
-                delta_w_i_inelse = w_i - w_imin1;
-                pulse_width = (int)(w_imin1 + (float)(delta_w_i_inelse*i) / (float)n);
-                w_imin1 = MAX_PULSEWIDTH;
-            } else if (w_i == MAX_PULSEWIDTH) {
-                w_i = -MAX_PULSEWIDTH;
-                delta_w_i_inelse = w_i - w_imin1;
-                pulse_width = (int)(w_imin1 + (float)(delta_w_i_inelse*i) / (float)n);
-                w_i = MAX_PULSEWIDTH;
+    void acceleration()
+    {
+        if (i <= n)
+        {
+            if (delta_w_i == 0) pulse_width = w_i;
+            else if (w_imin1*w_i > 0)
+            {
+                pulse_width = (int)(w_imin1 + (float)(delta_w_i*i)/ (float)n);
             }
-            //
-
-            if (i > (n/2)) {
-                // 正から負に行くとき      
-                if (w_imin1 > 0) {
-                    delta_w_i_inelse = w_i + MAX_PULSEWIDTH;
-                    // pulse_width = (int)(-MAX_PULSEWIDTH + (float)(delta_w_i_inelse*(i-n/2)) / nijou( (float)n));
-                    pulse_width = (int)(-MAX_PULSEWIDTH + (float)(delta_w_i_inelse*(i-n/2)) / (float)n);
-                    // UnityEngine.Debug.Log("if if i = "+i);
-                // 負から正に行くとき
-                } else {
-                    delta_w_i_inelse = w_i - MAX_PULSEWIDTH;
-                    // pulse_width = (int)(MAX_PULSEWIDTH + (float)(delta_w_i_inelse*(i-n/2)) / nijou( (float)n ));
-                    pulse_width = (int)(MAX_PULSEWIDTH + (float)(delta_w_i_inelse*(i-n/2)) / (float)n);
+            else if (w_imin1*w_i < 0)
+            {
+                if (w_imin1 == MAX_PULSEWIDTH)
+                {
+                    w_imin1 = -MAX_PULSEWIDTH;
                 }
-                
-            } else {
-                // 正から負に行くとき
-                if (w_imin1 > 0) delta_w_i_inelse = MAX_PULSEWIDTH - w_imin1;
-                // 負から正に行くとき                   
-                else delta_w_i_inelse = -MAX_PULSEWIDTH - w_imin1;
-                // pulse_width = (int)(w_imin1 + (float)(delta_w_i_inelse*i / nijou(( (float)n ))));
-                pulse_width = (int)(w_imin1 + (float)(delta_w_i_inelse*i / (float)n));
+                else if (w_i == MAX_PULSEWIDTH)
+                {
+                    w_i = -MAX_PULSEWIDTH;
+                }
+                delta_w_i = w_i - w_imin1;
+                pulse_width = (int)(w_imin1 + (float)(delta_w_i*i)/ (float)n);
             }
         }
+        else
+        {
+            pulse_width = w_i;
+        }
+        ++i;
 
-        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
+        CalculationException();
+        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)
@@ -254,5 +210,32 @@ public class SerialSendNew : MonoBehaviour
     void WaitForStabilization()
     {
         Thread.Sleep(100);
+    }
+
+
+    void CalculationException()
+    {
+        if (Math.Abs((float)pulse_width) >= MAX_PULSEWIDTH) pulse_width = MAX_PULSEWIDTH;
+        if (Mathf.Abs((float)pulse_width) <= (float)MIN_PULSEWIDTH) {
+            if (pulse_width >= 0 ) pulse_width = MIN_PULSEWIDTH;
+            else pulse_width = -MIN_PULSEWIDTH;
+        }
+    }
+
+
+    void MeasureTime()
+    {
+        if (stopWatch.IsRunning) {
+            stopWatch.Stop();
+            ms_per_flame_imin1 = ms_per_flame_i;
+            ms_per_flame_i = (float)stopWatch.ElapsedMilliseconds;
+        }
+        stopWatch.Start();
+    }
+
+    void FirstExecution()
+    {
+        pulse_width = w_i = w_imin1 = MAX_PULSEWIDTH;
+        WaitForStabilization();
     }
 }

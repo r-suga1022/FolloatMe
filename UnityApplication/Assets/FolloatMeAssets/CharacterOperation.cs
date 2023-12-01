@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterOperation : MonoBehaviour
 {
 
-    public GameObject target;
+    public OptitrackRigidBody target;
     // public Fairy character;
     public GameObject character;
 
@@ -43,7 +43,7 @@ public class CharacterOperation : MonoBehaviour
             Debug.Log("Character Operation\n");
         // トラッキング座標を用いた追従の実現
         } else {
-            target_pos = target.transform.position;
+            target_pos = target.rbStatePosition;
             target_pos.z = 0f;
             // target_pos.z = -7.0f;
             Vector3 new_pos = new Vector3(target_pos.x*pos_rate, target_pos.y*pos_rate, target_pos.z);

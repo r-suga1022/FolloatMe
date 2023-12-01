@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18381761, g: 0.22847213, b: 0.3002996, a: 1}
+  m_IndirectSpecularColor: {r: 0.18381804, g: 0.22847292, b: 0.30030066, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -757,6 +757,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   rbStatePosition: {x: 0, y: 0, z: 0}
+  rbStateOrientation: {x: 0, y: 0, z: 0, w: 0}
+  BeforePosition: {x: 0, y: 0, z: 0}
 --- !u!65 &639163502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1138,9 +1140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840b6332ce1628e4d97dd4a4e77059b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 639163500}
+  target: {fileID: 639163501}
   character: {fileID: 941282159}
-  pos_offset: {x: 0.1, y: -0.25, z: 0}
+  pos_offset: {x: 0.1, y: -0.5, z: 0}
   pos_offset_mousever: {x: 0, y: 0, z: 0}
   pos_rate: 3
   IsTrackingStop: 1
@@ -1539,15 +1541,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serialHandler: {fileID: 233560355}
-  cube: {fileID: 0}
   target: {fileID: 639163501}
   _record: {fileID: 286224546}
   MAX_PULSEWIDTH: 10000
   MIN_PULSEWIDTH: 10
+  TrackedPosition: {x: 0, y: 0, z: 0}
   n: 5
   i: 0
   IsSendStop: 1
-  MousePrototyping: 1
+  MousePrototyping: 0
+  a: 10
   PulseWidthText: {fileID: 1315842213}
 --- !u!1 &1116657741
 GameObject:

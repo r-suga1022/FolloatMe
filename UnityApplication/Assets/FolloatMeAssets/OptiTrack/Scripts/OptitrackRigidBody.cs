@@ -103,35 +103,41 @@ public class OptitrackRigidBody : MonoBehaviour
         UpdatePose();
 
         _serialsend.SetWasTrackingDone(PositionChanged);
+        // UnityEngine.Debug.Log("RigidBody:PositionChangedWasSet");
         // UnityEngine.Debug.Log("Measurement: Interval = "+tracking_interval.ToString());
     }
 
 
+    public Vector3 rbStatePosition; //
     void UpdatePose()
     {
         OptitrackRigidBodyState rbState = StreamingClient.GetLatestRigidBodyState( RigidBodyId, NetworkCompensation);
         Vector3 localPosition = this.transform.localPosition;
-        Vector3 rbStatePosition = rbState.Pose.Position;
+        // Vector3 localPosition = Camera.main.WorldToScreenPoint(this.transform.localPosition);
+        rbStatePosition = rbState.Pose.Position;
+        // rbStatePosition = Input.mousePosition;
 
-        bool XSame = localPosition.x == rbStatePosition.x;
-        bool YSame = localPosition.y == rbStatePosition.y;
-        bool ZSame = localPosition.z == rbStatePosition.z;
-        PositionChanged = !(XSame & YSame & ZSame);
+        bool XChanged = localPosition.x != rbStatePosition.x;
+        bool YChanged = localPosition.y != rbStatePosition.y;
+        bool ZChanged = localPosition.z != rbStatePosition.z;
+        // PositionChanged = XChanged || YChanged || ZChanged;
+        // PositionChanged = XChanged;
+        PositionChanged = ZChanged;
 
-        if ( rbState != null )
-        {
-            tracked_position = rbState.Pose.Position;
-            this.transform.localPosition = rbState.Pose.Position;
-            this.transform.localRotation = rbState.Pose.Orientation;
+        // if ( rbState != null )
+        // {
+            tracked_position = rbStatePosition;
+            // this.transform.localPosition = tracked_position;
+            // this.transform.localRotation = rbState.Pose.Orientation;
 
             tracking_time_n_1 = tracking_time_n;
             tracking_time_n = stopWatch.ElapsedMilliseconds;
             tracking_interval = tracking_time_n - tracking_time_n_1;
 
             //UnityEngine.Debug.Log("tracking_interval = "+tracking_interval);
-        }
+        // }
 
-        UnityEngine.Debug.Log("tracking_interval = "+tracking_interval+", position changed = "+PositionChanged);
+        UnityEngine.Debug.Log("Rigidbody:tracking_interval = "+tracking_interval+", position changed = "+PositionChanged+", local.z = "+localPosition.z+", rbState.z = "+rbStatePosition.z);
         EventMethod?.Invoke();
     }
 }

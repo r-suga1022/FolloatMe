@@ -756,6 +756,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  rbStatePosition: {x: 0, y: 0, z: 0}
 --- !u!65 &639163502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1476,34 +1477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754f44147a26c784894e17b6d21b011e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_PULSEWIDTH: 10000
-  MIN_PULSEWIDTH: 10
-  target: {fileID: 639163500}
-  serialHandler: {fileID: 233560355}
-  pulsewidth_text_object: {fileID: 1315842211}
-  pos: {x: 0, y: 0, z: 0}
-  x_i: 0
-  x_imin1: 0
-  delta_x_i: 0
-  w_i: 0
-  w_imin1: 0
-  pulse_width: 0
-  delta_w_i: 0
-  delta_w_i_inelse: 0
-  sum_x_i: 0
-  Flag_loop: 1
-  IsFirstExecution: 1
-  IsSendStop: 0
-  IsActuatorStop: 1
-  i: 0
-  n: 100
-  current_waittime: 0
-  waittime: 0
-  step_max: 40000
-  z_max: 0.4
-  pos_rate: 500
-  count: 0
-  frame_intvl: 0
 --- !u!114 &1069388184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,7 +1547,7 @@ MonoBehaviour:
   n: 5
   i: 0
   IsSendStop: 1
-  MousePrototyping: 0
+  MousePrototyping: 1
   PulseWidthText: {fileID: 1315842213}
 --- !u!1 &1116657741
 GameObject:
@@ -1815,7 +1788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5339a43e67abf448bddee722984eafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFrameRate: 60
+  targetFrameRate: 240
   vSyncCount: 1
 --- !u!4 &1567495785
 Transform:

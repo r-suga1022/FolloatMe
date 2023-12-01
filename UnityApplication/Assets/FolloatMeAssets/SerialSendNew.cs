@@ -45,7 +45,8 @@ public class SerialSendNew : MonoBehaviour
     bool PulseWidthWasSent = false;
     bool Accelerated = false;
     bool IsRecording = false; // パルス幅をファイルに記録しているか否か
-    bool was_tracking_done = false;
+    bool TrackingDone = false;
+    bool PulseWidthWasCalculated = false;
     public bool MousePrototyping;
 
 
@@ -87,7 +88,6 @@ public class SerialSendNew : MonoBehaviour
             {
                 try
                 {
-                    //if (was_tracking_done) iequalszero();
                     CalculatePulseWidth();
                     //UnityEngine.Debug.Log("thread ID = "+Thread.CurrentThread.ManagedThreadId.ToString());
                 }
@@ -107,28 +107,32 @@ public class SerialSendNew : MonoBehaviour
             return;
         }
 
-        if (!was_tracking_done) return;
+        // UnityEngine.Debug.Log("SerialSend:TrackingDone = "+TrackingDone);
+        // if (!TrackingDone) return;
+        if (TrackingDone) iequalszero();
+        else acceleration();
 
-        iequalszero();
+        // iequalszero();
         //else acceleration();
 
-        WaitForStabilization();
+        // WaitForStabilization();
     
 
         // シリアル通信で渡す
         serialHandler.Write(pulse_width.ToString()+"\n");
         PulseWidthWasSent = true;
-        UnityEngine.Debug.Log("pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+was_tracking_done);
+        // UnityEngine.Debug.Log("SerialSend:PulseWidthSend");
         _record.pulsewidth_list.Add(pulse_width);
         //PulseWidthText.text = pulse_width.ToString();
-        
-        was_tracking_done = false;
-        PulseWidthWasSent = false;
+
+        // PulseWidthWasSent = false;
     }
+
+
 
     void iequalszero()
     {
-        UnityEngine.Debug.Log("done");
+        // UnityEngine.Debug.Log("IEqualsZero");
         // 時間関係
         /*
         if (stopWatch.IsRunning) {
@@ -146,7 +150,7 @@ public class SerialSendNew : MonoBehaviour
             if (!MousePrototyping) pos = target.transform.position;
             else 
             {
-                pos = Input.mousePosition;
+                pos = target.rbStatePosition;
                 pos.z = pos.x;
             }
             delta_t = target.tracking_interval;
@@ -174,6 +178,7 @@ public class SerialSendNew : MonoBehaviour
         delta_x_i = x_i - x_imin1;
         delta_ms_per_flame_i = ms_per_flame_i - ms_per_flame_imin1;
         pulse_width = (int)((3f*delta_t) / (1000f*delta_x_i));
+        // pulse_width = (int)((25000f*delta_t) / (1000f*delta_x_i));
         if (Math.Abs((float)pulse_width) >= MAX_PULSEWIDTH) pulse_width = MAX_PULSEWIDTH;
         if (Math.Abs(delta_x_i) <= 0.0001f) pulse_width = MAX_PULSEWIDTH;
         if (Mathf.Abs((float)pulse_width) <= (float)MIN_PULSEWIDTH) {
@@ -182,10 +187,16 @@ public class SerialSendNew : MonoBehaviour
         }
         w_i = pulse_width;
         delta_w_i = w_i - w_imin1;
+
+        UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
+
+        TrackingDone = false;
     }
 
 
     void acceleration() {
+
+        // UnityEngine.Debug.Log("Acceleration");
         if (delta_w_i == 0) pulse_width = w_i;
         // w_{i-1}とw_iが同符号の場合
         else if (w_imin1*w_i > 0) {
@@ -231,11 +242,13 @@ public class SerialSendNew : MonoBehaviour
                 pulse_width = (int)(w_imin1 + (float)(delta_w_i_inelse*i / (float)n));
             }
         }
+
+        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)
     {
-        was_tracking_done = flag;
+        TrackingDone = flag;
     }
 
     void WaitForStabilization()

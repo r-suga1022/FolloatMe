@@ -30,7 +30,7 @@ public class Record : MonoBehaviour
         {
             if (Pulserecording)
             {
-                LogSave(pulsewidth_list, "pulsewidth", true);
+                LogSave(pulsewidth_list, "pulsewidth", false);
             }
             Pulserecording = !Pulserecording;
         }

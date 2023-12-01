@@ -8,6 +8,8 @@ public class SerialReceive : MonoBehaviour
     //上記URLのSerialHandler.cのクラス
     public SerialHandler serialHandler;
 
+    public SerialSendNew _serialsend;
+
     public string received_data;
 
   void Start()
@@ -26,6 +28,7 @@ public class SerialReceive : MonoBehaviour
             // Debug.Log(data[0]);//Unityのコンソールに受信データを表示
             received_data = data[0];
             //Debug.Log(received_data);
+            _serialsend.ActuatorStep = int.Parse(received_data);
         }
         catch (System.Exception e)
         {

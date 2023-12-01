@@ -20,6 +20,9 @@ using System.Diagnostics;
 
 using UnityEngine.Events;
 
+using System.Threading;
+using System.Threading.Tasks;
+
 
 /// <summary>
 /// Implements live tracking of streamed OptiTrack rigid body data onto an object.
@@ -48,6 +51,8 @@ public class OptitrackRigidBody : MonoBehaviour
     bool cantracking = false;
     bool PositionChanged = false;
 
+    bool LoopFlag = true;
+
     public UnityEvent EventMethod;
 
     void Start()
@@ -68,11 +73,32 @@ public class OptitrackRigidBody : MonoBehaviour
 
         this.StreamingClient.RegisterRigidBody( this, RigidBodyId );
 
-
         stopWatch = new Stopwatch();
         stopWatch.Start();
         tracking_time_n_1 = 0f;
+
+
+        //Thread_1();
     }
+
+
+    // 別スレッドにするなら
+    /*
+    public int i, n;
+    void Thread_1()
+    {
+        while (i++ < n) continue;
+        Task.Run(() => 
+        {
+            while (LoopFlag)
+            {
+                
+                UpdatePose();
+                _serialsend.SetWasTrackingDone(PositionChanged);
+            }
+        });
+    }
+    */
 
 
 #if UNITY_2017_1_OR_NEWER
@@ -92,19 +118,23 @@ public class OptitrackRigidBody : MonoBehaviour
     {
         //UpdatePose();
     }
+
+    void OnApplicationQuit()
+    {
+        LoopFlag = false;
+    }
 #endif
 
 
     //void FixedUpdate()
+    
     void Update()
     {
-        // UnityEngine.Debug.Log(cantracking);
         UpdatePose();
 
         _serialsend.SetWasTrackingDone(PositionChanged);
-        // UnityEngine.Debug.Log("RigidBody:PositionChangedWasSet");
-        // UnityEngine.Debug.Log("Measurement: Interval = "+tracking_interval.ToString());
     }
+    
 
 
     public Vector3 rbStatePosition; //
@@ -129,7 +159,7 @@ public class OptitrackRigidBody : MonoBehaviour
 
         //if (PositionChanged) _serialsend.TrackedPosition = rbStatePosition;
 
-        if ( rbState != null )
+        if ( rbState != null && PositionChanged)
         {
             //this.transform.localPosition = rbStatePosition;
             //this.transform.localRotation = rbStateOrientation;
@@ -140,6 +170,6 @@ public class OptitrackRigidBody : MonoBehaviour
         }
 
         UnityEngine.Debug.Log("Rigidbody:tracking_interval = "+tracking_interval+", position changed = "+PositionChanged+", before.z = "+BeforePosition.z+", after.z = "+rbStatePosition.z);
-        EventMethod?.Invoke();
+        //EventMethod?.Invoke();
     }
 }

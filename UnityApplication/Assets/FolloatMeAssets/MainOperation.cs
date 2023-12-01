@@ -37,6 +37,6 @@ public class MainOperation : MonoBehaviour
         }
 
         //Debug.Log("deltaTime = "+Time.deltaTime);
-        deltaTimeText.text = Time.deltaTime.ToString();
+        //deltaTimeText.text = Time.deltaTime.ToString();
     }
 }

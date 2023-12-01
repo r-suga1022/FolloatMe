@@ -103,10 +103,11 @@ void loop() {
     direction_flag = (pulse_width > 0);
     DoesStop = (pulse_width >= MAX_PULSEWIDTH);
     //Serial.println("from_micon = "+pulse_width);
-    Serial.println("from_micon = "+String(pulse_width));
+    //Serial.println("from_micon = "+String(pulse_width));
     //Serial.println("step = "+String(step_count/2));
     //Serial.println("from_micon = 36000");
     //Serial.println("36000");
+    Serial.println(step_count/2);
     //Serial.println();
   }
   //Serial.println("from_micon = "+pulse_width);
@@ -132,7 +133,8 @@ bool Generate_Pulse(struct repeating_timer *t) {
   digitalWrite(OutputPlusPin, check);
   digitalWrite(OutputMinusPin, !check);
 
-  step_count += direction_flag;
+  if (direction_flag) step_count += 1;
+  else step_count -= 1;
   //Serial.print(step_count);
   //Serial.println();
 

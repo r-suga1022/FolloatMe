@@ -13,7 +13,8 @@ public class CharacterOperation : MonoBehaviour
     public Vector3 pos_offset;
     public Vector3 pos_offset_mousever;
     private Vector3 latest_pos;
-    public float pos_rate;
+    public float Xpos_rate;
+    public float Ypos_rate;
 
     bool IsFirstExecution = true;
     public bool IsTrackingStop = false;
@@ -46,7 +47,7 @@ public class CharacterOperation : MonoBehaviour
             target_pos = target.rbStatePosition;
             target_pos.z = 0f;
             // target_pos.z = -7.0f;
-            Vector3 new_pos = new Vector3(target_pos.x*pos_rate, target_pos.y*pos_rate, target_pos.z);
+            Vector3 new_pos = new Vector3(target_pos.x*Xpos_rate, target_pos.y*Ypos_rate, target_pos.z);
             Quaternion new_rot = target.transform.rotation;
             // character.Set_Position(new_pos, pos_offset);
             // character.Set_Rotation(new_rot);

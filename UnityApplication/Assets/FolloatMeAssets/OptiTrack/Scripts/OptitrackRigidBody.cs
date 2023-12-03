@@ -53,6 +53,8 @@ public class OptitrackRigidBody : MonoBehaviour
 
     bool LoopFlag = true;
 
+    public bool MousePrototyping;
+
     public UnityEvent EventMethod;
 
     void Start()
@@ -137,39 +139,38 @@ public class OptitrackRigidBody : MonoBehaviour
     
 
 
-    public Vector3 rbStatePosition; //
-    public Quaternion rbStateOrientation; //
+    public Vector3 rbStatePosition;
+    public Quaternion rbStateOrientation;
     public Vector3 BeforePosition = Vector3.zero; // 変えるかもしれない
     void UpdatePose()
     {
-        OptitrackRigidBodyState rbState = StreamingClient.GetLatestRigidBodyState( RigidBodyId, NetworkCompensation);
-        //Vector3 localPosition = this.transform.localPosition;
-        // Vector3 localPosition = Camera.main.WorldToScreenPoint(this.transform.localPosition);
         BeforePosition = rbStatePosition;
-        rbStatePosition = rbState.Pose.Position;
-        rbStateOrientation = rbState.Pose.Orientation;
-        // rbStatePosition = Input.mousePosition;
+        if (MousePrototyping)
+        {
+            rbStatePosition = Input.mousePosition;
+            rbStatePosition.z = rbStatePosition.x;
+        }
+        else
+        {
+            OptitrackRigidBodyState rbState = StreamingClient.GetLatestRigidBodyState( RigidBodyId, NetworkCompensation);
+            rbStatePosition = rbState.Pose.Position;
+            rbStateOrientation = rbState.Pose.Orientation;
+        }
 
         bool XChanged = BeforePosition.x != rbStatePosition.x;
         bool YChanged = BeforePosition.y != rbStatePosition.y;
         bool ZChanged = BeforePosition.z != rbStatePosition.z;
-        // PositionChanged = XChanged || YChanged || ZChanged;
-        // PositionChanged = XChanged;
         PositionChanged = ZChanged;
 
-        //if (PositionChanged) _serialsend.TrackedPosition = rbStatePosition;
-
-        if ( rbState != null && PositionChanged)
+        // if ( rbState != null && PositionChanged)
+        if (PositionChanged)
         {
-            //this.transform.localPosition = rbStatePosition;
-            //this.transform.localRotation = rbStateOrientation;
-
             tracking_time_n_1 = tracking_time_n;
             tracking_time_n = stopWatch.ElapsedMilliseconds;
             tracking_interval = tracking_time_n - tracking_time_n_1;
         }
 
-        UnityEngine.Debug.Log("Rigidbody:tracking_interval = "+tracking_interval+", position changed = "+PositionChanged+", before.z = "+BeforePosition.z+", after.z = "+rbStatePosition.z);
+        // UnityEngine.Debug.Log("Rigidbody:tracking_interval = "+tracking_interval+", position changed = "+PositionChanged+", before.z = "+BeforePosition.z+", after.z = "+rbStatePosition.z);
         //EventMethod?.Invoke();
     }
 }

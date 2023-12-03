@@ -11,6 +11,7 @@ public class Record : MonoBehaviour
     public List<float> tracked_position_list;
     public List<float> fps_list;
     public List<float> pulsewidth_list;
+    public List<int> ReceivedOnMiconWidthList;
 
     bool Pulserecording = false;
 
@@ -21,11 +22,12 @@ public class Record : MonoBehaviour
         tracked_position_list = new List<float>();
         fps_list = new List<float>();
         pulsewidth_list = new List<float>();
+        ReceivedOnMiconWidthList = new List<int>();
     }
 
-    void Update()
+    bool DifShow = false;
+    void LateUpdate()
     {
-        //
         if (Input.GetKeyDown(KeyCode.D))
         {
             if (Pulserecording)
@@ -34,7 +36,7 @@ public class Record : MonoBehaviour
             }
             Pulserecording = !Pulserecording;
         }
-        //
+
     }
 
     public void AddData(List<float> list, float data)
@@ -48,7 +50,8 @@ public class Record : MonoBehaviour
         FileInfo fi;
         StreamWriter sw;
 
-        string filepath = Application.dataPath + "/" + fileName + ".csv";
+        // string filepath = Application.dataPath + "/" + fileName + ".csv";
+        string filepath = "../" + fileName + ".csv";
         
         // fi = new FileInfo(Application.dataPath + "/" + fileName + ".csv");
         // sw = fi.AppendText();

@@ -52,6 +52,11 @@ int count = 0;
 int LEDValue = 0;
 // ----------------------
 
+int WidthList[10000];
+int WidthRecording = 0;
+int MaxWidthNumber = 10000;
+int i = 0;
+
 
 
 // ------ setup関数 ------
@@ -73,42 +78,41 @@ void setup() {
   add_repeating_timer_us(default_intvl_us, Generate_Pulse, NULL, &st_tm1ms);
 }
 
+
 // ------ loop関数 ------
 void loop() {
+  if (i >= MaxWidthNumber) return;
+
   // 回転方向の指定（DIR入力）
   digitalWrite(OutputDirPlusPin, direction_flag);
   digitalWrite(OutputDirMinusPin, !direction_flag);
 
-  // 現在のポジションを表示
-  // Serial.print("Current position (step) = ");
-  // Serial.println(step_count/2);
-
-
   // シリアル通信で文字列を受け取ったら
   if (Serial.available() > 0)
   {
-    String str = "";
     /*
+    String str = "";
     while (Serial.available())    // 文字列を取得
     {
       char key = Serial.read();
       str += key;
     }
     */
+    
     String data = Serial.readStringUntil('\n');
+    // if (data == "hello\n") WidthRecording = 1;
     pulse_width = data.toInt();    // 整数値に変換
-    if (count++ > 100) {LEDValue = !LEDValue; count = 0; }
-    digitalWrite(LED_BUILTIN, LEDValue);
+    WidthList[i] = pulse_width;
+    ++i;
+    if (i >= MaxWidthNumber) SendWidthList();
+
+    //if (count++ > 100) {LEDValue = !LEDValue; count = 0; }
+    //digitalWrite(LED_BUILTIN, LEDValue);
     // if (DoesStop) DoesStop = false;
     direction_flag = (pulse_width > 0);
     DoesStop = (pulse_width >= MAX_PULSEWIDTH);
-    //Serial.println("from_micon = "+pulse_width);
-    //Serial.println("from_micon = "+String(pulse_width));
-    //Serial.println("step = "+String(step_count/2));
-    //Serial.println("from_micon = 36000");
-    //Serial.println("36000");
-    Serial.println(step_count/2);
-    //Serial.println();
+    //Serial.println("from micon = "+pulse_width);
+    //Serial.println(step_count/2);
   }
   //Serial.println("from_micon = "+pulse_width);
   //Serial.println("36000");
@@ -119,11 +123,23 @@ void loop() {
 }
 
 
+void SendWidthList()
+{
+  Serial.println("Exception!");
+  delay(1000);
+  int j;
+  for (j = 0; j < MaxWidthNumber; ++j)
+  {
+    Serial.println(String(WidthList[j])+", j = "+j);
+    // Serial.println(String(WidthList[j]));
+    // Serial.flush();
+    delay(6);
+  }
+}
 
 
 // ------ 各種関数定義 ------
 // タイマー割り込みで実行される関数
-// パルス波を発生させることが分かるように、この名前にする
 bool Generate_Pulse(struct repeating_timer *t) {
   // アクチュエータを動かすときのみパルス波を発生させる
   if (DoesStop) return true;
@@ -135,14 +151,6 @@ bool Generate_Pulse(struct repeating_timer *t) {
 
   if (direction_flag) step_count += 1;
   else step_count -= 1;
-  //Serial.print(step_count);
-  //Serial.println();
-
-  // アクチュエータの位置情報の送信処理
-  if (step_count >= 30000) {
-    //Serial.print("hensa");
-    //Serial.println();
-  }
   
   return true;
 }

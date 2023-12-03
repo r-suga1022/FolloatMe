@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18381804, g: 0.22847292, b: 0.30030066, a: 1}
+  m_IndirectSpecularColor: {r: 0.18381761, g: 0.22847213, b: 0.3002996, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c785f211b7d45584ea0c042940a59108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM7
+  portName: COM11
   baudRate: 115200
 --- !u!1 &245546994
 GameObject:
@@ -503,6 +503,7 @@ MonoBehaviour:
   tracked_position_list: []
   fps_list: []
   pulsewidth_list: []
+  ReceivedOnMiconWidthList: 
 --- !u!4 &286224547
 Transform:
   m_ObjectHideFlags: 0
@@ -839,6 +840,7 @@ MonoBehaviour:
   _record: {fileID: 286224546}
   _serialsend: {fileID: 1069388187}
   tracking_interval: 0
+  MousePrototyping: 1
   EventMethod:
     m_PersistentCalls:
       m_Calls:
@@ -1017,7 +1019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &705419294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,6 +1476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serialHandler: {fileID: 233560355}
   _serialsend: {fileID: 1069388187}
+  _Record: {fileID: 286224546}
   received_data: 
 --- !u!1 &1053847132
 GameObject:
@@ -1647,11 +1650,12 @@ MonoBehaviour:
   MAX_PULSEWIDTH: 10000
   MIN_PULSEWIDTH: 10
   TrackedPosition: {x: 0, y: 0, z: 0}
-  n: 30
+  n: 5
   i: 0
   IsSendStop: 1
-  MousePrototyping: 0
-  a: 3.8
+  MousePrototyping: 1
+  Exception: 0
+  a: 25000
   PulseWidthText: {fileID: 1315842213}
   ActuatorStep: 0
 --- !u!1 &1116657741

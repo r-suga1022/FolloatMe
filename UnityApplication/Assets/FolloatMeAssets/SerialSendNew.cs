@@ -45,6 +45,8 @@ public class SerialSendNew : MonoBehaviour
     bool PulseWidthWasCalculated = false;
     public bool MousePrototyping;
 
+    public bool Exception = false;
+
 
     int RecordCount = 0; // 記録ファイル数
 
@@ -78,10 +80,14 @@ public class SerialSendNew : MonoBehaviour
     }
 
 
+    long TimeInOneFrameBefore = 0;
+    long TimeInCurrentFrame = 0;
+    long FrameInterval = 0;
     void Thread_1()
     {
         context = SynchronizationContext.Current;
         stopWatch = new Stopwatch();
+        stopWatch.Start();
 
         Task.Run(() =>
         {
@@ -90,7 +96,7 @@ public class SerialSendNew : MonoBehaviour
                 try
                 {
                     CalculatePulseWidth();
-                    //UnityEngine.Debug.Log("thread ID = "+Thread.CurrentThread.ManagedThreadId.ToString());
+                    // UnityEngine.Debug.Log("thread ID = "+Thread.CurrentThread.ManagedThreadId.ToString());
                 }
                 catch (System.Exception e)//例外をチェック
                 {
@@ -102,6 +108,14 @@ public class SerialSendNew : MonoBehaviour
 
 
     public void CalculatePulseWidth() {
+        TimeInCurrentFrame = stopWatch.ElapsedMilliseconds;
+        FrameInterval = TimeInCurrentFrame - TimeInOneFrameBefore;
+        // UnityEngine.Debug.Log("FrameInterval = "+FrameInterval);
+        if (FrameInterval < 1) return;
+        TimeInOneFrameBefore = TimeInCurrentFrame;
+        
+        if (Exception) return;
+
         if (IsSendStop) {
             IsFirstExecution = true;
             pulse_width = MAX_PULSEWIDTH;
@@ -109,8 +123,6 @@ public class SerialSendNew : MonoBehaviour
         }
 
         if (IsFirstExecution) FirstExecution();
-
-        // if (!TrackingDone) return;
 
         MeasureTime();
 
@@ -125,11 +137,12 @@ public class SerialSendNew : MonoBehaviour
         // これでは、iequalszeroで計算されたパルスを渡した後、加減速でいったんもとのパルス幅に戻り、もう一度計算されたパルス幅に戻るようになってしまう。
         // ここを直す。
         serialHandler.Write(pulse_width.ToString()+"\n");
-        //UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
+        // serialHandler.Write("10000\n");
+        // UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
         PulseWidthWasSent = true;
         _record.pulsewidth_list.Add(pulse_width);
-        PulseWidthText.text = pulse_width.ToString();
-        //PulseWidthText.text = ActuatorStep.ToString();
+        //PulseWidthText.text = pulse_width.ToString();
+        // PulseWidthText.text = ActuatorStep.ToString();
     }
 
 
@@ -180,13 +193,7 @@ public class SerialSendNew : MonoBehaviour
 
     int BlankCount = 0;
     void acceleration()
-    {
-        /*
-        ++BlankCount;
-        if (BlankCount < 5) return;
-        BlankCount = 0;
-        */
-        
+    {    
         if (i <= n)
         {
             if (delta_w_i == 0) pulse_width = w_i;
@@ -253,6 +260,7 @@ public class SerialSendNew : MonoBehaviour
     {
         IsFirstExecution = false;
         pulse_width = w_i = w_imin1 = MAX_PULSEWIDTH;
+        
         WaitForStabilization();
     }
 }

@@ -81,7 +81,7 @@ void setup() {
 
 // ------ loop関数 ------
 void loop() {
-  if (i >= MaxWidthNumber) return;
+  //if (i >= MaxWidthNumber) return;
 
   // 回転方向の指定（DIR入力）
   digitalWrite(OutputDirPlusPin, direction_flag);
@@ -102,9 +102,11 @@ void loop() {
     String data = Serial.readStringUntil('\n');
     // if (data == "hello\n") WidthRecording = 1;
     pulse_width = data.toInt();    // 整数値に変換
+    /*
     WidthList[i] = pulse_width;
     ++i;
     if (i >= MaxWidthNumber) SendWidthList();
+    */
 
     //if (count++ > 100) {LEDValue = !LEDValue; count = 0; }
     //digitalWrite(LED_BUILTIN, LEDValue);

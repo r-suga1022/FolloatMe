@@ -129,6 +129,7 @@ public class SerialSendNew : MonoBehaviour
         if (TrackingDone) 
         {
             iequalszero();
+            pulse_width = w_imin1;
             return;
         }
         else acceleration();
@@ -184,7 +185,7 @@ public class SerialSendNew : MonoBehaviour
         w_i = pulse_width;
         delta_w_i = w_i - w_imin1;
 
-        UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
         i = 0;
@@ -222,7 +223,7 @@ public class SerialSendNew : MonoBehaviour
         ++i;
 
         CalculationException();
-        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", delta_ms_per_flame = "+delta_ms_per_flame_i+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", delta_ms_per_flame = "+delta_ms_per_flame_i+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)

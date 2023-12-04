@@ -1245,8 +1245,8 @@ MonoBehaviour:
   character: {fileID: 447046617}
   pos_offset: {x: 0.03, y: -0.26, z: 0}
   pos_offset_mousever: {x: 0, y: 0, z: 0}
-  Xpos_rate: 1.45
-  Ypos_rate: 1.5
+  Xpos_rate: 1.9
+  Ypos_rate: 1.9
   IsTrackingStop: 1
   mouse_prototyping: 0
 --- !u!1 &941282159
@@ -1655,7 +1655,7 @@ MonoBehaviour:
   IsSendStop: 1
   MousePrototyping: 0
   Exception: 0
-  a: 10
+  a: 5.5
   PulseWidthText: {fileID: 1315842213}
   ActuatorStep: 0
 --- !u!1 &1116657741

@@ -50,20 +50,21 @@ public class Record : MonoBehaviour
         FileInfo fi;
         StreamWriter sw;
 
-        // string filepath = Application.dataPath + "/" + fileName + ".csv";
-        string filepath = "../" + fileName + ".csv";
+        string filepath = Application.dataPath + "/" + fileName + ".csv";
+        //string filepath = "../" + fileName + ".csv";
         
         // fi = new FileInfo(Application.dataPath + "/" + fileName + ".csv");
         // sw = fi.AppendText();
-        sw = new StreamWriter(filepath, AppendToFile);
-
-        for (int i = 0; i < x.Count; ++i)
+        using (sw = new StreamWriter(filepath, AppendToFile))
         {
-            sw.Write(x[i].ToString()+"\n");
-        }
+            for (int i = 0; i < x.Count; ++i)
+            {
+                sw.Write(x[i].ToString()+"\n");
+            }
 
-        sw.Flush();
-        sw.Close();
+            sw.Flush();
+            sw.Close();
+        }
 
         x.Clear();
     }

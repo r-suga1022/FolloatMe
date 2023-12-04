@@ -138,8 +138,7 @@ public class SerialSendNew : MonoBehaviour
         // これでは、iequalszeroで計算されたパルスを渡した後、加減速でいったんもとのパルス幅に戻り、もう一度計算されたパルス幅に戻るようになってしまう。
         // ここを直す。
         serialHandler.Write(pulse_width.ToString()+"\n");
-        // serialHandler.Write("10000\n");
-        // UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
+        //UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
         PulseWidthWasSent = true;
         _record.pulsewidth_list.Add(pulse_width);
         //PulseWidthText.text = pulse_width.ToString();

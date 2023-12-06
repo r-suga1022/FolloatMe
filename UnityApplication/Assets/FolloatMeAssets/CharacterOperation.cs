@@ -21,6 +21,7 @@ public class CharacterOperation : MonoBehaviour
 
     public bool mouse_prototyping;
 
+    bool CharacterRed = false;
 
     void Start()
     {
@@ -46,12 +47,25 @@ public class CharacterOperation : MonoBehaviour
         } else {
             target_pos = target.rbStatePosition;
             target_pos.z = 0f;
-            // target_pos.z = -7.0f;
-            Vector3 new_pos = new Vector3(target_pos.x*Xpos_rate, target_pos.y*Ypos_rate, target_pos.z);
+            Vector3 new_pos = new Vector3(target_pos.x*Xpos_rate + pos_offset.x, target_pos.y*Ypos_rate + pos_offset.y, target_pos.z);
             Quaternion new_rot = target.transform.rotation;
-            // character.Set_Position(new_pos, pos_offset);
-            // character.Set_Rotation(new_rot);
-            character.transform.position = new_pos + pos_offset;
+            character.transform.position = new_pos;
+
+            if (target.LatencyMeasuring)
+            {
+                if (target.PositionChanged && !CharacterRed)
+                {
+                    character.GetComponent<Renderer>().material.color = Color.red;
+                    CharacterRed = true;
+                }
+
+                if (Input.GetKeyDown(KeyCode.W))
+                //if (!target.PositionChanged && CharacterRed)
+                {
+                    character.GetComponent<Renderer>().material.color = Color.white;
+                    CharacterRed = false;
+                }
+            }
             // Debug.Log("鉛直、水平方向にキャラクターを移動");
             // character.transform.rotation = new_rot;
         }

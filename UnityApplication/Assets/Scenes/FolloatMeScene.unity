@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18381761, g: 0.22847213, b: 0.3002996, a: 1}
+  m_IndirectSpecularColor: {r: 0.18381804, g: 0.22847292, b: 0.30030066, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -821,7 +821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &639163501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,7 +840,9 @@ MonoBehaviour:
   _record: {fileID: 286224546}
   _serialsend: {fileID: 1069388187}
   tracking_interval: 0
+  PositionChanged: 0
   MousePrototyping: 0
+  LatencyMeasuring: 1
   EventMethod:
     m_PersistentCalls:
       m_Calls:
@@ -859,6 +861,7 @@ MonoBehaviour:
   rbStatePosition: {x: 0, y: 0, z: 0}
   rbStateOrientation: {x: 0, y: 0, z: 0, w: 0}
   BeforePosition: {x: 0, y: 0, z: 0}
+  PositionChangeThreshold: 0.0001
 --- !u!65 &639163502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1243,12 +1246,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 639163501}
   character: {fileID: 447046617}
-  pos_offset: {x: 0.03, y: -0.26, z: 0}
+  pos_offset: {x: 0.03, y: -0.25, z: 0}
   pos_offset_mousever: {x: 0, y: 0, z: 0}
   Xpos_rate: 1.9
   Ypos_rate: 1.9
   IsTrackingStop: 1
   mouse_prototyping: 0
+  LatencyMeasuring: 0
 --- !u!1 &941282159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,7 +1901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5339a43e67abf448bddee722984eafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFrameRate: 20000
+  targetFrameRate: 240
   vSyncCount: 1
 --- !u!4 &1567495785
 Transform:

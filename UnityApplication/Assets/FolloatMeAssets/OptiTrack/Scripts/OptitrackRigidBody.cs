@@ -49,11 +49,14 @@ public class OptitrackRigidBody : MonoBehaviour
 
 
     bool cantracking = false;
-    bool PositionChanged = false;
+    
+    public bool PositionChanged = false;
 
     bool LoopFlag = true;
 
     public bool MousePrototyping;
+
+    public bool LatencyMeasuring;
 
     public UnityEvent EventMethod;
 
@@ -142,6 +145,8 @@ public class OptitrackRigidBody : MonoBehaviour
     public Vector3 rbStatePosition;
     public Quaternion rbStateOrientation;
     public Vector3 BeforePosition = Vector3.zero; // 変えるかもしれない
+
+    public float PositionChangeThreshold;
     void UpdatePose()
     {
         BeforePosition = rbStatePosition;
@@ -157,10 +162,11 @@ public class OptitrackRigidBody : MonoBehaviour
             rbStateOrientation = rbState.Pose.Orientation;
         }
 
-        bool XChanged = BeforePosition.x != rbStatePosition.x;
-        bool YChanged = BeforePosition.y != rbStatePosition.y;
-        bool ZChanged = BeforePosition.z != rbStatePosition.z;
-        PositionChanged = ZChanged;
+        // OptiTrackのノイズ対策（座標の変化量がある閾値以上であれば、動いたとみなす）
+        bool XChanged = Mathf.Abs(BeforePosition.x - rbStatePosition.x) >= PositionChangeThreshold;
+        bool YChanged = Mathf.Abs(BeforePosition.y - rbStatePosition.y) >= PositionChangeThreshold;
+        bool ZChanged = Mathf.Abs(BeforePosition.z - rbStatePosition.z) >= PositionChangeThreshold;
+        PositionChanged = XChanged || YChanged || ZChanged;
 
         // if ( rbState != null && PositionChanged)
         if (PositionChanged)

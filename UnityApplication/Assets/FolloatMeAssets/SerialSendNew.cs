@@ -114,7 +114,7 @@ public class SerialSendNew : MonoBehaviour
         if (FrameInterval < 1) return;
         TimeInOneFrameBefore = TimeInCurrentFrame;
         
-        if (Exception) return;
+        //if (Exception) return;
 
         if (IsSendStop) {
             IsFirstExecution = true;
@@ -130,13 +130,19 @@ public class SerialSendNew : MonoBehaviour
         {
             iequalszero();
             pulse_width = w_imin1;
-            return;
+            //return;
         }
         else acceleration();
 
         // シリアル通信で渡す
         // これでは、iequalszeroで計算されたパルスを渡した後、加減速でいったんもとのパルス幅に戻り、もう一度計算されたパルス幅に戻るようになってしまう。
         // ここを直す。
+
+        if (target.LatencyMeasuring)
+        {
+            pulse_width = MAX_PULSEWIDTH;
+        }
+
         serialHandler.Write(pulse_width.ToString()+"\n");
         //UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
         PulseWidthWasSent = true;

@@ -12,6 +12,8 @@ public class MainOperation : MonoBehaviour
     public bool mouse_prototyping;
 
     public Text deltaTimeText;
+    
+    int count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,7 @@ public class MainOperation : MonoBehaviour
         }
 
         //Debug.Log("deltaTime = "+Time.deltaTime);
-        //deltaTimeText.text = Time.deltaTime.ToString();
+        ++count;
+        deltaTimeText.text = count.ToString();
     }
 }

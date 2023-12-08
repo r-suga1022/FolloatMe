@@ -24,6 +24,7 @@ int OutputPlusPin = 16;
 int OutputMinusPin = 19;
 int OutputDirPlusPin = 22;
 int OutputDirMinusPin = 27;
+int LEDPin = 15;
 
 
 // --- タイマー割り込み関係 ---
@@ -69,6 +70,7 @@ void setup() {
   pinMode(OutputDirMinusPin, OUTPUT);
 
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LEDPin, OUTPUT);
 
   // シリアル通信設定
   Serial.begin(115200);
@@ -113,6 +115,7 @@ void loop() {
     // if (DoesStop) DoesStop = false;
     direction_flag = (pulse_width > 0);
     DoesStop = (pulse_width >= MAX_PULSEWIDTH);
+    digitalWrite(LEDPin, !DoesStop);
     //Serial.println("from micon = "+pulse_width);
     Serial.println(step_count/2);
   }

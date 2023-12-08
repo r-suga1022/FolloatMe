@@ -842,7 +842,7 @@ MonoBehaviour:
   tracking_interval: 0
   PositionChanged: 0
   MousePrototyping: 0
-  LatencyMeasuring: 1
+  LatencyMeasuring: 0
   EventMethod:
     m_PersistentCalls:
       m_Calls:
@@ -861,7 +861,7 @@ MonoBehaviour:
   rbStatePosition: {x: 0, y: 0, z: 0}
   rbStateOrientation: {x: 0, y: 0, z: 0, w: 0}
   BeforePosition: {x: 0, y: 0, z: 0}
-  PositionChangeThreshold: 0.00005
+  PositionChangeThreshold: 0.00004
 --- !u!65 &639163502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1022,7 +1022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &705419294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,7 +1091,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705419293}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0

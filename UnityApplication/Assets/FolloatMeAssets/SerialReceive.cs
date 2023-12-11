@@ -29,7 +29,7 @@ public class SerialReceive : MonoBehaviour
         {
             // Debug.Log(data[0]);//Unityのコンソールに受信データを表示
             received_data = data[0];
-            Debug.Log(received_data);
+            //Debug.Log(received_data);
 
             if (received_data == "Exception!") {
                 _serialsend.Exception = true;

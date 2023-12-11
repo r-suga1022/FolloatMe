@@ -138,10 +138,9 @@ public class SerialSendNew : MonoBehaviour
         // これでは、iequalszeroで計算されたパルスを渡した後、加減速でいったんもとのパルス幅に戻り、もう一度計算されたパルス幅に戻るようになってしまう。
         // ここを直す。
 
-        if (pulse_width != MAX_PULSEWIDTH)
+        if (target.LatencyMeasuring)
         {
-            if (pulse_width > 0) pulse_width = 20;
-            else pulse_width = -20;
+            pulse_width = MAX_PULSEWIDTH;
         }
 
         serialHandler.Write(pulse_width.ToString()+"\n");
@@ -190,7 +189,7 @@ public class SerialSendNew : MonoBehaviour
         w_i = pulse_width;
         delta_w_i = w_i - w_imin1;
 
-        UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
         i = 0;
@@ -228,7 +227,7 @@ public class SerialSendNew : MonoBehaviour
         ++i;
 
         CalculationException();
-        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", delta_ms_per_flame = "+delta_ms_per_flame_i+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", delta_ms_per_flame = "+delta_ms_per_flame_i+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)

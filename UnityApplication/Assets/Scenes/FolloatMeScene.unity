@@ -1252,6 +1252,7 @@ MonoBehaviour:
   Ypos_rate: 1.9
   IsTrackingStop: 1
   mouse_prototyping: 0
+  proportion: 0.9
 --- !u!1 &941282159
 GameObject:
   m_ObjectHideFlags: 0

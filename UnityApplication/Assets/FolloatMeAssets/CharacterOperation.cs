@@ -9,12 +9,15 @@ public class CharacterOperation : MonoBehaviour
     // public Fairy character;
     public GameObject character;
 
-    private Vector3 target_pos;
+    private Vector3 xvec_i;
     public Vector3 pos_offset;
     public Vector3 pos_offset_mousever;
     private Vector3 latest_pos;
     public float Xpos_rate;
     public float Ypos_rate;
+
+    private Vector3 xvec_imin1;
+    private Vector3 xvec_initial;
 
     bool IsFirstExecution = true;
     public bool IsTrackingStop = false;
@@ -23,9 +26,11 @@ public class CharacterOperation : MonoBehaviour
 
     bool CharacterRed = false;
 
+    public float proportion;
+
     void Start()
     {
-
+        xvec_initial = pos_offset;
     }
 
 
@@ -37,17 +42,19 @@ public class CharacterOperation : MonoBehaviour
 
         // プロトタイプ段階ではマウス座標
         if (mouse_prototyping) {
-            target_pos = Input.mousePosition;
-            target_pos.z = 1.0f;
-            Vector3 world_target_pos = Camera.main.ScreenToWorldPoint(target_pos);
-            // character.Set_Position(target_pos, pos_offset_mousever);
-            character.transform.position = target_pos + pos_offset_mousever;
+            xvec_i = Input.mousePosition;
+            xvec_i.z = 1.0f;
+            Vector3 world_xvec_i = Camera.main.ScreenToWorldPoint(xvec_i);
+            // character.Set_Position(xvec_i, pos_offset_mousever);
+            character.transform.position = xvec_i + pos_offset_mousever;
             Debug.Log("Character Operation\n");
         // トラッキング座標を用いた追従の実現
         } else {
-            target_pos = target.rbStatePosition;
-            target_pos.z = 0f;
-            Vector3 new_pos = new Vector3(target_pos.x*Xpos_rate + pos_offset.x, target_pos.y*Ypos_rate + pos_offset.y, target_pos.z);
+            xvec_imin1 = xvec_i;
+            xvec_i = target.rbStatePosition;
+            xvec_i.z = 0f;
+            Vector3 new_pos = xvec_imin1 + (xvec_i - xvec_imin1)*proportion;
+            //Vector3 new_pos = new Vector3(xvec_i.x*Xpos_rate + pos_offset.x, xvec_i.y*Ypos_rate + pos_offset.y, xvec_i.z); 
             Quaternion new_rot = target.transform.rotation;
             character.transform.position = new_pos;
 

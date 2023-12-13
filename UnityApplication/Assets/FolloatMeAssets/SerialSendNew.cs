@@ -144,6 +144,7 @@ public class SerialSendNew : MonoBehaviour
         }
 
         serialHandler.Write(pulse_width.ToString()+"\n");
+        
         //UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
         PulseWidthWasSent = true;
         _record.pulsewidth_list.Add(pulse_width);
@@ -155,7 +156,6 @@ public class SerialSendNew : MonoBehaviour
 
     void iequalszero()
     {
-
         // トラッキングされた座標、時間を取得
         delta_t = target.tracking_interval;
         TrackedPosition = target.rbStatePosition;
@@ -164,13 +164,18 @@ public class SerialSendNew : MonoBehaviour
         //
         // トラッキングし始めて一番最初の実行の時
         if (IsFirstExecution) {
+            UnityEngine.Debug.Log("First");
+            if (TrackedPosition.z == 0) return;
             IsFirstExecution = false;
-            x_i = x_imin1 = -TrackedPosition.z;
+            x_i = -TrackedPosition.z;
+            x_imin1 = -TrackedPosition.z;
             pulse_width = MAX_PULSEWIDTH;
-            w_i = w_imin1 = pulse_width;
+            w_i = pulse_width;
+            w_imin1 = pulse_width;
             return;
         }
         //
+
 
 
         x_imin1 = x_i;
@@ -263,9 +268,9 @@ public class SerialSendNew : MonoBehaviour
 
     void FirstExecution()
     {
-        IsFirstExecution = false;
+        //IsFirstExecution = false;
         pulse_width = w_i = w_imin1 = MAX_PULSEWIDTH;
         
-        WaitForStabilization();
+        //WaitForStabilization();
     }
 }

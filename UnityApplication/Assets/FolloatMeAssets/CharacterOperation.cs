@@ -50,11 +50,16 @@ public class CharacterOperation : MonoBehaviour
             Debug.Log("Character Operation\n");
         // トラッキング座標を用いた追従の実現
         } else {
+            //if (!target.PositionChanged) return;
             xvec_imin1 = xvec_i;
             xvec_i = target.rbStatePosition;
             xvec_i.z = 0f;
-            Vector3 new_pos = xvec_imin1 + (xvec_i - xvec_imin1)*proportion;
-            //Vector3 new_pos = new Vector3(xvec_i.x*Xpos_rate + pos_offset.x, xvec_i.y*Ypos_rate + pos_offset.y, xvec_i.z); 
+            //Vector3 new_pos = xvec_imin1 + (xvec_i - xvec_imin1)*proportion;
+            //Vector3 new_pos = xvec_i;
+            //xvec_i.z = 1f;
+            //Vector3 new_pos = Camera.main.ScreenToWorldPoint(xvec_i); //new_pos.z = 0f;
+            Vector3 new_pos = (xvec_i + (xvec_i - xvec_imin1)*25f/1000f)*Xpos_rate + pos_offset;
+            //Vector3 new_pos = new Vector3(xvec_i.x*Xpos_rate + pos_offset.x, xvec_i.y*Ypos_rate + pos_offset.y, xvec_i.z);
             Quaternion new_rot = target.transform.rotation;
             character.transform.position = new_pos;
 

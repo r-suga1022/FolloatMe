@@ -187,7 +187,7 @@ public class SerialSendNew : MonoBehaviour
         delta_x_i = x_i - x_imin1;
         delta_ms_per_flame_i = ms_per_flame_i - ms_per_flame_imin1;
         pulse_width = (int)((a*delta_t) / (1000f*delta_x_i));
-        if (Math.Abs(delta_x_i) <= 0.00004f) pulse_width = MAX_PULSEWIDTH;
+        if (Math.Abs(delta_x_i) <= 0.0001f) pulse_width = MAX_PULSEWIDTH;
         CalculationException();
 
 

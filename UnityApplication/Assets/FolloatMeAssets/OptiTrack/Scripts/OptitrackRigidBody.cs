@@ -163,12 +163,12 @@ public class OptitrackRigidBody : MonoBehaviour
         }
 
         // OptiTrackのノイズ対策（座標の変化量がある閾値以上であれば、動いたとみなす）
-        bool XChanged = Mathf.Abs(BeforePosition.x - rbStatePosition.x) > PositionChangeThreshold;
-        bool YChanged = Mathf.Abs(BeforePosition.y - rbStatePosition.y) > PositionChangeThreshold;
-        bool ZChanged = Mathf.Abs(BeforePosition.z - rbStatePosition.z) > PositionChangeThreshold;
-        //bool XChanged = (BeforePosition.x != rbStatePosition.x);
-        //bool YChanged = (BeforePosition.y != rbStatePosition.y);
-        //bool ZChanged = (BeforePosition.z != rbStatePosition.z);
+        //bool XChanged = Mathf.Abs(BeforePosition.x - rbStatePosition.x) > PositionChangeThreshold;
+        //bool YChanged = Mathf.Abs(BeforePosition.y - rbStatePosition.y) > PositionChangeThreshold;
+        //bool ZChanged = Mathf.Abs(BeforePosition.z - rbStatePosition.z) > PositionChangeThreshold;
+        bool XChanged = (BeforePosition.x != rbStatePosition.x);
+        bool YChanged = (BeforePosition.y != rbStatePosition.y);
+        bool ZChanged = (BeforePosition.z != rbStatePosition.z);
         PositionChanged = XChanged || YChanged || ZChanged;
         //PositionChanged = ZChanged;
         //UnityEngine.Debug.Log("before = "+BeforePosition.z+", rbstate = "+rbStatePosition.z);

@@ -4,33 +4,28 @@ using UnityEngine;
 
 public class CharacterOperation : MonoBehaviour
 {
+    // オブジェクト関係
+    public OptitrackRigidBody _target;
+    public GameObject _character;
 
-    public OptitrackRigidBody target;
-    // public Fairy character;
-    public GameObject character;
-
+    // 座標関係
     private Vector3 xvec_i;
-    public Vector3 pos_offset;
-    public Vector3 pos_offset_mousever;
-    private Vector3 latest_pos;
-    public float Xpos_rate;
-    public float Ypos_rate;
-
     private Vector3 xvec_imin1;
-    private Vector3 xvec_initial;
+    public Vector3 PositionOffset;
+    public Vector3 MousePositionOffset;
+    public float XPositionRate;
+    public float YPositionRate;
+    
 
-    bool IsFirstExecution = true;
-    public bool IsTrackingStop = false;
-
-    public bool mouse_prototyping;
-
+    // フラグ関係
+    public bool TrackingStop = false;
+    public bool MousePrototyping;
     bool CharacterRed = false;
 
-    public float proportion;
 
     void Start()
     {
-        xvec_initial = pos_offset;
+
     }
 
 
@@ -38,48 +33,47 @@ public class CharacterOperation : MonoBehaviour
     // void FixedUpdate()
     void LateUpdate()
     {
-        if (IsTrackingStop) return;
+        if (TrackingStop) return;
 
-        // プロトタイプ段階ではマウス座標
-        if (mouse_prototyping) {
+        // マウスに追従させるテスト
+        if (MousePrototyping) {
             xvec_i = Input.mousePosition;
             xvec_i.z = 1.0f;
-            Vector3 world_xvec_i = Camera.main.ScreenToWorldPoint(xvec_i);
-            // character.Set_Position(xvec_i, pos_offset_mousever);
-            character.transform.position = xvec_i + pos_offset_mousever;
-            Debug.Log("Character Operation\n");
-        // トラッキング座標を用いた追従の実現
-        } else {
-            //if (!target.PositionChanged) return;
-            xvec_imin1 = xvec_i;
-            xvec_i = target.rbStatePosition;
-            xvec_i.z = 0f;
-            //Vector3 new_pos = xvec_imin1 + (xvec_i - xvec_imin1)*proportion;
-            //Vector3 new_pos = xvec_i;
-            //xvec_i.z = 1f;
-            //Vector3 new_pos = Camera.main.ScreenToWorldPoint(xvec_i); //new_pos.z = 0f;
-            Vector3 new_pos = (xvec_i + (xvec_i - xvec_imin1)*25f/1000f)*Xpos_rate + pos_offset;
-            //Vector3 new_pos = new Vector3(xvec_i.x*Xpos_rate + pos_offset.x, xvec_i.y*Ypos_rate + pos_offset.y, xvec_i.z);
-            Quaternion new_rot = target.transform.rotation;
-            character.transform.position = new_pos;
+            Vector3 NewPosition = Camera.main.ScreenToWorldPoint(xvec_i);
+            _character.transform.position = NewPosition + MousePositionOffset;
 
-            if (target.LatencyMeasuring)
+        // トラッキングに基づく追従
+        } else {
+            // 座標取得
+            xvec_imin1 = xvec_i;
+            xvec_i = _target.rbStatePosition;
+
+            // 座標計算
+            float NewPositionX = (xvec_i.x + (xvec_i.x - xvec_imin1.x)*25f/1000f)*XPositionRate + PositionOffset.x;
+            float NewPositionY = (xvec_i.y + (xvec_i.y - xvec_imin1.y)*25f/1000f)*YPositionRate + PositionOffset.y;
+            Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, 0f);
+
+            // 姿勢
+            Quaternion new_rot = _target.rbStateRotation;
+
+            _character.transform.position = NewPosition;
+
+
+            // 遅延測定の際、色を変える
+            if (_target.LatencyMeasuring)
             {
-                if (target.PositionChanged && !CharacterRed)
+                if (_target.PositionChanged && !CharacterRed)
                 {
-                    character.GetComponent<Renderer>().material.color = Color.red;
+                    _character.GetComponent<Renderer>().material.color = Color.red;
                     CharacterRed = true;
                 }
 
                 if (Input.GetKeyDown(KeyCode.W))
-                //if (!target.PositionChanged && CharacterRed)
                 {
-                    character.GetComponent<Renderer>().material.color = Color.white;
+                    _character.GetComponent<Renderer>().material.color = Color.white;
                     CharacterRed = false;
                 }
             }
-            // Debug.Log("鉛直、水平方向にキャラクターを移動");
-            // character.transform.rotation = new_rot;
         }
     }
 }

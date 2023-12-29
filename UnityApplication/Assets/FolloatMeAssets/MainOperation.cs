@@ -5,15 +5,11 @@ using UnityEngine.UI;
 
 public class MainOperation : MonoBehaviour
 {
-    public CharacterOperation charaope;
-    public SerialSendNew serisend;
-    public SerialReceive serirece;
+    public CharacterOperation _CharacterOperation;
+    public SerialSendNew _SerialSend;
+    public SerialReceive _SerialReceive;
 
-    public bool mouse_prototyping;
-
-    public Text deltaTimeText;
-    
-    int count = 0;
+    public bool MousePrototyping;
 
     // Start is called before the first frame update
     void Start()
@@ -23,23 +19,18 @@ public class MainOperation : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
         // マウスプロトタイピングか、Optiによるトラッキングか
-        charaope.mouse_prototyping = this.mouse_prototyping;
-
+        _CharacterOperation.MousePrototyping = this.MousePrototyping;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A)) {
-            bool charaflag = charaope.IsTrackingStop;
-            bool serialflag = serisend.IsSendStop;
+            bool TrackingStop = _CharacterOperation.TrackingStop;
+            bool SendStop = _SerialSend.SendStop;
 
-            charaope.IsTrackingStop = !charaflag;
-            serisend.IsSendStop = !serialflag;
+            _CharacterOperation.TrackingStop = !TrackingStop;
+            _SerialSend.SendStop = !SendStop;
         }
-
-        //Debug.Log("deltaTime = "+Time.deltaTime);
-        ++count;
-        deltaTimeText.text = count.ToString();
     }
 }

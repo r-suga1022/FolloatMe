@@ -89,7 +89,6 @@ public class SerialHandler : MonoBehaviour
         try {
             serialPort_.Write(message);
             // serialPort_.Flush();
-            // Debug.Log("Write\n");
         } catch (System.Exception e) {
             Debug.LogWarning(e.Message);
         }

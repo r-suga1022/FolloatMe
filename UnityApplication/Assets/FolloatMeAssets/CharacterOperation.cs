@@ -54,7 +54,7 @@ public class CharacterOperation : MonoBehaviour
             Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, 0f);
 
             // 姿勢
-            Quaternion new_rot = _target.rbStateRotation;
+            Quaternion new_rot = _target.rbStateOrientation;
 
             _character.transform.position = NewPosition;
 

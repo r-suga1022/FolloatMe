@@ -1,72 +1,50 @@
 /* 別スレッドでパルス幅を計算し、シリアル通信で送信する */
-/* 注意：ここでいうパルス幅とは、立ち上がり時間（立ち下がり時間）のことを指している */
 
 
 using UnityEngine;
-using System.Threading;
-using System.Threading.Tasks;
-using UnityEngine.Profiling;
-using System.Diagnostics;
+using UnityEngine.UI;
 using UnityEngine.Profiling;
 using System;
-using UnityEngine.UI;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
 
 public class SerialSendNew : MonoBehaviour
 {
+    // オブジェクト関係
     // シリアル通信関係
-    public SerialHandler serialHandler; // シリアル通信の核
-
-    // オブジェクト関連のフィールド
-    public OptitrackRigidBody target; // トラッキング座標を有するオブジェクト
-
+    // SynchronizationContextを使っていたこともあった
+    public SerialHandler _serialHandler;
+    public OptitrackRigidBody _target;
     public Record _record;
-
-    // パルス幅の最大・最小
-    public int MAX_PULSEWIDTH;
-    public int MIN_PULSEWIDTH;
+    Stopwatch stopWatch;
 
     // 座標系統
     public Vector3 TrackedPosition; // 取得座標
-    float x_i = 0f;
-    float x_imin1 = 0f; // 前のフレームでのトラッキングx座標
-    float delta_x_i; // x座標の差分
+    float z_i = 0f; // 現在のフレームでのトラッキングz座標
+    float z_imin1 = 0f; // 前のフレームでのトラッキングz座標
+    float delta_z; // z座標の差分
     int pulse_width; // パルス幅
-    int w_i, w_imin1, delta_w_i, delta_w_i_inelse;
+    int w_i, w_imin1, delta_w;
     public int n, i;
 
-    // フラグ関係
-    bool Flag_loop = true; // 別スレッドを実行し続けるか否か
-    bool IsFirstExecution = true; // これが一番最初の実行であるか否か
-    public bool IsSendStop; // シリアル通信で送るのをストップしているか否か
-    bool PulseWidthWasSent = false;
-    bool Accelerated = false;
-    bool IsRecording = false; // パルス幅をファイルに記録しているか否か
-    bool TrackingDone = false;
-    bool PulseWidthWasCalculated = false;
-    public bool MousePrototyping;
-
-    public bool Exception = false;
-
-
-    int RecordCount = 0; // 記録ファイル数
-
-    float ms_per_flame_i = 0; // 実行開始からの時刻
-    float ms_per_flame_imin1 = 0; // ms_per_flameの1フレーム前
-    float delta_ms_per_flame_i = 0; // ms_per_flameの前フレームとの差分
-
-    float delta_t;
-
+    // 数値関係
+    public int MAX_PULSEWIDTH; // パルス幅の最大
+    public int MIN_PULSEWIDTH; // パルス幅の最小
     public float a; // パルス幅計算式の係数
+    float delta_t; // トラッキングの時間間隔
+    long TimeInOneFrameBefore = 0;
+    long TimeInCurrentFrame = 0;
+    long FrameInterval = 0;
 
-    public Text PulseWidthText;
-
-    // タイマー
-    Stopwatch stopWatch;
-
-    SynchronizationContext context;
-
-
-    public int ActuatorStep;
+    // フラグ関係
+    bool ThreadExecution = true; // 別スレッドを実行し続けるか否か
+    bool FirstExecution = true; // これが一番最初の実行であるか否か
+    public bool SendStop; // シリアル通信で送るのをストップしているか否か
+    bool TrackingDone = false; // トラッキングが完了したか否か
+    bool PulseWidthWasSent = false; // パルス幅が送信されたか否か
+    public bool Exception = false; // 例外があるか否か
 
 
     void Start()
@@ -76,22 +54,17 @@ public class SerialSendNew : MonoBehaviour
 
     void OnApplicationQuit()//アプリ終了時の処理（無限ループを解放）
     {
-        Flag_loop = false;//無限ループフラグを下げる
+        ThreadExecution = false;//無限ループフラグを下げる
     }
 
-
-    long TimeInOneFrameBefore = 0;
-    long TimeInCurrentFrame = 0;
-    long FrameInterval = 0;
     void Thread_1()
     {
-        context = SynchronizationContext.Current;
         stopWatch = new Stopwatch();
         stopWatch.Start();
 
         Task.Run(() =>
         {
-            while (Flag_loop)//無限ループフラグをチェック
+            while (ThreadExecution)//無限ループフラグをチェック
             {
                 try
                 {
@@ -108,48 +81,34 @@ public class SerialSendNew : MonoBehaviour
 
 
     public void CalculatePulseWidth() {
+        // 前のパルス幅送信から1ms以上経ってから次のパルス幅を送る
+        TimeInOneFrameBefore = TimeInCurrentFrame;
         TimeInCurrentFrame = stopWatch.ElapsedMilliseconds;
         FrameInterval = TimeInCurrentFrame - TimeInOneFrameBefore;
-        // UnityEngine.Debug.Log("FrameInterval = "+FrameInterval);
         if (FrameInterval < 1) return;
-        TimeInOneFrameBefore = TimeInCurrentFrame;
-        
-        //if (Exception) return;
-
-        if (IsSendStop) {
-            IsFirstExecution = true;
+        if (SendStop) {
+            FirstExecution = true;
             pulse_width = MAX_PULSEWIDTH;
             return;
         }
 
-        if (IsFirstExecution) FirstExecution();
-
-        MeasureTime();
-
-        if (TrackingDone) 
+        // パルス幅計算
+        if (TrackingDone)
         {
             iequalszero();
             pulse_width = w_imin1;
             //return;
         }
         else acceleration();
-
-        // シリアル通信で渡す
-        // これでは、iequalszeroで計算されたパルスを渡した後、加減速でいったんもとのパルス幅に戻り、もう一度計算されたパルス幅に戻るようになってしまう。
-        // ここを直す。
-
-        if (target.LatencyMeasuring)
+        if (_target.LatencyMeasuring)
         {
             pulse_width = MAX_PULSEWIDTH;
         }
 
-        serialHandler.Write(pulse_width.ToString()+"\n");
-        
-        //UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
+        // パルス幅送信
+        _serialHandler.Write(pulse_width.ToString()+"\n");
         PulseWidthWasSent = true;
         _record.pulsewidth_list.Add(pulse_width);
-        //PulseWidthText.text = pulse_width.ToString();
-        // PulseWidthText.text = ActuatorStep.ToString();
     }
 
 
@@ -157,59 +116,52 @@ public class SerialSendNew : MonoBehaviour
     void iequalszero()
     {
         // トラッキングされた座標、時間を取得
-        delta_t = target.tracking_interval;
-        TrackedPosition = target.rbStatePosition;
+        delta_t = _target.tracking_interval;
+        TrackedPosition = _target.rbStatePosition;
 
-
-        //
         // トラッキングし始めて一番最初の実行の時
-        if (IsFirstExecution) {
-            UnityEngine.Debug.Log("First");
+        if (FirstExecution) {
+            // トラッキング座標が初期値のままだったらまだ計算しない
+            // （いきなり最高速度で動き出すことを防ぐため）
             if (TrackedPosition.z == 0) return;
-            IsFirstExecution = false;
-            x_i = -TrackedPosition.z;
-            x_imin1 = -TrackedPosition.z;
+            FirstExecution = false;
+            z_i = -TrackedPosition.z;
+            z_imin1 = -TrackedPosition.z;
             pulse_width = MAX_PULSEWIDTH;
             w_i = pulse_width;
             w_imin1 = pulse_width;
             return;
         }
-        //
 
-
-
-        x_imin1 = x_i;
-        x_i = -TrackedPosition.z;
+        z_imin1 = z_i;
+        z_i = -TrackedPosition.z;
 
         // ---- パルス幅の計算 ----
         // 簡略化した式（２変数関数）で計算
         w_imin1 = pulse_width;
-        delta_x_i = x_i - x_imin1;
-        delta_ms_per_flame_i = ms_per_flame_i - ms_per_flame_imin1;
-        pulse_width = (int)((a*delta_t) / (1000f*delta_x_i));
-        if (Math.Abs(delta_x_i) <= 0.00004f) pulse_width = MAX_PULSEWIDTH;
+        delta_z = z_i - z_imin1;
+        pulse_width = (int)((a*delta_t) / (1000f*delta_z));
+        if (Math.Abs(delta_z) <= 0.00004f) pulse_width = MAX_PULSEWIDTH;
         CalculationException();
 
-
         w_i = pulse_width;
-        delta_w_i = w_i - w_imin1;
+        delta_w = w_i - w_imin1;
 
-        UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
+        // UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
         i = 0;
     }
 
 
-    int BlankCount = 0;
     void acceleration()
     {    
         if (i <= n)
         {
-            if (delta_w_i == 0) pulse_width = w_i;
+            if (delta_w == 0) pulse_width = w_i;
             else if (w_imin1*w_i > 0)
             {
-                pulse_width = (int)(w_imin1 + (float)(delta_w_i*i)/ (float)n);
+                pulse_width = (int)(w_imin1 + (float)(delta_w*i)/ (float)n);
             }
             else if (w_imin1*w_i < 0)
             {
@@ -221,8 +173,8 @@ public class SerialSendNew : MonoBehaviour
                 {
                     w_i = -MAX_PULSEWIDTH;
                 }
-                delta_w_i = w_i - w_imin1;
-                pulse_width = (int)(w_imin1 + (float)(delta_w_i*i)/ (float)n);
+                delta_w = w_i - w_imin1;
+                pulse_width = (int)(w_imin1 + (float)(delta_w*i)/ (float)n);
             }
         }
         else
@@ -232,7 +184,7 @@ public class SerialSendNew : MonoBehaviour
         ++i;
 
         CalculationException();
-        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", delta_ms_per_flame = "+delta_ms_per_flame_i+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_x_i = "+delta_x_i+", x_i = "+x_i+", x_imin1 = "+x_imin1+", tracking = "+TrackingDone);
+        // UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)
@@ -253,24 +205,5 @@ public class SerialSendNew : MonoBehaviour
             if (pulse_width >= 0 ) pulse_width = MIN_PULSEWIDTH;
             else pulse_width = -MIN_PULSEWIDTH;
         }
-    }
-
-
-    void MeasureTime()
-    {
-        if (stopWatch.IsRunning) {
-            stopWatch.Stop();
-            ms_per_flame_imin1 = ms_per_flame_i;
-            ms_per_flame_i = (float)stopWatch.ElapsedMilliseconds;
-        }
-        stopWatch.Start();
-    }
-
-    void FirstExecution()
-    {
-        //IsFirstExecution = false;
-        pulse_width = w_i = w_imin1 = MAX_PULSEWIDTH;
-        
-        //WaitForStabilization();
     }
 }

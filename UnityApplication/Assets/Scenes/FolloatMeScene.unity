@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18381754, g: 0.22847202, b: 0.3002995, a: 1}
+  m_IndirectSpecularColor: {r: 0.18381761, g: 0.22847213, b: 0.3002996, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -325,22 +325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c856adb830b886c42b4ea26c254a6fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  con: {fileID: 0}
-  anim: {fileID: 0}
-  position: {x: 0, y: 0, z: 0}
-  delta_position: {x: 0, y: 0, z: 0}
-  before_position: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  positions_list: []
-  normalSpeed: 6
-  sprintSpeed: 5
-  jump: 8
-  gravity: 0
-  moveDirection: {x: 0, y: 0, z: 0}
-  IsFirstExecution: 1
-  followdelay: 0
-  count: 0
 --- !u!1 &233560353
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,8 +946,10 @@ MonoBehaviour:
   _serialsend: {fileID: 1069388187}
   tracking_interval: 0
   PositionChanged: 0
+  TrackingDone: 0
+  PositionChangePositive: 0
   MousePrototyping: 0
-  LatencyMeasuring: 0
+  LatencyMeasuring: 1
   EventMethod:
     m_PersistentCalls:
       m_Calls:
@@ -1341,13 +1327,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840b6332ce1628e4d97dd4a4e77059b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
-  _character: {fileID: 0}
-  PositionOffset: {x: 0, y: 0, z: 0}
+  _target: {fileID: 639163501}
+  _character: {fileID: 447046617}
+  PositionOffset: {x: 0, y: -0.2, z: 0}
   MousePositionOffset: {x: 0, y: 0, z: 0}
-  XPositionRate: 0
-  YPositionRate: 0
-  TrackingStop: 0
+  XPositionRate: 4.878049
+  YPositionRate: 4.878049
+  TrackingStop: 1
   MousePrototyping: 0
 --- !u!1001 &810972906
 PrefabInstance:
@@ -1752,44 +1738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f495865bb47814f978a3cf0f7e5d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serialHandler: {fileID: 233560355}
-  cube: {fileID: 0}
-  cube_position: {x: 0, y: 0, z: 0}
-  target: {fileID: 639163500}
-  _record: {fileID: 286224546}
-  MAX_PULSEWIDTH: 10000
-  MIN_PULSEWIDTH: 10
-  pulsewidth_text_object: {fileID: 0}
-  pos: {x: 0, y: 0, z: 0}
-  x_i: 0
-  x_imin1: 0
-  delta_x_i: 0
-  w_i: 0
-  w_imin1: 0
-  pulse_width: 0
-  delta_w_i: 0
-  delta_w_i_inelse: 0
-  x_origin: 0
-  s_x_i: 0
-  s_x_iplus1: 0
-  sum_x_i: 0
-  Flag_loop: 1
-  IsFirstExecution: 1
-  IsSendStop: 1
-  IsActuatorStop: 1
-  IsRecording: 0
-  wast_tracking_done: 0
-  RecordCount: 0
-  i: 0
-  n: 5
-  N_send: 500000
-  step_max: 0
-  z_max: 0
-  pos_rate: 0
-  flame_count: 0
-  ms_per_flame_i: 0
-  ms_per_flame_imin1: 0
-  delta_ms_per_flame_i: 0
 --- !u!114 &1069388186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,40 +1750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c18e54dd9cfcd0478add76c23f1cf39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serialHandler: {fileID: 233560355}
-  cube: {fileID: 0}
-  cube_position: {x: 0, y: 0, z: 0}
-  target: {fileID: 639163500}
-  MAX_PULSEWIDTH: 10000
-  MIN_PULSEWIDTH: 10
-  pulsewidth_text_object: {fileID: 0}
-  pos: {x: 0, y: 0, z: 0}
-  x_i: 0
-  x_imin1: 0
-  delta_x_i: 0
-  w_i: 0
-  w_imin1: 0
-  pulse_width: 0
-  delta_w_i: 0
-  delta_w_i_inelse: 0
-  x_origin: 0
-  s_x_i: 0
-  s_x_iplus1: 0
-  sum_x_i: 0
-  Flag_loop: 1
-  IsFirstExecution: 1
-  IsSendStop: 1
-  IsActuatorStop: 1
-  i: 0
-  n: 5
-  N_send: 3000000
-  step_max: 0
-  z_max: 0
-  pos_rate: 0
-  flame_count: 0
-  ms_per_flame_i: 0
-  ms_per_flame_imin1: 0
-  delta_ms_per_flame_i: 0
 --- !u!114 &1069388187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1857,7 +1771,7 @@ MonoBehaviour:
   MAX_PULSEWIDTH: 10000
   MIN_PULSEWIDTH: 10
   a: 5
-  SendStop: 0
+  SendStop: 1
   Exception: 0
 --- !u!1 &1116657741
 GameObject:
@@ -1903,9 +1817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32298e7e02c4175428c64275c1529916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _CharacterOperation: {fileID: 0}
-  _SerialSend: {fileID: 0}
-  _SerialReceive: {fileID: 0}
+  _CharacterOperation: {fileID: 762647898}
+  _SerialSend: {fileID: 1069388187}
+  _SerialReceive: {fileID: 1032185113}
   MousePrototyping: 0
 --- !u!1 &1118456154
 GameObject:
@@ -2015,8 +1929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5339a43e67abf448bddee722984eafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFrameRate: 240
-  vSyncCount: 0
+  targetFrameRate: 360
+  vSyncCount: 1
 --- !u!4 &1567495785
 Transform:
   m_ObjectHideFlags: 0

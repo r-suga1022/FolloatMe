@@ -29,9 +29,9 @@ public class CharacterOperation : MonoBehaviour
     }
 
 
-    // void Update()
+    void Update()
     // void FixedUpdate()
-    void LateUpdate()
+    // void LateUpdate()
     {
         if (TrackingStop) return;
 
@@ -56,16 +56,20 @@ public class CharacterOperation : MonoBehaviour
             // 姿勢
             Quaternion new_rot = _target.rbStateOrientation;
 
-            _character.transform.position = NewPosition;
-
 
             // 遅延測定の際、色を変える
             if (_target.LatencyMeasuring)
             {
-                if (_target.PositionChanged && !CharacterRed)
+                if (_target.TrackingDone && _target.PositionChangePositive && !CharacterRed)
                 {
                     _character.GetComponent<Renderer>().material.color = Color.red;
                     CharacterRed = true;
+                }
+
+                else if (_target.TrackingDone && !_target.PositionChangePositive && CharacterRed)
+                {
+                    _character.GetComponent<Renderer>().material.color = Color.white;
+                    CharacterRed = false;
                 }
 
                 if (Input.GetKeyDown(KeyCode.W))
@@ -74,6 +78,8 @@ public class CharacterOperation : MonoBehaviour
                     CharacterRed = false;
                 }
             }
+
+            _character.transform.position = NewPosition;
         }
     }
 }

@@ -181,7 +181,6 @@ public class SerialSendNew : MonoBehaviour
         {
             pulse_width = w_i;
         }
-        ++i;
 
         CalculationException();
         // UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);

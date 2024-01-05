@@ -149,17 +149,17 @@ public class OptitrackRigidBody : MonoBehaviour
         }
 
         // OptiTrackのノイズ対策（座標の変化量がある閾値以上であれば、動いたとみなす）
-        bool XChanged = Mathf.Abs(BeforePosition.x - rbStatePosition.x) > PositionChangeThreshold;
-        bool YChanged = Mathf.Abs(BeforePosition.y - rbStatePosition.y) > PositionChangeThreshold;
-        bool ZChanged = Mathf.Abs(BeforePosition.z - rbStatePosition.z) > PositionChangeThreshold;
+        //bool XChanged = Mathf.Abs(BeforePosition.x - rbStatePosition.x) > PositionChangeThreshold;
+        //bool YChanged = Mathf.Abs(BeforePosition.y - rbStatePosition.y) > PositionChangeThreshold;
+        //bool ZChanged = Mathf.Abs(BeforePosition.z - rbStatePosition.z) > PositionChangeThreshold;
         bool XTrackingDone = (BeforePosition.x != rbStatePosition.x);
         bool YTrackingDone = (BeforePosition.y != rbStatePosition.y);
         bool ZTrackingDone = (BeforePosition.z != rbStatePosition.z);
-        bool XChangePositive = (rbStatePosition.x - BeforePosition.x) > PositionChangeThreshold;
-        bool ZChangePositive = (rbStatePosition.z - BeforePosition.z) > PositionChangeThreshold;
-        PositionChanged = XChanged || YChanged || ZChanged;
-        TrackingDone = XTrackingDone || YTrackingDone || ZTrackingDone;
-        PositionChangePositive = XChangePositive || ZChangePositive;
+        //bool XChangePositive = (rbStatePosition.x - BeforePosition.x) > PositionChangeThreshold;
+        //bool ZChangePositive = (rbStatePosition.z - BeforePosition.z) > PositionChangeThreshold;
+        //PositionChanged = XChanged || YChanged || ZChanged;
+        TrackingDone = XTrackingDone | YTrackingDone | ZTrackingDone;
+        //PositionChangePositive = XChangePositive || ZChangePositive;
         //PositionChanged = ZChanged;
         //UnityEngine.Debug.Log("before = "+BeforePosition.z+", rbstate = "+rbStatePosition.z);
 
@@ -169,8 +169,8 @@ public class OptitrackRigidBody : MonoBehaviour
             tracking_time_n_1 = tracking_time_n;
             tracking_time_n = stopWatch.ElapsedMilliseconds;
             //tracking_interval = tracking_time_n - tracking_time_n_1;
-            tracking_interval = 1f/120f*1000f;
         }
+        tracking_interval = 1f/120f*1000f;
 
         // UnityEngine.Debug.Log("Rigidbody:tracking_interval = "+tracking_interval+", position changed = "+PositionChanged+", before.z = "+BeforePosition.z+", after.z = "+rbStatePosition.z);
         //EventMethod?.Invoke();

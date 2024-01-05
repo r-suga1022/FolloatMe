@@ -117,7 +117,7 @@ void loop() {
     DoesStop = (pulse_width >= MAX_PULSEWIDTH);
     //digitalWrite(LEDPin, !DoesStop);
     //Serial.println("from micon = "+pulse_width);
-    //Serial.println(step_count/2);
+    Serial.println(step_count/2);
   }
   //Serial.println("from_micon = "+pulse_width);
   //Serial.println("36000");

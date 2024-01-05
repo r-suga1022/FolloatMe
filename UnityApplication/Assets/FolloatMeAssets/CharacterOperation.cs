@@ -15,12 +15,17 @@ public class CharacterOperation : MonoBehaviour
     public Vector3 MousePositionOffset;
     public float XPositionRate;
     public float YPositionRate;
+
+    float NewPositionX, NewPositionY;
+    float BeforePositionX, BeforePositionY;
+    public float MoveThreshold;
     
 
     // フラグ関係
     public bool TrackingStop = false;
     public bool MousePrototyping;
     bool CharacterRed = false;
+    bool PositionChanged = false;
 
 
     void Start()
@@ -49,24 +54,32 @@ public class CharacterOperation : MonoBehaviour
             xvec_i = _target.rbStatePosition;
 
             // 座標計算
-            float NewPositionX = (xvec_i.x + (xvec_i.x - xvec_imin1.x)*25f/1000f)*XPositionRate + PositionOffset.x;
-            float NewPositionY = (xvec_i.y + (xvec_i.y - xvec_imin1.y)*25f/1000f)*YPositionRate + PositionOffset.y;
+            BeforePositionX = NewPositionX; BeforePositionY = NewPositionY;
+            NewPositionX = (xvec_i.x + (xvec_i.x - xvec_imin1.x)*25f/1000f)*XPositionRate + PositionOffset.x;
+            NewPositionY = (xvec_i.y + (xvec_i.y - xvec_imin1.y)*25f/1000f)*YPositionRate + PositionOffset.y;
+            //NewPositionX = xvec_i.x*XPositionRate + PositionOffset.x;
+            //NewPositionY = xvec_i.y*YPositionRate + PositionOffset.y;
             Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, 0f);
 
             // 姿勢
             Quaternion new_rot = _target.rbStateOrientation;
 
+            bool XChanged = Mathf.Abs(NewPositionX - BeforePositionX) > MoveThreshold;
+            //bool YChangedPositive = (NewPositionY - BeforePositionY) > MoveThreshold;
+            bool YChanged = false;
+            PositionChanged = XChanged | YChanged;
+
 
             // 遅延測定の際、色を変える
             if (_target.LatencyMeasuring)
             {
-                if (_target.TrackingDone && _target.PositionChangePositive && !CharacterRed)
+                if (_target.TrackingDone && PositionChanged && !CharacterRed)
                 {
                     _character.GetComponent<Renderer>().material.color = Color.red;
                     CharacterRed = true;
                 }
 
-                else if (_target.TrackingDone && !_target.PositionChangePositive && CharacterRed)
+                else if (_target.TrackingDone && !PositionChanged && CharacterRed)
                 {
                     _character.GetComponent<Renderer>().material.color = Color.white;
                     CharacterRed = false;
@@ -79,6 +92,7 @@ public class CharacterOperation : MonoBehaviour
                 }
             }
 
+            //if (!PositionChanged) NewPosition = BeforePosition;
             _character.transform.position = NewPosition;
         }
     }

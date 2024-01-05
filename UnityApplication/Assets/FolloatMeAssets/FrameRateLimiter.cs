@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FrameRateLimiter : MonoBehaviour
 {
     [SerializeField] public int targetFrameRate;
     [SerializeField] public int vSyncCount;
+
+    public Text _IntervalText;
 
     void Awake()
     {
@@ -18,5 +21,6 @@ public class FrameRateLimiter : MonoBehaviour
         {
             Application.targetFrameRate = targetFrameRate;
         }
+        //_IntervalText.text = Time.deltaTime.ToString();
     }
 }

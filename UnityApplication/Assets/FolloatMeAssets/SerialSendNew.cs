@@ -34,6 +34,7 @@ public class SerialSendNew : MonoBehaviour
     public int MIN_PULSEWIDTH; // パルス幅の最小
     public float a; // パルス幅計算式の係数
     float delta_t; // トラッキングの時間間隔
+    public float MoveThreshold;
     long TimeInOneFrameBefore = 0;
     long TimeInCurrentFrame = 0;
     long FrameInterval = 0;
@@ -85,6 +86,7 @@ public class SerialSendNew : MonoBehaviour
         TimeInOneFrameBefore = TimeInCurrentFrame;
         TimeInCurrentFrame = stopWatch.ElapsedMilliseconds;
         FrameInterval = TimeInCurrentFrame - TimeInOneFrameBefore;
+        
         if (FrameInterval < 1) return;
         if (SendStop) {
             FirstExecution = true;
@@ -102,7 +104,7 @@ public class SerialSendNew : MonoBehaviour
         else acceleration();
         if (_target.LatencyMeasuring)
         {
-            pulse_width = MAX_PULSEWIDTH;
+            //pulse_width = MAX_PULSEWIDTH;
         }
 
         // パルス幅送信
@@ -141,13 +143,13 @@ public class SerialSendNew : MonoBehaviour
         w_imin1 = pulse_width;
         delta_z = z_i - z_imin1;
         pulse_width = (int)((a*delta_t) / (1000f*delta_z));
-        if (Math.Abs(delta_z) <= 0.00004f) pulse_width = MAX_PULSEWIDTH;
+        if (Math.Abs(delta_z) <= MoveThreshold) pulse_width = MAX_PULSEWIDTH;
         CalculationException();
 
         w_i = pulse_width;
         delta_w = w_i - w_imin1;
 
-        // UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
         i = 0;
@@ -182,8 +184,10 @@ public class SerialSendNew : MonoBehaviour
             pulse_width = w_i;
         }
 
+        ++i;
+
         CalculationException();
-        // UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)

@@ -91,24 +91,6 @@ public class OptitrackRigidBody : MonoBehaviour
     }
 
 
-    // 別スレッドにするなら
-    /*
-    public int i, n;
-    void Thread_1()
-    {
-        while (i++ < n) continue;
-        Task.Run(() => 
-        {
-            while (LoopFlag)
-            {
-                
-                UpdatePose();
-                _serialsend.SetWasTrackingDone(PositionChanged);
-            }
-        });
-    }
-    */
-
 
 #if UNITY_2017_1_OR_NEWER
     void OnEnable()

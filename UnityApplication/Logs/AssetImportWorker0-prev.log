@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.19f1 (c9714fde33b6) revision 13201743'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'ja' Physical Memory: 8082 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'ja' Physical Memory: 65224 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/sugar/OneDrive/ドキュメント/小泉研究室/FolloatMe/UnityApplication
+C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56083
-Successfully changed project path to: C:/Users/sugar/OneDrive/ドキュメント/小泉研究室/FolloatMe/UnityApplication
-C:/Users/sugar/OneDrive/ドキュメント/小泉研究室/FolloatMe/UnityApplication
+62046
+Successfully changed project path to: C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
+C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,109 +47,109 @@ C:/Users/sugar/OneDrive/ドキュメント/小泉研究室/FolloatMe/UnityApplic
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7160] Host "[IP] 192.168.1.30 [Port] 0 [Flags] 2 [Guid] 345128033 [EditorId] 345128033 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-T0AVQSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [13744] Host "[IP] 172.21.127.232 [Port] 0 [Flags] 2 [Guid] 1131438486 [EditorId] 1131438486 [Version] 1048832 [Id] WindowsEditor(7,KoizumilabM16R1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [7160] Host "[IP] 192.168.1.30 [Port] 0 [Flags] 2 [Guid] 345128033 [EditorId] 345128033 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-T0AVQSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [13744] Host "[IP] 172.21.127.232 [Port] 0 [Flags] 2 [Guid] 1131438486 [EditorId] 1131438486 [Version] 1048832 [Id] WindowsEditor(7,KoizumilabM16R1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 261.61 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 64.77 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.19f1 (c9714fde33b6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/sugar/OneDrive/ドキュメント/小泉研究室/FolloatMe/UnityApplication/Assets
+[Subsystems] Discovering subsystems at path C:/Users/koizu/Sugawara/FolloatMe/UnityApplication/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 620 (ID=0x3ea0)
-    Vendor:   Intel
-    VRAM:     4041 MB
-    Driver:   26.20.100.7262
+    Renderer: NVIDIA GeForce RTX 4090 Laptop GPU (ID=0x2757)
+    Vendor:   NVIDIA
+    VRAM:     16064 MB
+    Driver:   31.0.15.3209
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56076
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.023917 seconds.
+Registered in 0.003311 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 168.53 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 46.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.465 seconds
+- Completed reload, in  0.671 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2466ms)
-		BeginReloadAssembly (266ms)
+	ReloadAssembly (671ms)
+		BeginReloadAssembly (138ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1746ms)
-			LoadAssemblies (262ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (425ms)
+			LoadAssemblies (138ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (295ms)
+			SetupTypeCache (149ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (86ms)
-			SetupLoadedEditorAssemblies (1231ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (202ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (169ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (704ms)
-				ProcessInitializeOnLoadMethodAttributes (341ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (46ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (108ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.017057 seconds.
+Registered in 0.003900 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\OneDrive\ドキュメント\小泉研究室\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\OneDrive\ドキュメント\小泉研究室\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.57 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.146 seconds
+- Completed reload, in  0.627 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3148ms)
-		BeginReloadAssembly (241ms)
+	ReloadAssembly (628ms)
+		BeginReloadAssembly (74ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (2665ms)
-			LoadAssemblies (210ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (494ms)
+			LoadAssemblies (52ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1476ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (102ms)
-			SetupLoadedEditorAssemblies (800ms)
+			SetupTypeCache (161ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (222ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (32ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (209ms)
-				ProcessInitializeOnLoadAttributes (509ms)
-				ProcessInitializeOnLoadMethodAttributes (36ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (49ms)
+				ProcessInitializeOnLoadAttributes (146ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 1.53 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3096 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (57.0 KB). Loaded Objects now: 3559.
-Memory consumption went from 114.8 MB to 114.8 MB.
-Total: 5.913800 ms (FindLiveObjects: 0.438300 ms CreateObjectMapping: 0.338600 ms MarkObjects: 4.962300 ms  DeleteObjects: 0.172800 ms)
+Unloading 3088 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (56.4 KB). Loaded Objects now: 3551.
+Memory consumption went from 113.9 MB to 113.9 MB.
+Total: 2.163100 ms (FindLiveObjects: 0.161400 ms CreateObjectMapping: 0.040900 ms MarkObjects: 1.900300 ms  DeleteObjects: 0.059800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,213 +159,1531 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2889112.807562 seconds.
-  path: Assets/Scenes/FolloatMeScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/FolloatMeScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7088c2c91a974f5bd78c45b1a4c1c1b') in 0.048677 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013773 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\OneDrive\ドキュメント\小泉研究室\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\OneDrive\ドキュメント\小泉研究室\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.836 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1837ms)
-		BeginReloadAssembly (232ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (58ms)
-		EndReloadAssembly (1403ms)
-			LoadAssemblies (141ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (553ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (75ms)
-			SetupLoadedEditorAssemblies (539ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (27ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (116ms)
-				ProcessInitializeOnLoadAttributes (347ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
-				AfterProcessingInitializeOnLoad (12ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.50 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3077 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 17 unused Assets / (24.7 KB). Loaded Objects now: 3562.
-Memory consumption went from 113.3 MB to 113.3 MB.
-Total: 4.988700 ms (FindLiveObjects: 0.359600 ms CreateObjectMapping: 0.308900 ms MarkObjects: 4.262100 ms  DeleteObjects: 0.056400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011820 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\OneDrive\ドキュメント\小泉研究室\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\OneDrive\ドキュメント\小泉研究室\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.92 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.127 seconds
-Domain Reload Profiling:
-	ReloadAssembly (4136ms)
-		BeginReloadAssembly (1162ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (79ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (359ms)
-		EndReloadAssembly (2606ms)
-			LoadAssemblies (381ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1031ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (142ms)
-			SetupLoadedEditorAssemblies (1037ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (49ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (216ms)
-				ProcessInitializeOnLoadAttributes (683ms)
-				ProcessInitializeOnLoadMethodAttributes (59ms)
-				AfterProcessingInitializeOnLoad (24ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 7.72 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (24.7 KB). Loaded Objects now: 3560.
-Memory consumption went from 113.2 MB to 113.2 MB.
-Total: 9.992500 ms (FindLiveObjects: 0.587000 ms CreateObjectMapping: 0.660600 ms MarkObjects: 8.610700 ms  DeleteObjects: 0.132000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.054682 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\OneDrive\ドキュメント\小泉研究室\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\OneDrive\ドキュメント\小泉研究室\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.36 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.219 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3227ms)
-		BeginReloadAssembly (964ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (59ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (407ms)
-		EndReloadAssembly (1924ms)
-			LoadAssemblies (284ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (794ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (118ms)
-			SetupLoadedEditorAssemblies (688ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (25ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (122ms)
-				ProcessInitializeOnLoadAttributes (469ms)
-				ProcessInitializeOnLoadMethodAttributes (52ms)
-				AfterProcessingInitializeOnLoad (17ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (21ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 6.34 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3069 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 20 unused Assets / (24.6 KB). Loaded Objects now: 3560.
-Memory consumption went from 113.1 MB to 113.1 MB.
-Total: 8.503000 ms (FindLiveObjects: 0.418800 ms CreateObjectMapping: 0.231800 ms MarkObjects: 7.581200 ms  DeleteObjects: 0.269300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 1165993.524136 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_MetallicSmoothness.png
+  artifactKey: Guid(a685c8f461a651a46a2631ea3decafae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_MetallicSmoothness.png using Guid(a685c8f461a651a46a2631ea3decafae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '59827af99edab8b30ce7c1d2074a5589') in 0.409932 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6376.401955 seconds.
-  path: Assets/Hovl Studio/Procedural fire/Materials/FireSphere1.mat
-  artifactKey: Guid(14fab0de6c54324468738e7b38a88207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hovl Studio/Procedural fire/Materials/FireSphere1.mat using Guid(14fab0de6c54324468738e7b38a88207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7711c684f8b57e4b72c04055af8706b') in 0.689083 seconds 
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Floor3.mat
+  artifactKey: Guid(ca6fd35d7de69cb449d560ab9228d502) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Floor3.mat using Guid(ca6fd35d7de69cb449d560ab9228d502) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f755bb39c741b702a6f4a40ea709130e') in 0.105233 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 293.108907 seconds.
-  path: Assets/Hovl Studio
-  artifactKey: Guid(91f8f006a1f9d794e9a81f24a1e768e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hovl Studio using Guid(91f8f006a1f9d794e9a81f24a1e768e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36ceb8e0177504f3c01e765fe489b96c') in 0.012277 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Controller/Nymph Fairy - Controller.controller
+  artifactKey: Guid(897cd8dfc98d1a3419beb6bccbf65e82) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Controller/Nymph Fairy - Controller.controller using Guid(897cd8dfc98d1a3419beb6bccbf65e82) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f0d133a8004ccd2977d2f374dcc460d') in 0.056297 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.145559 seconds.
-  path: Assets/FolloatMeAssets
-  artifactKey: Guid(a651696d5e54d3e47b23247e93c76eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FolloatMeAssets using Guid(a651696d5e54d3e47b23247e93c76eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7300569fa823bdbdfc6f3d63539179aa') in 0.017023 seconds 
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/Record.cs
+  artifactKey: Guid(eb34adf996d0653449b82ad5a36c1558) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Record.cs using Guid(eb34adf996d0653449b82ad5a36c1558) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ddb35e8cd72c07666fb69cf3dcc5bd9f') in 0.116584 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.379714 seconds.
-  path: Assets/pulsewidth.csv
-  artifactKey: Guid(93938f334f1816c419cb4179c772e181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/pulsewidth.csv using Guid(93938f334f1816c419cb4179c772e181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '392414adf7fb14e389ef1e70bfd738cf') in 0.034400 seconds 
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Normal.png
+  artifactKey: Guid(3a0dde7201a17f646865e8deeac56596) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Normal.png using Guid(3a0dde7201a17f646865e8deeac56596) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'eb10c031e4751ac4b8ee1f96960513b1') in 0.164216 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.601793 seconds.
-  path: Assets/FpsTestAsset
-  artifactKey: Guid(b3dff3604134b6a4c8bce2291b9917d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FpsTestAsset using Guid(b3dff3604134b6a4c8bce2291b9917d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbcd36875b0e51c287aa4b9feca7a535') in 0.012341 seconds 
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Legacy/Animations/Nymph Fairy@SpellCast.FBX
+  artifactKey: Guid(aefc404b619eaec4bb1d807f5f2b7ce4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Legacy/Animations/Nymph Fairy@SpellCast.FBX using Guid(aefc404b619eaec4bb1d807f5f2b7ce4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd442f2da34b97f4dd248f3e838d6d287') in 0.125789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/FolloatMeAssets/Animals_FREE/Prefabs/Pinguin_001.prefab
+  artifactKey: Guid(bc872a222baa3e541acaf7d390c1e9aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Animals_FREE/Prefabs/Pinguin_001.prefab using Guid(bc872a222baa3e541acaf7d390c1e9aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a2941972fb0b8a7b3d017c748e23cb57') in 0.106437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro green.prefab
+  artifactKey: Guid(3d35e81bdc5955041be098ef22e82a3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro green.prefab using Guid(3d35e81bdc5955041be098ef22e82a3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '025dab35904f2759bea4e848463cbe9a') in 0.117708 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Textures/FireSphere1.png
+  artifactKey: Guid(31679c4b857f0d140bd9566b86eb8674) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Textures/FireSphere1.png using Guid(31679c4b857f0d140bd9566b86eb8674) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5f674ba59f407f4ffa595382b536de06') in 0.113249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/ReflectionProbe-1.exr
+  artifactKey: Guid(6cd5e7294f0f7be4aa89e131da9505b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/ReflectionProbe-1.exr using Guid(6cd5e7294f0f7be4aa89e131da9505b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e49e20768f136e16e837ffd4ab39e414') in 0.125755 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Scenes/ARPoseTest.unity
+  artifactKey: Guid(dc19d125674d55e4395fbb75f6d6f855) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Scenes/ARPoseTest.unity using Guid(dc19d125674d55e4395fbb75f6d6f855) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '780e85739de308f0d971f36373711288') in 0.109568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Materials/FireSphere1.mat
+  artifactKey: Guid(14fab0de6c54324468738e7b38a88207) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Materials/FireSphere1.mat using Guid(14fab0de6c54324468738e7b38a88207) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3d826c81979997109454e0fbacc17f63') in 0.109745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/unitychan.prefab
+  artifactKey: Guid(412b92d4feeb9c548bfa98f62c4d1022) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/unitychan.prefab using Guid(412b92d4feeb9c548bfa98f62c4d1022) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fda2c3ed7a82318fe7e0fb83fd7b6d77') in 0.136853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Textures/Projectile-Blue.tga
+  artifactKey: Guid(e60d812714d2f1c468613b562db10c89) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Textures/Projectile-Blue.tga using Guid(e60d812714d2f1c468613b562db10c89) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c24024cc1f7e1c7bd53a2ac5c4283fed') in 0.117003 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Textures/Projectile-Pink.tga
+  artifactKey: Guid(83b62dde9b05f3047a3f2beca0ad5992) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Textures/Projectile-Pink.tga using Guid(83b62dde9b05f3047a3f2beca0ad5992) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c1b7f6198c34881c4384a9e064a250e4') in 0.130307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/Standard Assets/Characters/ThirdPersonCharacter/Models/Ethan.fbx
+  artifactKey: Guid(b235179bd2a63d1468dd430670338c55) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Standard Assets/Characters/ThirdPersonCharacter/Models/Ethan.fbx using Guid(b235179bd2a63d1468dd430670338c55) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c2b07121350c94f57e29dddde325e81b') in 0.150761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/SplashScreen/SplashScreen_Light.unity
+  artifactKey: Guid(3ad4f8c442f444c5e966898c99704b0f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/SplashScreen/SplashScreen_Light.unity using Guid(3ad4f8c442f444c5e966898c99704b0f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ef3bcdaac42e679b69a8b9043018ae64') in 0.046423 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/SplashScreen/SplashScreen_Dark.unity
+  artifactKey: Guid(c340d6b0ee7f347b98ecab4430cc5df6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/SplashScreen/SplashScreen_Dark.unity using Guid(c340d6b0ee7f347b98ecab4430cc5df6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '46285683ba3ebbf2dfbedd7a87d7496c') in 0.043477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FolloatMeAssets/Animals_FREE/Prefabs/Horse_001.prefab
+  artifactKey: Guid(d5eb1b3748b88e245b2033ba7e2d3fa1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Animals_FREE/Prefabs/Horse_001.prefab using Guid(d5eb1b3748b88e245b2033ba7e2d3fa1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cf23bd9d6485fb1a20f50b0e0726de97') in 0.096513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/WebPlayerTemplate.pdf
+  artifactKey: Guid(f0926b9bbecd94bda8b68e0c738a4526) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/WebPlayerTemplate.pdf using Guid(f0926b9bbecd94bda8b68e0c738a4526) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a7b273338b406b8bdf22b1edced5c77c') in 0.033677 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/OptiTrack/Scripts/OptitrackStreamingClient.cs
+  artifactKey: Guid(a331805347588fe4a8161c8875d24396) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/OptiTrack/Scripts/OptitrackStreamingClient.cs using Guid(a331805347588fe4a8161c8875d24396) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '848e0d7141f1a89fe180a7872c99b71e') in 0.014610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Legacy/Animations/Nymph Fairy@Die.FBX
+  artifactKey: Guid(51891ab5400e0d74f98bbbabb5b00f2b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Legacy/Animations/Nymph Fairy@Die.FBX using Guid(51891ab5400e0d74f98bbbabb5b00f2b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5cb331c8bf109fae079519ab7ee7fdef') in 0.182335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_WAIT01.fbx
+  artifactKey: Guid(1e79f5e733df84044a45d6ab05035627) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_WAIT01.fbx using Guid(1e79f5e733df84044a45d6ab05035627) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '894858598f1e9b92a8881e5c3fd076bb') in 0.186094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_JUMP01.fbx
+  artifactKey: Guid(87486f7b16eedbf4eb26567d70189058) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_JUMP01.fbx using Guid(87486f7b16eedbf4eb26567d70189058) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c75a9c78707c6249a21ab8c15a717dd4') in 0.141994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_ARpose1.fbx
+  artifactKey: Guid(e8397bfde2758f942a04edaaf7ad57ec) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_ARpose1.fbx using Guid(e8397bfde2758f942a04edaaf7ad57ec) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7f90cabd1150c89b416cde6b30630936') in 1.146153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire 2.prefab
+  artifactKey: Guid(529eb4216865eba419c1a4a68d0b0388) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire 2.prefab using Guid(529eb4216865eba419c1a4a68d0b0388) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4e74112140e4a69d5e083dbc2247ad6d') in 0.249635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001156 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Materials/eye_L1.mat
+  artifactKey: Guid(4987862c1c195e74c86994ba4bcbd812) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Materials/eye_L1.mat using Guid(4987862c1c195e74c86994ba4bcbd812) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '72be900ea6e3532acb0c5b8dea1466f9') in 0.017747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro red.prefab
+  artifactKey: Guid(eca000ab44c908d4dab395f654753038) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro red.prefab using Guid(eca000ab44c908d4dab395f654753038) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dd52ee2155a6981326f96f94676dd8d2') in 0.103450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Read me.txt
+  artifactKey: Guid(81b6354feaa320e41898db83b94d0b5e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Read me.txt using Guid(81b6354feaa320e41898db83b94d0b5e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a9ecf45057f2f68e78f2a2a9c596d38c') in 0.116096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Scripts/RandomWind.cs
+  artifactKey: Guid(a38e39ada51aaba4db6d352ce218849e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Scripts/RandomWind.cs using Guid(a38e39ada51aaba4db6d352ce218849e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5bc352d5e268f23868c816bd276c5584') in 0.106126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Materials/Nymph Fairy - Blue 1.mat
+  artifactKey: Guid(2e58d07bba36a0844be8ec3665fbd81d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Materials/Nymph Fairy - Blue 1.mat using Guid(2e58d07bba36a0844be8ec3665fbd81d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '73da3d1e0648b9feacc2177ce9d8bc8c') in 0.020383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Animations/Nymph Fairy@SpellCast.FBX
+  artifactKey: Guid(c6fbc9a0253e5b346ab7e607f2ca572a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Animations/Nymph Fairy@SpellCast.FBX using Guid(c6fbc9a0253e5b346ab7e607f2ca572a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9ac8589c6792725de9f8fd7cd0730bc4') in 0.102255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Scripts/SpringManager.cs
+  artifactKey: Guid(6514ba86f976d724ab63844a6015b2aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Scripts/SpringManager.cs using Guid(6514ba86f976d724ab63844a6015b2aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3bc49d9c1b39e4f7dc484234329a9ba0') in 0.011334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Materials/skin1.mat
+  artifactKey: Guid(ca131910d5c9a634dbdd38e77111033f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Materials/skin1.mat using Guid(ca131910d5c9a634dbdd38e77111033f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a9233625795db3fee8b0c9d57b340dbd') in 0.134148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/SplashScreen.pdf
+  artifactKey: Guid(c06525567be0e4cfd90dca3c8c626e98) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/SplashScreen.pdf using Guid(c06525567be0e4cfd90dca3c8c626e98) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '152fc6ff08e32be387ae22be342c5dbc') in 0.054388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0011.wav
+  artifactKey: Guid(874dc2aadd4204ec1987fcd17f8d7fb8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0011.wav using Guid(874dc2aadd4204ec1987fcd17f8d7fb8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3330bb8922ee5eb9e0658644d5a6163d') in 0.087312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0013.wav
+  artifactKey: Guid(23b4a85d442dc4abb8d2c6559b135c3c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0013.wav using Guid(23b4a85d442dc4abb8d2c6559b135c3c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '03e9aefa8d076ada2ac915d1c0407b3b') in 0.121762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0010.wav
+  artifactKey: Guid(d7c4040670e28478fbd49fd9b6060ac8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0010.wav using Guid(d7c4040670e28478fbd49fd9b6060ac8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dc3951d17b6f6752d9d573be3803c703') in 0.113520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0023.wav
+  artifactKey: Guid(436f01e35ef0542f8b42c9b0d0907ea2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0023.wav using Guid(436f01e35ef0542f8b42c9b0d0907ea2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '836b58cca6ccfab1df821fdde402647a') in 0.117801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Animations/Nymph Fairy@Die.FBX
+  artifactKey: Guid(392476e6b6a33cb4e8d95fc0499b7da9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Animations/Nymph Fairy@Die.FBX using Guid(392476e6b6a33cb4e8d95fc0499b7da9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2a9a2a231bfb7b8699cc944c599c6db2') in 0.110201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0026.wav
+  artifactKey: Guid(947cd1d02855e4e8ab6118488a12ec4d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0026.wav using Guid(947cd1d02855e4e8ab6118488a12ec4d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4dacebc416a7c8b220d92ac4281a7736') in 0.125021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Height.png
+  artifactKey: Guid(db368c1c85b12fe48aba6cc9bcd41f43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Height.png using Guid(db368c1c85b12fe48aba6cc9bcd41f43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dd3a840ba86624651496ff8624c49ade') in 0.019992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0002.wav
+  artifactKey: Guid(6ccbc3d284bd849d49fb1f8f94ab2888) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0002.wav using Guid(6ccbc3d284bd849d49fb1f8f94ab2888) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '12ee9022258c757c374a8a7c2923ee5d') in 0.144679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0031.wav
+  artifactKey: Guid(c5e4846ae1d7e4595bd81cfb31f819a2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0031.wav using Guid(c5e4846ae1d7e4595bd81cfb31f819a2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ec1e75f840a3f23178f05e10cbc5b594') in 0.114797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/SerialSend.cs
+  artifactKey: Guid(7ac8758bb28200c4e9e7abc7dd8fae2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/SerialSend.cs using Guid(7ac8758bb28200c4e9e7abc7dd8fae2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c7c8dec1358be0830a8252f7279db0f3') in 0.015894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0001.wav
+  artifactKey: Guid(eed2451bbd4264da8b6c27c92df62faf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0001.wav using Guid(eed2451bbd4264da8b6c27c92df62faf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ae470e0ea33fcd42da3e6767a241614d') in 0.109206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Models/unitychan.fbx
+  artifactKey: Guid(8f0565f23a2b58541a475bd3c1393052) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Models/unitychan.fbx using Guid(8f0565f23a2b58541a475bd3c1393052) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f662491be7c635f202f90f48b23a2d70') in 0.106579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0039.wav
+  artifactKey: Guid(5ca3d77953c5c40fdbd17d625c78ff78) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0039.wav using Guid(5ca3d77953c5c40fdbd17d625c78ff78) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3e7316a152d23548c50002a594892259') in 0.122743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0040.wav
+  artifactKey: Guid(2c9c70ceb0e7c471a9db3829f9954fc5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0040.wav using Guid(2c9c70ceb0e7c471a9db3829f9954fc5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7e336c616a15c7d50fd4687378d173dc') in 0.102325 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FolloatMeAssets/Animals_FREE/Materials/Color.mat
+  artifactKey: Guid(4bc6206bdc7c5144792f63d943f03532) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Animals_FREE/Materials/Color.mat using Guid(4bc6206bdc7c5144792f63d943f03532) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a1b1550e884a3236481f70e7d26944ed') in 0.036763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_ARpose2.fbx
+  artifactKey: Guid(edd51f298e7994c498b99bd24c098f52) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_ARpose2.fbx using Guid(edd51f298e7994c498b99bd24c098f52) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c9f1215b9b0544293853551bd8e671d8') in 2.790782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1048.wav
+  artifactKey: Guid(cc616918ae23a420fb52e5e6a8f0031e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1048.wav using Guid(cc616918ae23a420fb52e5e6a8f0031e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '75e976cd34fe81b420f3886820020e6d') in 0.118539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1031.wav
+  artifactKey: Guid(c66e87e26a6994c768b643743f6494cd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1031.wav using Guid(c66e87e26a6994c768b643743f6494cd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'de999690c0e6071854e831360dd25ff6') in 0.112321 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1030.wav
+  artifactKey: Guid(f5f3e09ef248149918ae12fcee944309) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1030.wav using Guid(f5f3e09ef248149918ae12fcee944309) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f7a54b0f8cd53574907f8b1b85dd1470') in 0.110643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0024.wav
+  artifactKey: Guid(168b099abe87a4431ba16dfd3d78df46) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0024.wav using Guid(168b099abe87a4431ba16dfd3d78df46) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c70be3c814ef77cb568bf973549da8ac') in 0.109226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1056.wav
+  artifactKey: Guid(c61a0e3b19b8243ee94b855392f15b66) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1056.wav using Guid(c61a0e3b19b8243ee94b855392f15b66) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8eac47db3ff59fed50f1bd419b25fb52') in 0.126096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1062.wav
+  artifactKey: Guid(a2497d6107cd14892b9c60f694e39abe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1062.wav using Guid(a2497d6107cd14892b9c60f694e39abe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9c28b4fbe8f32072edd0bf6c4a19ec70') in 0.124613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1047.wav
+  artifactKey: Guid(ea1a3de72e0474bbfb22357be75fa443) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1047.wav using Guid(ea1a3de72e0474bbfb22357be75fa443) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '60df792afc58377f06928237d2e65b68') in 0.131945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0015.wav
+  artifactKey: Guid(28411f84ac99843ba9649b2cae8c879e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0015.wav using Guid(28411f84ac99843ba9649b2cae8c879e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5ccd4f91700539972314559abac97ce8') in 0.125375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1068.wav
+  artifactKey: Guid(33469c50c55424f45b3fe7ef78aae2d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1068.wav using Guid(33469c50c55424f45b3fe7ef78aae2d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '11436c19600b1da87edceee0e2558fb4') in 0.110746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1074.wav
+  artifactKey: Guid(c47790e1f2f3e4f4b93384f4cf49c07d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1074.wav using Guid(c47790e1f2f3e4f4b93384f4cf49c07d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fdc41fcc136b11965e98515ac43a24bc') in 0.109548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1040.wav
+  artifactKey: Guid(35d89da8284ab4bb7b52cc120f88ce2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1040.wav using Guid(35d89da8284ab4bb7b52cc120f88ce2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ecb25d778ad58bf2360b4a0e4ed6584b') in 0.121286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0030.wav
+  artifactKey: Guid(5f1962b28971041f3b08aa2185cca6ae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0030.wav using Guid(5f1962b28971041f3b08aa2185cca6ae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8967bf37d224a1d038ead7e43dbb102a') in 0.117255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1086.wav
+  artifactKey: Guid(09dcd2f585c6d4d7f83a1ab41b8fd008) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1086.wav using Guid(09dcd2f585c6d4d7f83a1ab41b8fd008) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '555106898d9f97d307a4bd8d9cca4e29') in 0.108891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1083.wav
+  artifactKey: Guid(2a1f4efb6cdbc4e3c839dd445492438a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1083.wav using Guid(2a1f4efb6cdbc4e3c839dd445492438a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fdae2c7e3b4e782517039bf0f0490169') in 0.110025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0034.wav
+  artifactKey: Guid(c035a7f37428c489999077c2be83e594) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0034.wav using Guid(c035a7f37428c489999077c2be83e594) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3cecc7f96731ac75558c1536589c2220') in 0.118753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0038.wav
+  artifactKey: Guid(6c3ad311026564be2bd05c73b93f49d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0038.wav using Guid(6c3ad311026564be2bd05c73b93f49d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a1cc46f437e0cbacabd31aadcf500c5d') in 0.117898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1092.wav
+  artifactKey: Guid(23e7ee0c4720c4bd48c405abb4ffa7f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1092.wav using Guid(23e7ee0c4720c4bd48c405abb4ffa7f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f7da3e03c076417e7cacb5033fdb7b61') in 0.115249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1088.wav
+  artifactKey: Guid(bbf42c83ce5bb4045a4a63e8ae0e5656) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1088.wav using Guid(bbf42c83ce5bb4045a4a63e8ae0e5656) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '61dc166ab637fbc62f82e25470ee675c') in 0.115519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1099.wav
+  artifactKey: Guid(e92ffffa558284658aca79f7b72b7e58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1099.wav using Guid(e92ffffa558284658aca79f7b72b7e58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '665f1a5d9f984e294092164b758abcfd') in 0.114546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0007.wav
+  artifactKey: Guid(d721cf72523c74b5b937bd0a354fdd40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0007.wav using Guid(d721cf72523c74b5b937bd0a354fdd40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2a66ae99d18e1dc2e7f7be9832046a5c') in 0.121544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1004.wav
+  artifactKey: Guid(5f495037948cf49269a56b62f7b9e8e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1004.wav using Guid(5f495037948cf49269a56b62f7b9e8e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '74c744d268e2e0126f68bb474ae9a7a2') in 0.114304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1107.wav
+  artifactKey: Guid(20f1f9f2c7b3c4592acb4e32c1646bcf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1107.wav using Guid(20f1f9f2c7b3c4592acb4e32c1646bcf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd94f4d74685f3988462ae04e381b4283') in 0.112493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1106.wav
+  artifactKey: Guid(094de76b4ed3d48f19844f529665011b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1106.wav using Guid(094de76b4ed3d48f19844f529665011b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd0ad9dd8e58cddd8ebb9cfa2faf0f652') in 0.121508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1100.wav
+  artifactKey: Guid(28f7e076ccd5640da8fad9bcc74efe58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1100.wav using Guid(28f7e076ccd5640da8fad9bcc74efe58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd65ae400fe4e3802375e01853896680b') in 0.112552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1112.wav
+  artifactKey: Guid(f8e22b9c3a996449f8ef047cf67866ae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1112.wav using Guid(f8e22b9c3a996449f8ef047cf67866ae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f9932578e79e80ad80fe1d5b6efe40ca') in 0.113333 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1125.wav
+  artifactKey: Guid(8841fe57b39704952811b1850e9de699) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1125.wav using Guid(8841fe57b39704952811b1850e9de699) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '643be7f11ffe14259e7441803aa0a9f3') in 0.131112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1117.wav
+  artifactKey: Guid(2c73740b2efca45b1a4525f7a0f4f361) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1117.wav using Guid(2c73740b2efca45b1a4525f7a0f4f361) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9a25912cea2faca131d59042b89be9e7') in 0.134385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1121.wav
+  artifactKey: Guid(18f36ae73867646b7aabe41b95b93dcc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1121.wav using Guid(18f36ae73867646b7aabe41b95b93dcc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1ce8500eabaed177377879e89f225b84') in 0.121743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1050.wav
+  artifactKey: Guid(0fe0b582ed51d441faf3a4321edd37a6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1050.wav using Guid(0fe0b582ed51d441faf3a4321edd37a6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2bdde09663f59f46f3eb485ff1929a0e') in 0.109053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1127.wav
+  artifactKey: Guid(329c4348914f4481b9efc2318230c337) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1127.wav using Guid(329c4348914f4481b9efc2318230c337) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '64fb6d1ab5d33af43b6ffa0f7105eabb') in 0.114895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1132.wav
+  artifactKey: Guid(1ce210a50a3e2496a931b77bf6839e29) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1132.wav using Guid(1ce210a50a3e2496a931b77bf6839e29) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e790c40dbe6bac76671b70e249057277') in 0.120473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1084.wav
+  artifactKey: Guid(d3029239f552947acb50fb23db248fe6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1084.wav using Guid(d3029239f552947acb50fb23db248fe6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7b06ffe00d4c4618154468996db984a2') in 0.104669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1091.wav
+  artifactKey: Guid(c0cc9bb81e32248d7b64b27359c13a43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1091.wav using Guid(c0cc9bb81e32248d7b64b27359c13a43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8aad72b36d999967914af481a5493def') in 0.117115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1138.wav
+  artifactKey: Guid(3902bb59b9d144499ab297f996a88db3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1138.wav using Guid(3902bb59b9d144499ab297f996a88db3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7b8e5d2c58de7a3a4f5689d9657ab4eb') in 0.121066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1137.wav
+  artifactKey: Guid(371083f0be7f3410dbd1db377075072b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1137.wav using Guid(371083f0be7f3410dbd1db377075072b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f4edd78c880daec07e56f5ba818cb624') in 0.114306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1144.wav
+  artifactKey: Guid(e69d8e2713b28425084ff4e3ea26b2cf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1144.wav using Guid(e69d8e2713b28425084ff4e3ea26b2cf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '57a8fb89c30eb7fe0d7f0fc8690a4035') in 0.111837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1140.wav
+  artifactKey: Guid(3c6fcd461c70046098c42b43078be8c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1140.wav using Guid(3c6fcd461c70046098c42b43078be8c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9036372bf494c4df1da80d7d9cf68e2d') in 0.145269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1150.wav
+  artifactKey: Guid(4083475e71a304b76b4c39b72378c4d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1150.wav using Guid(4083475e71a304b76b4c39b72378c4d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '401a02ad6689c7e24bf4bf5548e949a7') in 0.119110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1154.wav
+  artifactKey: Guid(d72e6599ab5914afdbbe922355025af8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1154.wav using Guid(d72e6599ab5914afdbbe922355025af8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7850e82c7ee95cc2b2456bd34364d887') in 0.151353 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1158.wav
+  artifactKey: Guid(a3e667c13a1024be39abd9d556efb638) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1158.wav using Guid(a3e667c13a1024be39abd9d556efb638) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '238ce0a303192339ffb2485a3718e314') in 0.110028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Shaders/FireSphere.shadergraph
+  artifactKey: Guid(97ae18f56456e864badd6796dec2d5a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Shaders/FireSphere.shadergraph using Guid(97ae18f56456e864badd6796dec2d5a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '690e4812707307f81b0f7e83216cd19c') in 0.117286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1163.wav
+  artifactKey: Guid(62659a110adb84d02814960fac22a489) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1163.wav using Guid(62659a110adb84d02814960fac22a489) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aecf3b3b15a03dfcc13e0843bbe8e946') in 0.119739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1162.wav
+  artifactKey: Guid(adb39d7349e2747168eeb51f1b437c9b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1162.wav using Guid(adb39d7349e2747168eeb51f1b437c9b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6c9189ad574170915a7f58442c75e316') in 0.113013 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1167.wav
+  artifactKey: Guid(14c94d28d0fa044eabf8080bc09df2f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1167.wav using Guid(14c94d28d0fa044eabf8080bc09df2f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f972502d1d207f23f9cc8cc772d81fd7') in 0.125880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/Nymph Fairy/Legacy/Animations/Nymph Fairy@BlowPetals.FBX
+  artifactKey: Guid(cbc2eaf07f5016f429d1dafcebc2214e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Nymph Fairy/Legacy/Animations/Nymph Fairy@BlowPetals.FBX using Guid(cbc2eaf07f5016f429d1dafcebc2214e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '55092c4bc1b92a16aac77523ca01a752') in 0.132870 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1173.wav
+  artifactKey: Guid(576dc1e227f1948b7810b1f4486f2239) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1173.wav using Guid(576dc1e227f1948b7810b1f4486f2239) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bafa57e7728617399f7d4836b0c2bff0') in 0.220905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1174.wav
+  artifactKey: Guid(d895b3e88867749eb80ec257e12278bd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1174.wav using Guid(d895b3e88867749eb80ec257e12278bd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd5badd3598ec401dc06136c8798a5f3e') in 0.128885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1175.wav
+  artifactKey: Guid(d99e85421202f4fcbbe6feff2ff4d365) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1175.wav using Guid(d99e85421202f4fcbbe6feff2ff4d365) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '32d509cd03181f2dec94963b248ad678') in 0.111509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1191.wav
+  artifactKey: Guid(7438894ace0984034991902fdba854a4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1191.wav using Guid(7438894ace0984034991902fdba854a4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b5adff020caba7f8eccd07d12db4fa31') in 0.127851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1186.wav
+  artifactKey: Guid(0c312b427337d4b18a4ad08d0045268e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1186.wav using Guid(0c312b427337d4b18a4ad08d0045268e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5c3eab539a120b650cbbaf31fbcee3d0') in 0.117613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1190.wav
+  artifactKey: Guid(cf71e3a227cd1415ea722ad3b584d292) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1190.wav using Guid(cf71e3a227cd1415ea722ad3b584d292) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '22ed0cd30246509bd408bc0a1837dff1') in 0.107577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1195.wav
+  artifactKey: Guid(201c1b72fb6cb43a9b51ac183c7cacfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1195.wav using Guid(201c1b72fb6cb43a9b51ac183c7cacfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '72f0fa07e0e56493e0fe1e528d64d487') in 0.118351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1197a.wav
+  artifactKey: Guid(b8e53b3ec913b48acab3e579d74607c4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1197a.wav using Guid(b8e53b3ec913b48acab3e579d74607c4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '64ba0c28d2a9f1dcb772812254e6522e') in 0.119478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1199.wav
+  artifactKey: Guid(55a7fdb4f056d420e8cebee1ae9652ed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1199.wav using Guid(55a7fdb4f056d420e8cebee1ae9652ed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1c2657fc0a002612bc03594b61dc102d') in 0.115438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1201.wav
+  artifactKey: Guid(ea328a2994ed042899f3c5057c903a88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1201.wav using Guid(ea328a2994ed042899f3c5057c903a88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8777c7b028c7d8d2afc1baba5e012569') in 0.115679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1129.wav
+  artifactKey: Guid(5728f57b2fd1e4b14b98288768c7d054) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1129.wav using Guid(5728f57b2fd1e4b14b98288768c7d054) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6ce6aa863985a1eaefdb3052b65396e2') in 0.142670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1214.wav
+  artifactKey: Guid(83d0f0f2a99f2486ea491ff2d81b72ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1214.wav using Guid(83d0f0f2a99f2486ea491ff2d81b72ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0aa24d2ecaf4f89620c10d06539fafb0') in 0.117945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1216.wav
+  artifactKey: Guid(f972d61c0cbd64265af3023f93035e8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1216.wav using Guid(f972d61c0cbd64265af3023f93035e8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'af1b612211212a5edd0324115555e2a0') in 0.116630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Scripts/ThirdPersonCamera.cs
+  artifactKey: Guid(bd9604897707c4879978b864a8be4d39) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Scripts/ThirdPersonCamera.cs using Guid(bd9604897707c4879978b864a8be4d39) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '500bfcca5c0998f06229df28c8a0a709') in 0.108082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1016.wav
+  artifactKey: Guid(514dfaed2534942e8a5c5f7f253ed89b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1016.wav using Guid(514dfaed2534942e8a5c5f7f253ed89b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7d0ebb0d9ec0b135621b30e2604d3c3a') in 0.123182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1229.wav
+  artifactKey: Guid(542adc815435145d5a9f6fa641352c6a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1229.wav using Guid(542adc815435145d5a9f6fa641352c6a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ea070c3e2f813976119f20726461990a') in 0.107699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1219.wav
+  artifactKey: Guid(93c68fb116be945f691bb71346745d41) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1219.wav using Guid(93c68fb116be945f691bb71346745d41) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a675771392da69bae8bad6f6c8b55aeb') in 0.118994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1228.wav
+  artifactKey: Guid(e83a15fba18f443ed8e4aa6f16600e18) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1228.wav using Guid(e83a15fba18f443ed8e4aa6f16600e18) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b12e3e86ffac4cfc97824302db52fec9') in 0.114825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1222.wav
+  artifactKey: Guid(330a389a63f06404aba06b59830e123b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1222.wav using Guid(330a389a63f06404aba06b59830e123b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2df03ee5a9f165e441f700d6fbd81faf') in 0.114221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1236.wav
+  artifactKey: Guid(ddbe8e87414f24e14bc67638efbc0858) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1236.wav using Guid(ddbe8e87414f24e14bc67638efbc0858) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1010a6b0bfa2e5ccfb2fe0e365446c6d') in 0.145338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1233.wav
+  artifactKey: Guid(8144e1aafd6074925b08d88c87ccfb2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1233.wav using Guid(8144e1aafd6074925b08d88c87ccfb2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e5ae68dc91db046712201e5a2927f9b6') in 0.099498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1237.wav
+  artifactKey: Guid(2b893b0361250455887c3a49868c59a0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1237.wav using Guid(2b893b0361250455887c3a49868c59a0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '89e935cb93fe2ee9e1787e2969b04d14') in 0.121410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1230.wav
+  artifactKey: Guid(e0d458a6e98644678aee0f0bc8c334aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1230.wav using Guid(e0d458a6e98644678aee0f0bc8c334aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '87b5c59a77ffb52cea30823dffb462f1') in 0.124577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1251.wav
+  artifactKey: Guid(1852067f4039041a8b5e4e0904a1c6d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1251.wav using Guid(1852067f4039041a8b5e4e0904a1c6d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '97ace9f8184a47a7574eacb5fddcbb7c') in 0.109800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1246.wav
+  artifactKey: Guid(e608e117977094c369b216afd32e8342) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1246.wav using Guid(e608e117977094c369b216afd32e8342) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '64b30ab36189a34360cdf1ee62ffad9a') in 0.117415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1250.wav
+  artifactKey: Guid(58e4dfe1843e4456491d5b19a0aa4988) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1250.wav using Guid(58e4dfe1843e4456491d5b19a0aa4988) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ff6b8687138c702483999ae99c66923e') in 0.129374 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1035.wav
+  artifactKey: Guid(c512a55406d8045f2b636cf4bf853448) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1035.wav using Guid(c512a55406d8045f2b636cf4bf853448) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '51e6bcdfe915e2f07ccc20a09f71a645') in 0.106867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0006.wav
+  artifactKey: Guid(55cdcf6662c1e410baec7623f20689d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0006.wav using Guid(55cdcf6662c1e410baec7623f20689d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0b8ad8d84dfbcfbb0475cf4a7f65def3') in 0.109539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1260.wav
+  artifactKey: Guid(758aeeac2b9a64f75834c6cc74fccf1c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1260.wav using Guid(758aeeac2b9a64f75834c6cc74fccf1c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '764820c6629d497db225fffe46fabdcd') in 0.123238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1263.wav
+  artifactKey: Guid(f974ed02801414540a6ba05e42f1c2d2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1263.wav using Guid(f974ed02801414540a6ba05e42f1c2d2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c0b7547feed37abdfba6512fb14ecdff') in 0.107416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1256.wav
+  artifactKey: Guid(d4192b1c6089a4194ba8d1b217951774) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1256.wav using Guid(d4192b1c6089a4194ba8d1b217951774) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c7b2d7584791737544c7c495c1468246') in 0.116294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1253.wav
+  artifactKey: Guid(c680172e9ee284460a1f0f344e05ac59) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1253.wav using Guid(c680172e9ee284460a1f0f344e05ac59) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c318e649c4d993544a8ab9b31ecf9bf2') in 0.114854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1275.wav
+  artifactKey: Guid(367b2123e41784547b5f532db4781029) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1275.wav using Guid(367b2123e41784547b5f532db4781029) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1d061b10dd7ac17b0a44abe464685bc4') in 0.119472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1269.wav
+  artifactKey: Guid(f2b59bee921964dd09695b4844f9f5a6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1269.wav using Guid(f2b59bee921964dd09695b4844f9f5a6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd29af021556cfd423096e1c6fa200ea') in 0.111256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1271.wav
+  artifactKey: Guid(cde9bbba3d74446cf8121119dbfefb0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1271.wav using Guid(cde9bbba3d74446cf8121119dbfefb0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '86d53912430c2258aa6534c1b234f125') in 0.122157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1273.wav
+  artifactKey: Guid(155b80e2df5fe43cfaffbcd6a166f8a1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1273.wav using Guid(155b80e2df5fe43cfaffbcd6a166f8a1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b15b14fb1fc6c8db9e97a61c513e7a51') in 0.111084 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1285.wav
+  artifactKey: Guid(59ba76a3118f946f489f483da6618745) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1285.wav using Guid(59ba76a3118f946f489f483da6618745) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd4a422431a7a40741f50805034d2a4da') in 0.115073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1290.wav
+  artifactKey: Guid(514f2543b81e74c53ac1d9b5bc4fe40c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1290.wav using Guid(514f2543b81e74c53ac1d9b5bc4fe40c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '165ead89c76828dd739121a36819c6a6') in 0.113932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1279.wav
+  artifactKey: Guid(24f4cbf3b62964fa8ae2bf57346142a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1279.wav using Guid(24f4cbf3b62964fa8ae2bf57346142a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd3ac1a2076ac797dcbf5b894eae50c5') in 0.141843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1286.wav
+  artifactKey: Guid(a43af34cb93f54adb88bfcbe7af42114) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1286.wav using Guid(a43af34cb93f54adb88bfcbe7af42114) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ab7fa6ff599a4a72c601be5073899931') in 0.122233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1294.wav
+  artifactKey: Guid(138b8507a18ff4cf98f14476447f401c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1294.wav using Guid(138b8507a18ff4cf98f14476447f401c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '19ed4e9f323591667295b551a159fc1e') in 0.110217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1299.wav
+  artifactKey: Guid(c2ec7604781e143319d2d4750d7eb208) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1299.wav using Guid(c2ec7604781e143319d2d4750d7eb208) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '862d82a5bde598870b8550dcfac20bb4') in 0.129552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1291.wav
+  artifactKey: Guid(bdc1ade80be854ea5849de68a1b9e471) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1291.wav using Guid(bdc1ade80be854ea5849de68a1b9e471) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd00aa72102b8b7689f2fcc68e820b333') in 0.301919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1306.wav
+  artifactKey: Guid(e3126a7cef6154ae2a74e47befe434b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1306.wav using Guid(e3126a7cef6154ae2a74e47befe434b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4d3770a95f73030c65debb4e5a0fd1c6') in 0.128446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1303.wav
+  artifactKey: Guid(f121d90ebb4b242568ccf5575584aca1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1303.wav using Guid(f121d90ebb4b242568ccf5575584aca1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1c50fd81ae17e7d435cced6c66063033') in 0.126529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1310.wav
+  artifactKey: Guid(7031635d035ab43baaeb1ba7b3dad877) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1310.wav using Guid(7031635d035ab43baaeb1ba7b3dad877) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd2a40c366fe50ba2a30857d518acdd78') in 0.137392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1319.wav
+  artifactKey: Guid(c46659c4399554ccf87d41cc44b24ee0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1319.wav using Guid(c46659c4399554ccf87d41cc44b24ee0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '470db51a57935d82d57489a0336fcc5c') in 0.115558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1318.wav
+  artifactKey: Guid(64576b36e59594c49a0a990795ab77b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1318.wav using Guid(64576b36e59594c49a0a990795ab77b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cceca9af76e582597ca0f7d1023044f8') in 0.112955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1261.wav
+  artifactKey: Guid(0f9b83a7b39274177b6e3d39b408313f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1261.wav using Guid(0f9b83a7b39274177b6e3d39b408313f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '52411db7c75a18c918d63b13971b8258') in 0.110984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1265.wav
+  artifactKey: Guid(2e2236cd9045448788f29f4f38713cea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1265.wav using Guid(2e2236cd9045448788f29f4f38713cea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '36ad6eb6c422368ff9f24eb2e98d3816') in 0.127718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1324.wav
+  artifactKey: Guid(645349beb0b074a5ca47de9e78862ab2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1324.wav using Guid(645349beb0b074a5ca47de9e78862ab2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '27c51a2ce4b8625a9fea97ad84c95a3c') in 0.143104 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1332.wav
+  artifactKey: Guid(7c92b00ff054a4fd1b786f9ef8db6a3c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1332.wav using Guid(7c92b00ff054a4fd1b786f9ef8db6a3c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '10e4a95cbd04c3d8eff019f95018500a') in 0.106220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1328.wav
+  artifactKey: Guid(7a536c4068948403a9378d80ec38497c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1328.wav using Guid(7a536c4068948403a9378d80ec38497c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3ae81d2bc4488b279680d4d8654a01e1') in 0.129483 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1325.wav
+  artifactKey: Guid(300fd04524d484f339272b325cf2261c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1325.wav using Guid(300fd04524d484f339272b325cf2261c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cf2259ac50eda2872765a3e89006e21d') in 0.117438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1343.wav
+  artifactKey: Guid(85d2bcf8ffdf647299390ab06504553c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1343.wav using Guid(85d2bcf8ffdf647299390ab06504553c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '41b825807d5ff0a94ec4bd16d883885f') in 0.110248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1340.wav
+  artifactKey: Guid(51791f91b88ea494cbd397f882da7585) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1340.wav using Guid(51791f91b88ea494cbd397f882da7585) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '45ec3b898f4e069be29cbcd1ab104460') in 0.121011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1335.wav
+  artifactKey: Guid(eb2e01d7fef4348bf97a8c9cfa2d4cda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1335.wav using Guid(eb2e01d7fef4348bf97a8c9cfa2d4cda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '201a43747ecaad4733c7c25d514d7874') in 0.113767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire 3.prefab
+  artifactKey: Guid(78e8b38d431ddef4fa2994a3f2d6e2ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire 3.prefab using Guid(78e8b38d431ddef4fa2994a3f2d6e2ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0a32441a9569dfc34c0abb9b215f654e') in 0.231302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/for Locomotion/JumpPos.prefab
+  artifactKey: Guid(2801f2532c4364c8696fc1dc3b4c6a1a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/for Locomotion/JumpPos.prefab using Guid(2801f2532c4364c8696fc1dc3b4c6a1a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3affb4414444dafd83cc74f6732032ce') in 0.155421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/SplashScreen/Animations/FadeIn.anim
+  artifactKey: Guid(4bd5bac4ccdae4f9c85135b8fd7da355) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/SplashScreen/Animations/FadeIn.anim using Guid(4bd5bac4ccdae4f9c85135b8fd7da355) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd37397fd1b15430c4600608320276641') in 0.111502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/for Locomotion/unitychan_dynamic_locomotion.prefab
+  artifactKey: Guid(69c3ed15e9d13481e8f7dc4db5532fb6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/for Locomotion/unitychan_dynamic_locomotion.prefab using Guid(69c3ed15e9d13481e8f7dc4db5532fb6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'eb55e876045b1fc0cad869ff99b400b7') in 0.336450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/SplashScreen/Logo/Light_Silhouette.png
+  artifactKey: Guid(f0b1c60b0227e4e1fa89a56252ded127) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/SplashScreen/Logo/Light_Silhouette.png using Guid(f0b1c60b0227e4e1fa89a56252ded127) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e7254e64ff8a5a547cae4238526b5aad') in 0.133050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/angry2@unitychan.anim
+  artifactKey: Guid(66c6a39c175f346f6b2e3016fa5ae35b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/angry2@unitychan.anim using Guid(66c6a39c175f346f6b2e3016fa5ae35b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a466a2125fb5221327a0711447a64171') in 0.110582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/ASHAMED.anim
+  artifactKey: Guid(3555863ff4ef948e298b8d11ea795ec4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/ASHAMED.anim using Guid(3555863ff4ef948e298b8d11ea795ec4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '96e77e1d404f9deeab6a1e6adcf0a261') in 0.234835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_E.anim
+  artifactKey: Guid(63e3bd86527074923b9dc38ddb715245) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/MTH_E.anim using Guid(63e3bd86527074923b9dc38ddb715245) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '66dda05316b830e5a07267e2e17ead9b') in 0.118958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/default@unitychan.anim
+  artifactKey: Guid(6394472d24c9347e5bb789ec1f15e5bb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/default@unitychan.anim using Guid(6394472d24c9347e5bb789ec1f15e5bb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bde39ad32297c9877003420998c921e6') in 0.118166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/LookPos.prefab
+  artifactKey: Guid(6d5bff5837eca402492a89073b17c2e6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/LookPos.prefab using Guid(6d5bff5837eca402492a89073b17c2e6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5d285ecdd11bfd4af05fd6d4e8672809') in 0.111342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Stage/Materials/unitychan_tile5.mat
+  artifactKey: Guid(0fabbaa20a36d468a84e4925db02ecc5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Stage/Materials/unitychan_tile5.mat using Guid(0fabbaa20a36d468a84e4925db02ecc5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ec2efaf8f68e255e7d81e1dce6238a81') in 0.222421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Stage/Materials/unitychan_tile6.mat
+  artifactKey: Guid(330274cf2c5de4464a4b4b243b59e371) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Stage/Materials/unitychan_tile6.mat using Guid(330274cf2c5de4464a4b4b243b59e371) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a319b73a91ea612607c34545858b1ff3') in 0.249247 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Materials/eyeline.mat
+  artifactKey: Guid(7bac98231102243919a4534a06cc74ba) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Materials/eyeline.mat using Guid(7bac98231102243919a4534a06cc74ba) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f77067ed8a282e97e9658faa74553be') in 0.115364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Stage/Textures/unitychan_tile3.png
+  artifactKey: Guid(0c13bdfc1ad5def4aa6650ca8a1568e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Stage/Textures/unitychan_tile3.png using Guid(0c13bdfc1ad5def4aa6650ca8a1568e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1497cb5435e87313755f20c2904905b1') in 0.117983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001246 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Stage/Shader/AlphaMask.shader
+  artifactKey: Guid(9da2031a78926d0489f6bdcbf31ffa53) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Stage/Shader/AlphaMask.shader using Guid(9da2031a78926d0489f6bdcbf31ffa53) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e63c55a7ec14e2629399a7c48ad60219') in 0.124236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1038.wav
+  artifactKey: Guid(1fea949ca16274adb8e4a6a9b673d938) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1038.wav using Guid(1fea949ca16274adb8e4a6a9b673d938) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '147a4b498e5871a40940362e5a84a948') in 0.161205 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eye.shader
+  artifactKey: Guid(abaf2020b803b6847b5c081ed22c05c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eye.shader using Guid(abaf2020b803b6847b5c081ed22c05c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dd32e0b26f0d42af5c4b7f8c5c9fc329') in 0.020362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaSkin.cg
+  artifactKey: Guid(fe01eae1ec1d1c24b99530833c8c8241) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaSkin.cg using Guid(fe01eae1ec1d1c24b99530833c8c8241) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a26c01a1494107a7157722ccb73b8c92') in 0.020506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaMain.cg
+  artifactKey: Guid(c3d0f1648f39e1a408ca5a56b25e96bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaMain.cg using Guid(c3d0f1648f39e1a408ca5a56b25e96bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8ea32638a3b5b27adde976ffd6e15564') in 0.017711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eye_blend.shader
+  artifactKey: Guid(bf944057124b80b4e84496139e3b072c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_eye_blend.shader using Guid(bf944057124b80b4e84496139e3b072c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '767bee8b08e39af09685ab9f091f9a46') in 0.016120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1014.wav
+  artifactKey: Guid(1699abed5a7da43cabe83d31df9b7fae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1014.wav using Guid(1699abed5a7da43cabe83d31df9b7fae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e4195fe8435906051d770e6345638de2') in 0.043404 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Materials/body.mat
+  artifactKey: Guid(bb570020a8c3bad4bbf803af20e78937) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Materials/body.mat using Guid(bb570020a8c3bad4bbf803af20e78937) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '21f2c2cfd8c29467aff9a56801d99510') in 0.018994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/RotatorPS2.prefab
+  artifactKey: Guid(26255240385821a4185c7163c7a7aec6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/RotatorPS2.prefab using Guid(26255240385821a4185c7163c7a7aec6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '24044c6b69df16f063324ee729acf155') in 0.073954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1148.wav
+  artifactKey: Guid(9b3912e8859164465a359471dc7340d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1148.wav using Guid(9b3912e8859164465a359471dc7340d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8038c326ca3f6a5fd566f0ea0f01e069') in 0.047190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1184.wav
+  artifactKey: Guid(89bfeef88dfba475fbcb7167c7335489) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1184.wav using Guid(89bfeef88dfba475fbcb7167c7335489) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1ebfe4831bcee58604074a86adf68499') in 0.048206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1152.wav
+  artifactKey: Guid(bcf223560048d446f936ccd1ebfab413) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1152.wav using Guid(bcf223560048d446f936ccd1ebfab413) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6c7740939c0d1dcb535f4bd0948a1d44') in 0.049181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1015.wav
+  artifactKey: Guid(c5b7b617e6a324665b0154b0366b81a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1015.wav using Guid(c5b7b617e6a324665b0154b0366b81a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c3e41a63d075dfe0c487111f3476ba54') in 0.046301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_fuku_ds.shader
+  artifactKey: Guid(96d05de60c5f7474491f9f94568cf623) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_fuku_ds.shader using Guid(96d05de60c5f7474491f9f94568cf623) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4bbd4cbdd8d4c80103a9015b24d65073') in 0.035291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_hada_blend.shader
+  artifactKey: Guid(7a95784c68f03494d8c7911e15fab82a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/Unitychan_chara_hada_blend.shader using Guid(7a95784c68f03494d8c7911e15fab82a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a3b4a12109b19a3278569bca8422be34') in 0.026582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01.tga
+  artifactKey: Guid(cbb65ec17f92eb44fb0dde6381b6a415) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01.tga using Guid(cbb65ec17f92eb44fb0dde6381b6a415) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cc66464fe908f04674e41b896f6629b1') in 0.048048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_NRM.tga
+  artifactKey: Guid(9eea3b9b4b755f64da2c821145616f44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_NRM.tga using Guid(9eea3b9b4b755f64da2c821145616f44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f7d2ff13cca67e4278bc24a1c274bfab') in 0.031116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/Japanese/03Indication of License_JP_UCL2.0.pdf
+  artifactKey: Guid(54011055ae63de14085a64899c67c78d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/Japanese/03Indication of License_JP_UCL2.0.pdf using Guid(54011055ae63de14085a64899c67c78d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3cf3fdb87c46c76bcfbc7cb9fde92f2f') in 0.016822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/English/03Indication of License_EN_UCL2.0.pdf
+  artifactKey: Guid(b9724caadbebf8d458acca2ed6733770) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/English/03Indication of License_EN_UCL2.0.pdf using Guid(b9724caadbebf8d458acca2ed6733770) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '67512c9119bf5129ccefab3b2a6e81b1') in 0.016660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/English/02Unity-Chan License Terms and Condition_Summary_EN_UCL2.0.pdf
+  artifactKey: Guid(6eba677bcdb1054499442af4c153ac80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/English/02Unity-Chan License Terms and Condition_Summary_EN_UCL2.0.pdf using Guid(6eba677bcdb1054499442af4c153ac80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '97c3e3d23411a80f5a49f4b0d81f14d7') in 0.022055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/ENV2.tga
+  artifactKey: Guid(763c5d30206d1d54a9b49b3309e37fe1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/ENV2.tga using Guid(763c5d30206d1d54a9b49b3309e37fe1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5e7c2275f6b946e49db5db6063dffd82') in 0.031740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_SPEC.tga
+  artifactKey: Guid(c4271b2b1e8bfa949aa9230abaa7709e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_SPEC.tga using Guid(c4271b2b1e8bfa949aa9230abaa7709e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8735a8086b38ce4a95b22422d9a4d856') in 0.025838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/cheek_00.tga
+  artifactKey: Guid(89ede59217e3847c39c444f223f4084e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/cheek_00.tga using Guid(89ede59217e3847c39c444f223f4084e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fd197d69f72dfbf8d2ef67a89ad23a8b') in 0.026757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/English/01Unity-Chan License Terms and Condition_EN_UCL2.0.pdf
+  artifactKey: Guid(25f6a06eb1fc1cd4e89654f3697f1964) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/English/01Unity-Chan License Terms and Condition_EN_UCL2.0.pdf using Guid(25f6a06eb1fc1cd4e89654f3697f1964) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '48dffcdd3833a53b2524ee4a342a09be') in 0.012880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/FolloatMeAssets/CharacterOperation.cs
+  artifactKey: Guid(840b6332ce1628e4d97dd4a4e77059b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/CharacterOperation.cs using Guid(840b6332ce1628e4d97dd4a4e77059b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aab8a86443d7608d25014f296d59947a') in 0.022083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1209.wav
+  artifactKey: Guid(1c6f9af47dccb4ab18e33ce5ff8a9a08) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1209.wav using Guid(1c6f9af47dccb4ab18e33ce5ff8a9a08) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6a93fbdaf9ac1ddb7edf0d1b844bbec6') in 0.049963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1208.wav
+  artifactKey: Guid(3303ecc492b4549508963afde665f54e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1208.wav using Guid(3303ecc492b4549508963afde665f54e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cfcae8de13a3af23f36b4c3ab3904b4d') in 0.053315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/svg/Light_Silhouette.svg
+  artifactKey: Guid(872f46857b0149146b3f13872d3d0d09) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/svg/Light_Silhouette.svg using Guid(872f46857b0149146b3f13872d3d0d09) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '56221dac789271ebdbb995a035a9a70a') in 0.021095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/jpg/Dark_Silhouette.jpg
+  artifactKey: Guid(29ceb9749c224174e9177a5c1ab7a909) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/jpg/Dark_Silhouette.jpg using Guid(29ceb9749c224174e9177a5c1ab7a909) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f5585cb878cae6f73e0ea24d32ceac8b') in 0.036069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/svg/Light_Frame.svg
+  artifactKey: Guid(9d4adf376bd6fd349b4096f508a124d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/svg/Light_Frame.svg using Guid(9d4adf376bd6fd349b4096f508a124d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '68dd434d4d985877fe2a940f92cad746') in 0.018069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/LUUL_LOGO_rules02.ai
+  artifactKey: Guid(85eaf320b5a92704998d172e033cac16) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/LUUL_LOGO_rules02.ai using Guid(85eaf320b5a92704998d172e033cac16) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'de123c0eef0a136f4e5b9fd0b904e12b') in 0.035189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/LUUL_LOGO_rules02.psd
+  artifactKey: Guid(1eb90fd0241a89b4781850606634ede3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/LUUL_LOGO_rules02.psd using Guid(1eb90fd0241a89b4781850606634ede3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '35d7a12a7c8987e3348bf2ac9a5319b9') in 0.034854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1220.wav
+  artifactKey: Guid(b8cfde15b4c754c7598bc07e2e2fdddc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1220.wav using Guid(b8cfde15b4c754c7598bc07e2e2fdddc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7450a40e6cb8dd222e35392aa5645757') in 0.071711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0042.wav
+  artifactKey: Guid(a194b35bc52164e6da777d374923cb83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ0042.wav using Guid(a194b35bc52164e6da777d374923cb83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4ea7b0e735a23dd46bdfd56116e5852f') in 0.067260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scenes/FpsTestScene.unity
+  artifactKey: Guid(eb946c3f39be16c4ab7d03aa7e8d61c7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/FpsTestScene.unity using Guid(eb946c3f39be16c4ab7d03aa7e8d61c7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '792cb9703a3e4cfb1692f93df1350315') in 0.017057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1065.wav
+  artifactKey: Guid(41b76e0e711aa4c63822bbd4e4ca4872) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1065.wav using Guid(41b76e0e711aa4c63822bbd4e4ca4872) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '608be35f11c83870b0bef0c5cd68b00c') in 0.064788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1226.wav
+  artifactKey: Guid(7ae964fefc0b946e2bfc1d4f9e859adc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1226.wav using Guid(7ae964fefc0b946e2bfc1d4f9e859adc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dde357bfef4f037ab057104e130aa8af') in 0.108945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire 0.prefab
+  artifactKey: Guid(08fd1b80cc24cc8439f45fda3c558255) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Prefabs/Magic fire 0.prefab using Guid(08fd1b80cc24cc8439f45fda3c558255) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '16a399df8ee2de5772e0238618855d79') in 0.070905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1070.wav
+  artifactKey: Guid(fd78a38399bb64069b2f13cf85d7b9b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1070.wav using Guid(fd78a38399bb64069b2f13cf85d7b9b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '16b8b49db7d2e66f51e34376c44f88e4') in 0.057465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_RUN00_F.fbx
+  artifactKey: Guid(26055e26f15260e4e8e0e51f50c41926) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/unitychan_RUN00_F.fbx using Guid(26055e26f15260e4e8e0e51f50c41926) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8340f4a98dab2a98305944174c62afb2') in 0.154339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FolloatMeAssets/SerialReceive.cs
+  artifactKey: Guid(034805217d79246479cdb64cde5c9c5d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/SerialReceive.cs using Guid(034805217d79246479cdb64cde5c9c5d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '68cd0d82d8ff94896a003f342c1ed039') in 0.030907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/for Locomotion/CamPos.prefab
+  artifactKey: Guid(65eb07d65eb184e13a4b388eced0d32b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/for Locomotion/CamPos.prefab using Guid(65eb07d65eb184e13a4b388eced0d32b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2352de478aef39e3d0e05c58a7db55cc') in 0.025306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/eye_close@unitychan.anim
+  artifactKey: Guid(73cb3ae8fc1de47a0a307cb5f95ec701) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/Animations/FaceAnimation/eye_close@unitychan.anim using Guid(73cb3ae8fc1de47a0a307cb5f95ec701) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'af79af80fc145e5394b5c39a3aac4747') in 0.026206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1203.wav
+  artifactKey: Guid(a674e6701ebd444eabd52df2df51f2be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1203.wav using Guid(a674e6701ebd444eabd52df2df51f2be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '72a2320ffa9a321515d0a386b2f3ff84') in 0.051490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/OptiTrack/README_OptiTrack_Unity.txt
+  artifactKey: Guid(9e05d3c7df4497b4a963ce874ba3151a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/OptiTrack/README_OptiTrack_Unity.txt using Guid(9e05d3c7df4497b4a963ce874ba3151a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '23c2575de33bfd24acf07c54686c0e20') in 0.031918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/BoxUnityChan.prefab
+  artifactKey: Guid(6788413dff62c534d8ca610faef3c7a2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Prefabs/BoxUnityChan.prefab using Guid(6788413dff62c534d8ca610faef3c7a2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c589b0b88084a391d83768ff5b4b2d65') in 0.032849 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1003.wav
+  artifactKey: Guid(1ec434e75e64c4dc7ab389969fcfaa46) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1003.wav using Guid(1ec434e75e64c4dc7ab389969fcfaa46) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4a751ee541946694064042ecdd5eb27b') in 0.045120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1249.wav
+  artifactKey: Guid(ee2c116fb090b4da4bb6d571e3f98dfb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1249.wav using Guid(ee2c116fb090b4da4bb6d571e3f98dfb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8f7c4e31868193691c868c8d812d327a') in 0.049069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1333.wav
+  artifactKey: Guid(200f6aa17501b414e9f7460618168fe3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1333.wav using Guid(200f6aa17501b414e9f7460618168fe3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '42bb45c8dcb7597df2133127fdc3d40f') in 0.047345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1141.wav
+  artifactKey: Guid(d575db14abfb34ffaa5421328cc8dccc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Audio/Voice/univ1141.wav using Guid(d575db14abfb34ffaa5421328cc8dccc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c9f78f65658ceae590d9b90c80b556cc') in 0.047882 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

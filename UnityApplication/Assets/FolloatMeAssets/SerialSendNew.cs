@@ -108,7 +108,7 @@ public class SerialSendNew : MonoBehaviour
         // パルス幅送信
         _serialHandler.Write(pulse_width.ToString()+"\n");
         PulseWidthWasSent = true;
-        _record.pulsewidth_list.Add(pulse_width);
+        // _record.pulsewidth_list.Add(pulse_width);
     }
 
 

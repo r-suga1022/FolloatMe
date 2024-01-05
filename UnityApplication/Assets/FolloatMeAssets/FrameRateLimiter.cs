@@ -9,7 +9,7 @@ public class FrameRateLimiter : MonoBehaviour
     {
         QualitySettings.vSyncCount = vSyncCount;
         Application.targetFrameRate = targetFrameRate;
-        QualitySettings.maxQueuedFrames = 1;
+        QualitySettings.maxQueuedFrames = 2;
     }
 
     void Update()

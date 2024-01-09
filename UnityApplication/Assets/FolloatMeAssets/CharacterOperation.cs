@@ -11,6 +11,7 @@ public class CharacterOperation : MonoBehaviour
     // 座標関係
     private Vector3 xvec_i;
     private Vector3 xvec_imin1;
+    private Quaternion rotvec_i;
     public Vector3 PositionOffset;
     public Vector3 MousePositionOffset;
     public float XPositionRate;
@@ -52,11 +53,14 @@ public class CharacterOperation : MonoBehaviour
             // 座標取得
             xvec_imin1 = xvec_i;
             xvec_i = _target.rbStatePosition;
+            rotvec_i = _target.rbStateOrientation;
 
             // 座標計算
             BeforePositionX = NewPositionX; BeforePositionY = NewPositionY;
             NewPositionX = (xvec_i.x + (xvec_i.x - xvec_imin1.x)*25f/1000f)*XPositionRate + PositionOffset.x;
             NewPositionY = (xvec_i.y + (xvec_i.y - xvec_imin1.y)*25f/1000f)*YPositionRate + PositionOffset.y;
+            //NewPositionX = xvec_imin1.x + (xvec_i.x - xvec_imin1.x)*XPositionRate + PositionOffset.x;
+            //NewPositionY = xvec_imin1.y + (xvec_i.y - xvec_imin1.y)*YPositionRate + PositionOffset.y;
             //NewPositionX = xvec_i.x*XPositionRate + PositionOffset.x;
             //NewPositionY = xvec_i.y*YPositionRate + PositionOffset.y;
             Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, 0f);
@@ -94,6 +98,7 @@ public class CharacterOperation : MonoBehaviour
 
             //if (!PositionChanged) NewPosition = BeforePosition;
             _character.transform.position = NewPosition;
+            _character.transform.rotation = rotvec_i;
         }
     }
 }

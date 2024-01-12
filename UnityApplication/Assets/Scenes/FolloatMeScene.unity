@@ -1203,7 +1203,7 @@ MonoBehaviour:
   _CharacterOperation: {fileID: 762647898}
   _SerialSend: {fileID: 1069388187}
   _SerialReceive: {fileID: 1032185113}
-  MousePrototyping: 0
+  MousePrototyping: 1
 --- !u!1 &1118456154
 GameObject:
   m_ObjectHideFlags: 0

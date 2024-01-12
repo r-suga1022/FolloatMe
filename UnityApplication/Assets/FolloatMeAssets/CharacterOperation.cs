@@ -46,6 +46,10 @@ public class CharacterOperation : MonoBehaviour
             xvec_i = Input.mousePosition;
             xvec_i.z = 1.0f;
             Vector3 NewPosition = Camera.main.ScreenToWorldPoint(xvec_i);
+
+            Vector3 NewPositionInScreen = Camera.main.WorldToScreenPoint(NewPosition + MousePositionOffset);
+
+            UnityEngine.Debug.Log("screen = "+NewPositionInScreen);
             _character.transform.position = NewPosition + MousePositionOffset;
 
         // トラッキングに基づく追従

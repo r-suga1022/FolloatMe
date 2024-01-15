@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterOperation : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class CharacterOperation : MonoBehaviour
     public bool MousePrototyping;
     bool CharacterRed = false;
     bool PositionChanged = false;
+
+    public Text PositionDifferenceText;
 
 
     void Start()
@@ -60,6 +63,7 @@ public class CharacterOperation : MonoBehaviour
             rotvec_i = _target.rbStateOrientation;
 
             // 座標計算
+            if (!_target.TrackingDone) return;
             BeforePositionX = NewPositionX; BeforePositionY = NewPositionY;
             NewPositionX = (xvec_i.x + (xvec_i.x - xvec_imin1.x)*25f/1000f)*XPositionRate + PositionOffset.x;
             NewPositionY = (xvec_i.y + (xvec_i.y - xvec_imin1.y)*25f/1000f)*YPositionRate + PositionOffset.y;
@@ -67,13 +71,14 @@ public class CharacterOperation : MonoBehaviour
             //NewPositionY = xvec_imin1.y + (xvec_i.y - xvec_imin1.y)*YPositionRate + PositionOffset.y;
             //NewPositionX = xvec_i.x*XPositionRate + PositionOffset.x;
             //NewPositionY = xvec_i.y*YPositionRate + PositionOffset.y;
-            Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, 0f);
+            Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, -1f);
 
             // 姿勢
             Quaternion new_rot = _target.rbStateOrientation;
 
-            bool XChanged = Mathf.Abs(NewPositionX - BeforePositionX) > MoveThreshold;
+            //bool XChanged = Mathf.Abs(NewPositionX - BeforePositionX) > MoveThreshold;
             //bool YChangedPositive = (NewPositionY - BeforePositionY) > MoveThreshold;
+            bool XChanged = (xvec_i.x - xvec_imin1.x) > MoveThreshold;
             bool YChanged = false;
             PositionChanged = XChanged | YChanged;
 
@@ -100,9 +105,16 @@ public class CharacterOperation : MonoBehaviour
                 }
             }
 
+            /*
+            if (_target.TrackingDone)
+            {  
+                PositionDifferenceText.text = (xvec_i.x - xvec_imin1.x).ToString();
+            }
+            */
+
             //if (!PositionChanged) NewPosition = BeforePosition;
             _character.transform.position = NewPosition;
-            _character.transform.rotation = rotvec_i;
+            //_character.transform.rotation = rotvec_i;
         }
     }
 }

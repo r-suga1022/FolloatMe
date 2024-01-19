@@ -527,7 +527,7 @@ MonoBehaviour:
   TrackingDone: 0
   PositionChangePositive: 0
   MousePrototyping: 0
-  LatencyMeasuring: 1
+  LatencyMeasuring: 0
   EventMethod:
     m_PersistentCalls:
       m_Calls:
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   i: 0
   MAX_PULSEWIDTH: 10000
   MIN_PULSEWIDTH: 10
-  a: 5
+  a: 3
   MoveThreshold: 0.0002
   SendStop: 1
   Exception: 0

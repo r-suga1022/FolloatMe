@@ -25,6 +25,7 @@ int OutputMinusPin = 19;
 int OutputDirPlusPin = 22;
 int OutputDirMinusPin = 27;
 int LEDPin = 15;
+int FrameCountPin = 14;
 
 
 // --- タイマー割り込み関係 ---
@@ -38,6 +39,7 @@ int CanPulseGenerate = 1; // パルスを発生させるか否か
 int DoesStop = 0; // アクチュエータが止まったか否か
 int IsAccelerating = 0; // GKeyが押されて、加速処理中か否か
 int IsDeccelerating = 0; // GKeyが押されて、減速処理中か否か
+int FrameCheck = 0; // 1フレームにつきON（OFF）
 
 
 // 実行開始時
@@ -68,6 +70,7 @@ void setup() {
   pinMode(OutputMinusPin, OUTPUT);
   pinMode(OutputDirPlusPin, OUTPUT);
   pinMode(OutputDirMinusPin, OUTPUT);
+  pinMode(FrameCountPin, OUTPUT);
 
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(LEDPin, OUTPUT);
@@ -84,6 +87,8 @@ void setup() {
 // ------ loop関数 ------
 void loop() {
   //if (i >= MaxWidthNumber) return;
+  FrameCheck = !FrameCheck;
+  digitalWrite(FrameCountPin, FrameCheck);
 
   // 回転方向の指定（DIR入力）
   digitalWrite(OutputDirPlusPin, direction_flag);

@@ -28,6 +28,7 @@ public class CharacterOperation : MonoBehaviour
     public bool MousePrototyping;
     bool CharacterRed = false;
     bool PositionChanged = false;
+    bool CharacterActive = true;
 
     public Text PositionDifferenceText;
 
@@ -103,6 +104,12 @@ public class CharacterOperation : MonoBehaviour
                     _character.GetComponent<Renderer>().material.color = Color.white;
                     CharacterRed = false;
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                CharacterActive = !CharacterActive;
+                _character.SetActive(CharacterActive);
             }
 
             /*

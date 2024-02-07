@@ -7,3 +7,4 @@ Cmd: compileSnippet
   error: 1 plat 25 at (1098): CGPROGRAM block does not contain #pragma vertex, #pragma fragment or #pragma surface directive, skipping
  ok=0 outsize=0
 
+Cmd: shutdown

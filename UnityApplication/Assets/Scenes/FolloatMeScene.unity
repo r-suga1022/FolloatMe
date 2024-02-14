@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamingClient: {fileID: 1192506194}
-  RigidBodyId: 11
+  RigidBodyId: 12
   NetworkCompensation: 1
   _record: {fileID: 286224546}
   _serialsend: {fileID: 1069388187}

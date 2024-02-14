@@ -15,7 +15,7 @@ C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/Unity
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-59791
+64750
 Successfully changed project path to: C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication
 C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/Unity
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10828] Host "[IP] 192.168.1.61 [Port] 0 [Flags] 2 [Guid] 1874108367 [EditorId] 1874108367 [Version] 1048832 [Id] WindowsEditor(7,Ryo_Sugawara) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [33636] Host "[IP] 192.168.1.61 [Port] 0 [Flags] 2 [Guid] 4294288374 [EditorId] 4294288374 [Version] 1048832 [Id] WindowsEditor(7,Ryo_Sugawara) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [10828] Host "[IP] 192.168.1.61 [Port] 0 [Flags] 2 [Guid] 1874108367 [EditorId] 1874108367 [Version] 1048832 [Id] WindowsEditor(7,Ryo_Sugawara) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [33636] Host "[IP] 192.168.1.61 [Port] 0 [Flags] 2 [Guid] 4294288374 [EditorId] 4294288374 [Version] 1048832 [Id] WindowsEditor(7,Ryo_Sugawara) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 230.42 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 70.98 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.19f1 (c9714fde33b6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
@@ -67,77 +67,79 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013072 seconds.
+Registered in 0.008057 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 103.58 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 68.99 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.038 seconds
+- Completed reload, in  0.679 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1039ms)
-		BeginReloadAssembly (183ms)
+	ReloadAssembly (680ms)
+		BeginReloadAssembly (83ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (687ms)
-			LoadAssemblies (175ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (459ms)
+			LoadAssemblies (81ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (162ms)
+			SetupTypeCache (112ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (372ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (272ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (104ms)
+				RefreshPlugins (69ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (172ms)
-				ProcessInitializeOnLoadMethodAttributes (80ms)
+				ProcessInitializeOnLoadAttributes (133ms)
+				ProcessInitializeOnLoadMethodAttributes (61ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007904 seconds.
+Registered in 0.005993 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.97 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.758 seconds
+- Completed reload, in  1.123 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1761ms)
-		BeginReloadAssembly (184ms)
+	ReloadAssembly (1124ms)
+		BeginReloadAssembly (102ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (35ms)
-		EndReloadAssembly (1415ms)
-			LoadAssemblies (138ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (902ms)
+			LoadAssemblies (80ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (396ms)
+			SetupTypeCache (304ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (102ms)
-			SetupLoadedEditorAssemblies (725ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (392ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
+				InitializePlatformSupportModulesInManaged (18ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (152ms)
-				ProcessInitializeOnLoadAttributes (491ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
-				AfterProcessingInitializeOnLoad (22ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (263ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -147,13 +149,13 @@ Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph
 Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.20 seconds
-Refreshing native plugins compatible for Editor in 4.31 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3326 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 96 unused Assets / (12.9 MB). Loaded Objects now: 3722.
-Memory consumption went from 170.4 MB to 157.5 MB.
-Total: 30.657200 ms (FindLiveObjects: 0.837900 ms CreateObjectMapping: 0.316200 ms MarkObjects: 10.512500 ms  DeleteObjects: 18.986400 ms)
+Memory consumption went from 170.3 MB to 157.4 MB.
+Total: 10.005000 ms (FindLiveObjects: 0.394900 ms CreateObjectMapping: 0.108300 ms MarkObjects: 3.600900 ms  DeleteObjects: 5.898800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -168,68 +170,68 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 94393.904859 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Sleep.prefab
-  artifactKey: Guid(78ac195e333c62547a7433c75723258a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Sleep.prefab using Guid(78ac195e333c62547a7433c75723258a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+  Time since last request: 95486.283069 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Die.fbx
+  artifactKey: Guid(1ab542f34956501418b14a3779e128b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Die.fbx using Guid(1ab542f34956501418b14a3779e128b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
 Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
- -> (artifact id: '16b5877ec0fc1404b687c12e1b08c413') in 0.376624 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@_KnockDown.prefab
-  artifactKey: Guid(75c52aabc418036449336bd9d5373ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@_KnockDown.prefab using Guid(75c52aabc418036449336bd9d5373ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
-Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
- -> (artifact id: '1ade35e2a9e34b378eafea8a2c0e5b25') in 0.100505 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000108 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@_Sleep.prefab
-  artifactKey: Guid(93479d07ed7ea494788ce59fbf0c82db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@_Sleep.prefab using Guid(93479d07ed7ea494788ce59fbf0c82db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
-Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
- -> (artifact id: '26104f03abf643c36b21b6d14e776b44') in 0.098231 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@Move.prefab
-  artifactKey: Guid(bfc337d4b7d65e94ab18b6d724ddb4cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@Move.prefab using Guid(bfc337d4b7d65e94ab18b6d724ddb4cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
-Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
- -> (artifact id: '28ca5976fea8249e46a78c1658eae9a0') in 0.079779 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@_Damage.prefab
-  artifactKey: Guid(2a66aca9a4367ba4eb1cd1d16b08099e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@_Damage.prefab using Guid(2a66aca9a4367ba4eb1cd1d16b08099e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
-Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
- -> (artifact id: 'dfa16e554ddd30e87112da2f74c4f5a2') in 0.079801 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@Stun.prefab
-  artifactKey: Guid(6dc0833b79b9ba74c9bf186c2c6e6a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@Stun.prefab using Guid(6dc0833b79b9ba74c9bf186c2c6e6a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
-Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
- -> (artifact id: 'b2b52b22c0aed9d598ccab349e757a84') in 0.092957 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000099 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@Damage.prefab
-  artifactKey: Guid(183975b86dbcbdf42aa98642fed7e6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@Damage.prefab using Guid(183975b86dbcbdf42aa98642fed7e6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
-Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
- -> (artifact id: '9b76c06d0e8496a35c9e071bc886ec8b') in 0.093881 seconds 
+ -> (artifact id: 'f53daf82b5745eeaebf35314232babe9') in 0.302818 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000049 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@_Awake.prefab
-  artifactKey: Guid(c7176e1680cee294d939a3185664b02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04@_Awake.prefab using Guid(c7176e1680cee294d939a3185664b02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Attack.fbx
+  artifactKey: Guid(05c7a81c086829a4ea830e452937d9bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Attack.fbx using Guid(05c7a81c086829a4ea830e452937d9bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
 Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
- -> (artifact id: '73ac50c4bb2866a550473e5903a4db0f') in 0.072944 seconds 
+ -> (artifact id: '1c91b1860e832a6cc87d2b0b7738b85a') in 0.158111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@KnockDown.fbx
+  artifactKey: Guid(170aba24b586c4f489e84ece6ec1727f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@KnockDown.fbx using Guid(170aba24b586c4f489e84ece6ec1727f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+ -> (artifact id: '7dffd038abeb6366b3e7091d9b9afc87') in 0.080269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Stun.fbx
+  artifactKey: Guid(e59344c189b05d64a8794f472db4647e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Stun.fbx using Guid(e59344c189b05d64a8794f472db4647e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+ -> (artifact id: 'c36c509cf828c9f758add4724b9cd741') in 0.059682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Move.fbx
+  artifactKey: Guid(8ea2eed37fad8a045bf103d8428b7f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Move.fbx using Guid(8ea2eed37fad8a045bf103d8428b7f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+ -> (artifact id: '5a9478430670f0e2ed33b5c4ae574025') in 0.084800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Sleep.fbx
+  artifactKey: Guid(c238b5b5cbbac1240bb947542cad46fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Sleep.fbx using Guid(c238b5b5cbbac1240bb947542cad46fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+ -> (artifact id: '2b625e838ba11f27c9faef9c76bc8c55') in 0.063231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_KnockDown.fbx
+  artifactKey: Guid(1fd45e4ae7795ee42b2a2d12c9577922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_KnockDown.fbx using Guid(1fd45e4ae7795ee42b2a2d12c9577922) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+ -> (artifact id: '9b1e80109e2d8b39a02a998353d9c354') in 0.084355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@Move.fbx
+  artifactKey: Guid(9a78fccae43cfa749befb3b770726023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@Move.fbx using Guid(9a78fccae43cfa749befb3b770726023) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+Shader error in 'UnityChan/Eye - Transparent': Couldn't open include file 'CharaSkin.cginc'. at line 34
+ -> (artifact id: '57c450d31eb6c4c54496630ec923efa2') in 0.078365 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

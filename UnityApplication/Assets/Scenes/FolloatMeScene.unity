@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12731706, g: 0.13414723, b: 0.12107849, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414754, b: 0.12107867, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamingClient: {fileID: 1192506194}
-  RigidBodyId: 10
+  RigidBodyId: 11
   NetworkCompensation: 1
   _record: {fileID: 286224546}
   _serialsend: {fileID: 1069388187}
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   _CharacterOperation: {fileID: 762647898}
   _SerialSend: {fileID: 1069388187}
   _SerialReceive: {fileID: 1032185113}
-  MousePrototyping: 1
+  MousePrototyping: 0
 --- !u!1 &1118456154
 GameObject:
   m_ObjectHideFlags: 0

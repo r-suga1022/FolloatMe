@@ -1,71 +1,197 @@
 fileFormatVersion: 2
 guid: 8ea2eed37fad8a045bf103d8428b7f6d
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Bip001
-    100002: Bip001_Eye
-    100004: Bip001_L_Forearm
-    100006: Bip001_L_UpperArm
-    100008: Bip001_Pelvis
-    100010: Bip001_R_Forearm
-    100012: Bip001_R_UpperArm
-    100014: Bone_Tail_01
-    100016: Bone_Tail_02
-    100018: Bone_Tail_03
-    100020: Bone_Tail_04
-    100022: Bone_Top_01
-    100024: Bone_Top_02
-    100026: Bone_Top_03
-    100028: Bone_Top_04
-    100030: Bone_Top_05
-    100032: //RootNode
-    100034: Ghost_01_2
-    100036: Ghost_01_3
-    100038: Ghost_01_base
-    100040: Ghost_Face
-    100042: Shadow
-    100044: Shadow_0
-    100046: Skin
-    100048: Skin_2
-    400000: Bip001
-    400002: Bip001_Eye
-    400004: Bip001_L_Forearm
-    400006: Bip001_L_UpperArm
-    400008: Bip001_Pelvis
-    400010: Bip001_R_Forearm
-    400012: Bip001_R_UpperArm
-    400014: Bone_Tail_01
-    400016: Bone_Tail_02
-    400018: Bone_Tail_03
-    400020: Bone_Tail_04
-    400022: Bone_Top_01
-    400024: Bone_Top_02
-    400026: Bone_Top_03
-    400028: Bone_Top_04
-    400030: Bone_Top_05
-    400032: //RootNode
-    400034: Ghost_01_2
-    400036: Ghost_01_3
-    400038: Ghost_01_base
-    400040: Ghost_Face
-    400042: Shadow
-    400044: Shadow_0
-    400046: Skin
-    400048: Skin_2
-    2100000: shadow
-    2100002: mat_Ghost01
-    2100004: mat_Face
-    2300000: Shadow_0
-    3300000: Shadow_0
-    4300000: Shadow_0
-    4300002: Ghost_01_3
-    4300004: Ghost_Face
-    7400000: C4D Animation Take
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: Ghost_01_3
-    13700002: Ghost_Face
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Bip001
+  - first:
+      1: 100002
+    second: Bip001_Eye
+  - first:
+      1: 100004
+    second: Bip001_L_Forearm
+  - first:
+      1: 100006
+    second: Bip001_L_UpperArm
+  - first:
+      1: 100008
+    second: Bip001_Pelvis
+  - first:
+      1: 100010
+    second: Bip001_R_Forearm
+  - first:
+      1: 100012
+    second: Bip001_R_UpperArm
+  - first:
+      1: 100014
+    second: Bone_Tail_01
+  - first:
+      1: 100016
+    second: Bone_Tail_02
+  - first:
+      1: 100018
+    second: Bone_Tail_03
+  - first:
+      1: 100020
+    second: Bone_Tail_04
+  - first:
+      1: 100022
+    second: Bone_Top_01
+  - first:
+      1: 100024
+    second: Bone_Top_02
+  - first:
+      1: 100026
+    second: Bone_Top_03
+  - first:
+      1: 100028
+    second: Bone_Top_04
+  - first:
+      1: 100030
+    second: Bone_Top_05
+  - first:
+      1: 100032
+    second: //RootNode
+  - first:
+      1: 100034
+    second: Ghost_01_2
+  - first:
+      1: 100036
+    second: Ghost_01_3
+  - first:
+      1: 100038
+    second: Ghost_01_base
+  - first:
+      1: 100040
+    second: Ghost_Face
+  - first:
+      1: 100042
+    second: Shadow
+  - first:
+      1: 100044
+    second: Shadow_0
+  - first:
+      1: 100046
+    second: Skin
+  - first:
+      1: 100048
+    second: Skin_2
+  - first:
+      4: 400000
+    second: Bip001
+  - first:
+      4: 400002
+    second: Bip001_Eye
+  - first:
+      4: 400004
+    second: Bip001_L_Forearm
+  - first:
+      4: 400006
+    second: Bip001_L_UpperArm
+  - first:
+      4: 400008
+    second: Bip001_Pelvis
+  - first:
+      4: 400010
+    second: Bip001_R_Forearm
+  - first:
+      4: 400012
+    second: Bip001_R_UpperArm
+  - first:
+      4: 400014
+    second: Bone_Tail_01
+  - first:
+      4: 400016
+    second: Bone_Tail_02
+  - first:
+      4: 400018
+    second: Bone_Tail_03
+  - first:
+      4: 400020
+    second: Bone_Tail_04
+  - first:
+      4: 400022
+    second: Bone_Top_01
+  - first:
+      4: 400024
+    second: Bone_Top_02
+  - first:
+      4: 400026
+    second: Bone_Top_03
+  - first:
+      4: 400028
+    second: Bone_Top_04
+  - first:
+      4: 400030
+    second: Bone_Top_05
+  - first:
+      4: 400032
+    second: //RootNode
+  - first:
+      4: 400034
+    second: Ghost_01_2
+  - first:
+      4: 400036
+    second: Ghost_01_3
+  - first:
+      4: 400038
+    second: Ghost_01_base
+  - first:
+      4: 400040
+    second: Ghost_Face
+  - first:
+      4: 400042
+    second: Shadow
+  - first:
+      4: 400044
+    second: Shadow_0
+  - first:
+      4: 400046
+    second: Skin
+  - first:
+      4: 400048
+    second: Skin_2
+  - first:
+      21: 2100000
+    second: shadow
+  - first:
+      21: 2100002
+    second: mat_Ghost01
+  - first:
+      21: 2100004
+    second: mat_Face
+  - first:
+      23: 2300000
+    second: Shadow_0
+  - first:
+      33: 3300000
+    second: Shadow_0
+  - first:
+      43: 4300000
+    second: Shadow_0
+  - first:
+      43: 4300002
+    second: Ghost_01_3
+  - first:
+      43: 4300004
+    second: Ghost_Face
+  - first:
+      74: 7400000
+    second: _Move
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Ghost_01_3
+  - first:
+      137: 13700002
+    second: Ghost_Face
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -83,7 +209,7 @@ ModelImporter:
       name: shadow
     second: {fileID: 2100000, guid: 4cd0a490234f2eb4aaa1a579d70c4aea, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -92,6 +218,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -108,7 +235,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: _Move
+      takeName: C4D Animation Take
+      internalID: 7400000
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -116,25 +272,34 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -143,10 +308,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -156,13 +321,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 1
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

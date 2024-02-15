@@ -8,6 +8,7 @@ public class CharacterOperation : MonoBehaviour
     // オブジェクト関係
     public OptitrackRigidBody _target;
     public GameObject _character;
+    public GameObject _LookAtTarget;
 
     // 座標関係
     private Vector3 xvec_i;
@@ -50,11 +51,16 @@ public class CharacterOperation : MonoBehaviour
             xvec_i = Input.mousePosition;
             xvec_i.z = 1.0f;
             Vector3 NewPosition = Camera.main.ScreenToWorldPoint(xvec_i);
+            Vector3 CharacterToLookAtTarget = _LookAtTarget.transform.position - _character.transform.position;
+            // Quaternion NewOrientation = Quaternion.LookRotation(CharacterToLookAtTarget);
+            // _character.transform.LookAt(_LookAtTarget.transform);
 
             Vector3 NewPositionInScreen = Camera.main.WorldToScreenPoint(NewPosition + MousePositionOffset);
 
             UnityEngine.Debug.Log("screen = "+NewPositionInScreen);
             _character.transform.position = NewPosition + MousePositionOffset;
+            _character.transform.LookAt(_LookAtTarget.transform);
+            // _character.transform.rotation = NewOrientation;
 
         // トラッキングに基づく追従
         } else {
@@ -121,6 +127,7 @@ public class CharacterOperation : MonoBehaviour
 
             //if (!PositionChanged) NewPosition = BeforePosition;
             _character.transform.position = NewPosition;
+            _character.transform.LookAt(_LookAtTarget.transform);
             //_character.transform.rotation = rotvec_i;
         }
     }

@@ -128,7 +128,7 @@ public class CharacterOperation : MonoBehaviour
             //if (!PositionChanged) NewPosition = BeforePosition;
             _character.transform.position = NewPosition;
             _character.transform.LookAt(_LookAtTarget.transform);
-            //_character.transform.rotation = rotvec_i;
+            _character.transform.rotation = rotvec_i;
         }
     }
 }

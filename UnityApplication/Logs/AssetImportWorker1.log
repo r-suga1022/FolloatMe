@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.19f1 (c9714fde33b6) revision 13201743'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'ja' Physical Memory: 16077 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'ja' Physical Memory: 65224 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication
+C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-56744
-Successfully changed project path to: C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication
-C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication
+57142
+Successfully changed project path to: C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
+C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,115 +47,115 @@ C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/Unity
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10112] Host "[IP] 0.0.0.0 [Port] 0 [Flags] 2 [Guid] 396856396 [EditorId] 396856396 [Version] 1048832 [Id] WindowsEditor(7,Ryo_Sugawara) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [17800] Host "[IP] 172.21.113.75 [Port] 0 [Flags] 2 [Guid] 1116567469 [EditorId] 1116567469 [Version] 1048832 [Id] WindowsEditor(7,KoizumilabM16R1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [10112] Host "[IP] 0.0.0.0 [Port] 0 [Flags] 2 [Guid] 396856396 [EditorId] 396856396 [Version] 1048832 [Id] WindowsEditor(7,Ryo_Sugawara) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [17800] Host "[IP] 172.21.113.75 [Port] 0 [Flags] 2 [Guid] 1116567469 [EditorId] 1116567469 [Version] 1048832 [Id] WindowsEditor(7,KoizumilabM16R1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 172.39 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 48.94 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.19f1 (c9714fde33b6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication/Assets
+[Subsystems] Discovering subsystems at path C:/Users/koizu/Sugawara/FolloatMe/UnityApplication/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x46aa)
-    Vendor:   Intel
-    VRAM:     8038 MB
-    Driver:   31.0.101.4502
+    Renderer: NVIDIA GeForce RTX 4090 Laptop GPU (ID=0x2757)
+    Vendor:   NVIDIA
+    VRAM:     16064 MB
+    Driver:   31.0.15.3209
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56476
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007176 seconds.
+Registered in 0.002397 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 87.34 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 47.93 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.883 seconds
+- Completed reload, in  0.376 seconds
 Domain Reload Profiling:
-	ReloadAssembly (883ms)
-		BeginReloadAssembly (126ms)
+	ReloadAssembly (376ms)
+		BeginReloadAssembly (45ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (613ms)
-			LoadAssemblies (127ms)
+		EndReloadAssembly (267ms)
+			LoadAssemblies (44ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (150ms)
+			SetupTypeCache (63ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (34ms)
-			SetupLoadedEditorAssemblies (364ms)
+			RebuildScriptCaches (17ms)
+			SetupLoadedEditorAssemblies (154ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (87ms)
-				BeforeProcessingInitializeOnLoad (4ms)
-				ProcessInitializeOnLoadAttributes (192ms)
-				ProcessInitializeOnLoadMethodAttributes (71ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (48ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (73ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007612 seconds.
+Registered in 0.002540 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.435 seconds
+- Completed reload, in  0.585 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1436ms)
-		BeginReloadAssembly (153ms)
+	ReloadAssembly (586ms)
+		BeginReloadAssembly (66ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1175ms)
-			LoadAssemblies (91ms)
+			CreateAndSetChildDomain (11ms)
+		EndReloadAssembly (462ms)
+			LoadAssemblies (50ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (486ms)
+			SetupTypeCache (151ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (65ms)
-			SetupLoadedEditorAssemblies (447ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (209ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (97ms)
-				ProcessInitializeOnLoadAttributes (299ms)
-				ProcessInitializeOnLoadMethodAttributes (24ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (47ms)
+				ProcessInitializeOnLoadAttributes (139ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 4 plugins.
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.49 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3326 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 92 unused Assets / (11.8 MB). Loaded Objects now: 3726.
-Memory consumption went from 170.3 MB to 158.5 MB.
-Total: 8.421600 ms (FindLiveObjects: 0.343200 ms CreateObjectMapping: 0.110000 ms MarkObjects: 2.761400 ms  DeleteObjects: 5.204900 ms)
+Memory consumption went from 168.9 MB to 157.1 MB.
+Total: 5.703600 ms (FindLiveObjects: 0.175600 ms CreateObjectMapping: 0.050000 ms MarkObjects: 2.057800 ms  DeleteObjects: 3.419600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,388 +170,355 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 151953.498169 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Move.fbx
-  artifactKey: Guid(8ea2eed37fad8a045bf103d8428b7f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Move.fbx using Guid(8ea2eed37fad8a045bf103d8428b7f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5899b3870e59443718ea35ac8008a628') in 0.220746 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012015 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.003 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1004ms)
-		BeginReloadAssembly (123ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (787ms)
-			LoadAssemblies (78ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (259ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (353ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (241ms)
-				ProcessInitializeOnLoadMethodAttributes (19ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 5.65 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (11.9 MB). Loaded Objects now: 3741.
-Memory consumption went from 174.3 MB to 162.4 MB.
-Total: 19.564100 ms (FindLiveObjects: 0.439800 ms CreateObjectMapping: 0.238300 ms MarkObjects: 5.482400 ms  DeleteObjects: 13.400900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.023553 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.917 seconds
-Domain Reload Profiling:
-	ReloadAssembly (918ms)
-		BeginReloadAssembly (143ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (683ms)
-			LoadAssemblies (90ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (231ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (293ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (56ms)
-				ProcessInitializeOnLoadAttributes (198ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 6.88 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (12.1 MB). Loaded Objects now: 3744.
-Memory consumption went from 174.5 MB to 162.4 MB.
-Total: 18.317500 ms (FindLiveObjects: 0.419800 ms CreateObjectMapping: 0.236600 ms MarkObjects: 5.227600 ms  DeleteObjects: 12.418600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009355 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.923 seconds
-Domain Reload Profiling:
-	ReloadAssembly (924ms)
-		BeginReloadAssembly (148ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (677ms)
-			LoadAssemblies (99ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (269ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (263ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (55ms)
-				ProcessInitializeOnLoadAttributes (171ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 2.63 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (12.1 MB). Loaded Objects now: 3747.
-Memory consumption went from 174.4 MB to 162.3 MB.
-Total: 15.610400 ms (FindLiveObjects: 0.309300 ms CreateObjectMapping: 0.130000 ms MarkObjects: 3.146400 ms  DeleteObjects: 12.022800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009217 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.045 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1046ms)
-		BeginReloadAssembly (134ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (804ms)
-			LoadAssemblies (79ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (294ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (333ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (68ms)
-				ProcessInitializeOnLoadAttributes (217ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 2.23 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (11.8 MB). Loaded Objects now: 3750.
-Memory consumption went from 174.3 MB to 162.4 MB.
-Total: 7.309500 ms (FindLiveObjects: 0.219500 ms CreateObjectMapping: 0.093900 ms MarkObjects: 2.080400 ms  DeleteObjects: 4.914800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 607562.487666 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Move.prefab
+  artifactKey: Guid(60c515e26fbfe984497fe9cde2f298aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Move.prefab using Guid(60c515e26fbfe984497fe9cde2f298aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76fbb845efbedb63ab913415b5afcfb6') in 0.113410 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 209.279095 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@_Stand.fbx
-  artifactKey: Guid(ab0d8061c6267714e9dd0ea37b22fbe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@_Stand.fbx using Guid(ab0d8061c6267714e9dd0ea37b22fbe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '150104dce9a66b64f84e6b0aac6a7b42') in 0.191218 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010574 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.106 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1107ms)
-		BeginReloadAssembly (216ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (62ms)
-		EndReloadAssembly (707ms)
-			LoadAssemblies (117ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (249ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (304ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (191ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
-				AfterProcessingInitializeOnLoad (13ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 3.93 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (11.9 MB). Loaded Objects now: 3753.
-Memory consumption went from 174.3 MB to 162.4 MB.
-Total: 18.420400 ms (FindLiveObjects: 0.479400 ms CreateObjectMapping: 0.163300 ms MarkObjects: 4.374100 ms  DeleteObjects: 13.401100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 0.000020 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Stun.prefab
+  artifactKey: Guid(506b57fe91e2c774782eeb5a82fdc24b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Stun.prefab using Guid(506b57fe91e2c774782eeb5a82fdc24b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2070986d246cd3aa7241b26038058413') in 0.028118 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 47.994039 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@_Stand.fbx
-  artifactKey: Guid(ab0d8061c6267714e9dd0ea37b22fbe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@_Stand.fbx using Guid(ab0d8061c6267714e9dd0ea37b22fbe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab857908a4c07a9873654e7cb8c01843') in 0.280330 seconds 
+  Time since last request: 0.000019 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Move.prefab
+  artifactKey: Guid(6ee26792e5c80c246b1220e39cb49977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Move.prefab using Guid(6ee26792e5c80c246b1220e39cb49977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a73dde496b69ca19ae5b5e3487403050') in 0.033964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Stun.prefab
+  artifactKey: Guid(d2abde627044b4441a3c7d7a3eebe602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Stun.prefab using Guid(d2abde627044b4441a3c7d7a3eebe602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '223ca9a035133548df82516c317241b2') in 0.034676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@Awake.prefab
+  artifactKey: Guid(eb721e3fba077ac4ebc81c5e46f4143b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@Awake.prefab using Guid(eb721e3fba077ac4ebc81c5e46f4143b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b2f06caae5191af1f70a7bd3a93b75b') in 0.018383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Die.prefab
+  artifactKey: Guid(a720a53e884eff741af190cc3fc5b782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Die.prefab using Guid(a720a53e884eff741af190cc3fc5b782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93bb49c6e22cbee1c0cd16988729e244') in 0.029642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02.prefab
+  artifactKey: Guid(0cca1638c08df9a42a62d44d4e84bf12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02.prefab using Guid(0cca1638c08df9a42a62d44d4e84bf12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bead7f7e71ac3715394a1a1cfa64f95') in 0.025379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Damage.prefab
+  artifactKey: Guid(d1103b96a06199f44b3727719f462688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Damage.prefab using Guid(d1103b96a06199f44b3727719f462688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1c363a61782dbe4ff91320354563ca9') in 0.025730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@_Idle.prefab
+  artifactKey: Guid(05362653bb698364c82154d909186530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@_Idle.prefab using Guid(05362653bb698364c82154d909186530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '814cf9d1ec0bce82bb8208c13e534648') in 0.031513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Damage.prefab
+  artifactKey: Guid(d0efec6646f761d4bbef29e9a19c8b7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Damage.prefab using Guid(d0efec6646f761d4bbef29e9a19c8b7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '856d3da533b0acb3d30d3fd1ae0df5ce') in 0.046422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@_KnockDown.prefab
+  artifactKey: Guid(32516c739fd8eb5439af1f9b00a6ba70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@_KnockDown.prefab using Guid(32516c739fd8eb5439af1f9b00a6ba70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db71bbd4f9ba3996dc8f7c0a8f155e4c') in 0.032002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Die.prefab
+  artifactKey: Guid(b5d959fc811d3284cb4c1dfe6d811802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Die.prefab using Guid(b5d959fc811d3284cb4c1dfe6d811802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdc8c6a6654cda73c38c330cd49fabed') in 0.039487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@Move.prefab
+  artifactKey: Guid(b86392078c72cbd49881ebc75e4d464d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@Move.prefab using Guid(b86392078c72cbd49881ebc75e4d464d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86309af0fdfa9b80703eb5bfdbf92680') in 0.028242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Cute Monster Pack (Ghost)
+  artifactKey: Guid(ead536f7cd815471aacb36ecd48b1963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost) using Guid(ead536f7cd815471aacb36ecd48b1963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85ae342050f13bb4d5b1615881dc1a34') in 0.016512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Stand.prefab
+  artifactKey: Guid(a9efcd624e5dd5d478601673ac7ffa72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Stand.prefab using Guid(a9efcd624e5dd5d478601673ac7ffa72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a13b1373e8829ce69a20666a2179d133') in 0.039180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@_Skill.prefab
+  artifactKey: Guid(e206128f45e78bd438155acc531a5905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@_Skill.prefab using Guid(e206128f45e78bd438155acc531a5905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5acf2b876b7b8edb583b21c5aa393b6') in 0.035767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Move.prefab
+  artifactKey: Guid(00c72c3fea9b5a24eba6d32f9d32dda4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Move.prefab using Guid(00c72c3fea9b5a24eba6d32f9d32dda4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e2325f66d7902fbbc31e8826b5a6f1') in 0.061965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04.prefab
+  artifactKey: Guid(8fbbb05a214a19040b1b95e44878c8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost04.prefab using Guid(8fbbb05a214a19040b1b95e44878c8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0652cb6167d4e88af9b80e75133792b9') in 0.036656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@KnockDown.prefab
+  artifactKey: Guid(18fddf3e86daaf4498f61cd2a6db9e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@KnockDown.prefab using Guid(18fddf3e86daaf4498f61cd2a6db9e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec3273ad9dc10cfa12c69e32da14cb2') in 0.019241 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Stand.prefab
+  artifactKey: Guid(8b81d152cace6364aaa9adfbf70a0ebf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Stand.prefab using Guid(8b81d152cace6364aaa9adfbf70a0ebf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e675514ed9b0c304a2b8845cbc2e8f1') in 0.023521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Sleep.prefab
+  artifactKey: Guid(58e521936f4932f45bed0469c7b1c15f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Sleep.prefab using Guid(58e521936f4932f45bed0469c7b1c15f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '161308a49be1a8341e5aa7a36ddf6e4d') in 0.051803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Stand.prefab
+  artifactKey: Guid(66d4a7b30a681e741b765c6c085705b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Stand.prefab using Guid(66d4a7b30a681e741b765c6c085705b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd32d1172c39f6fa293e20697dee6849') in 0.030458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Stun.prefab
+  artifactKey: Guid(a888c86f80dcff3409f203d4ca9c1cd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Stun.prefab using Guid(a888c86f80dcff3409f203d4ca9c1cd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '384a886ac1d8c80fc33ecaaf829d3479') in 0.022008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Sleep.prefab
+  artifactKey: Guid(78ac195e333c62547a7433c75723258a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Sleep.prefab using Guid(78ac195e333c62547a7433c75723258a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f73efa4d98dd9126aae88e97a63fc81') in 0.018634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Attack.prefab
+  artifactKey: Guid(be55ab13d858d4b449e49ccbdd2617a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Attack.prefab using Guid(be55ab13d858d4b449e49ccbdd2617a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c040a18dca288c07107f14787acd6b') in 0.018774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Damage.prefab
+  artifactKey: Guid(02e669f3c4403074fa71b304bce52a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Damage.prefab using Guid(02e669f3c4403074fa71b304bce52a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a8a0012043bb7fb13049ad541a92bd5') in 0.020082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Sleep.prefab
+  artifactKey: Guid(d1934fc349891654793ab1a1963ed555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Sleep.prefab using Guid(d1934fc349891654793ab1a1963ed555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d88eb827dc0639590559d5762bce8eb') in 0.027098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Idle.prefab
+  artifactKey: Guid(7cedf47134ac41e4ebea65a058db7bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Idle.prefab using Guid(7cedf47134ac41e4ebea65a058db7bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dc091ba9bee48d487eefd7b46e6ae4b') in 0.023304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Attack.prefab
+  artifactKey: Guid(7f7486554bec6984897796cfb6dc9fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Attack.prefab using Guid(7f7486554bec6984897796cfb6dc9fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d15bf40e712e156a4062b4c5639fe4') in 0.025264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Move.prefab
+  artifactKey: Guid(a19c805f5b16ae240a8671ec4a4b417d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Move.prefab using Guid(a19c805f5b16ae240a8671ec4a4b417d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1922a9c8a2ea5ecb21cca50d99431d5') in 0.021196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Die.prefab
+  artifactKey: Guid(563e682c17c554148bb4de1a4a540a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Die.prefab using Guid(563e682c17c554148bb4de1a4a540a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65d1cd1871fa2bde74c15e15e6bbce24') in 0.019650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Skill.prefab
+  artifactKey: Guid(09546c74b6c2cdc45ba19f6787dd0d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Skill.prefab using Guid(09546c74b6c2cdc45ba19f6787dd0d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c30db18e5161b121c03100c5a941c558') in 0.017682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@_Stand.prefab
+  artifactKey: Guid(43f90ecbd614dfc438ff650e1299cca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@_Stand.prefab using Guid(43f90ecbd614dfc438ff650e1299cca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43e2e93ffe9ce5f0a2a3a201d458313d') in 0.020444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Attack.prefab
+  artifactKey: Guid(ee6c6e513e0e2e34ba836142db27e75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Attack.prefab using Guid(ee6c6e513e0e2e34ba836142db27e75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f9affdec517f006b3e6678a463f2604') in 0.023284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@Sleep.prefab
+  artifactKey: Guid(01a140b59b0f21f43b99cb8dc3fb540e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@Sleep.prefab using Guid(01a140b59b0f21f43b99cb8dc3fb540e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee44c78d214262d6b2d7f1e557d3772b') in 0.017315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_KnockDown.prefab
+  artifactKey: Guid(e2092cb6f89e3904687c341fccb76d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_KnockDown.prefab using Guid(e2092cb6f89e3904687c341fccb76d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95489f4687b31432752713bda441fed7') in 0.020249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Die.prefab
+  artifactKey: Guid(3f1b84dc6d7de7443a902bfa0a5f1b64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost03@Die.prefab using Guid(3f1b84dc6d7de7443a902bfa0a5f1b64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf7d334a6e88d30a7bd470beeb6e62ca') in 0.025302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Sleep.prefab
+  artifactKey: Guid(fd1e4ecfdf23bde4d8c8b09606a34bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_Sleep.prefab using Guid(fd1e4ecfdf23bde4d8c8b09606a34bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '303959c15e2dfb99498d0e2392b18abe') in 0.023158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@KnockDown.prefab
+  artifactKey: Guid(c5d64309a5b70ac419fc3c4fa47c72fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@KnockDown.prefab using Guid(c5d64309a5b70ac419fc3c4fa47c72fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c72f4932f99839623173a4d653dc0b0a') in 0.016477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Stun.prefab
+  artifactKey: Guid(d66e4ff953d38d646baf485172a878e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@Stun.prefab using Guid(d66e4ff953d38d646baf485172a878e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f64af8d2597e612d5c07e43054d6a8') in 0.022944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_KnockDown.prefab
+  artifactKey: Guid(8b202673915d0cf4f95f72037c6e6a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost01@_KnockDown.prefab using Guid(8b202673915d0cf4f95f72037c6e6a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc4d68fd9163e02c1e6710a7448da54d') in 0.017970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@KnockDown.prefab
+  artifactKey: Guid(c94961b331c98f24c9bb3b5a0fb558d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@KnockDown.prefab using Guid(c94961b331c98f24c9bb3b5a0fb558d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4aa5533f3eedac377555ce20ea5f30d') in 0.019073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.901098 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Idle.fbx
+  artifactKey: Guid(808bc719a1230d546a02307e383e03ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Idle.fbx using Guid(808bc719a1230d546a02307e383e03ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de2fc0e2fb911356fae0076173febac3') in 0.060998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@Idle.fbx
+  artifactKey: Guid(f210b80379f665f4ca929a30a08d8a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@Idle.fbx using Guid(f210b80379f665f4ca929a30a08d8a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5bc7b78f2d47b0640f0838c69313788') in 0.034341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.825709 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Damage.fbx
+  artifactKey: Guid(bd91e268d41682242a6007c7ea49b329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Damage.fbx using Guid(bd91e268d41682242a6007c7ea49b329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02881788d7b6cdd90393bc29b11c3ec8') in 0.045339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost01/Ghost01@_Die.fbx
+  artifactKey: Guid(c3c72c4f2e3687b499b6958ae3b9a714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost01/Ghost01@_Die.fbx using Guid(c3c72c4f2e3687b499b6958ae3b9a714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebfdef1ad68cab28a73eada00193e3e9') in 0.065726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@_Idle.fbx
+  artifactKey: Guid(d6cacb3bd38233b4681c9fbb85512258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@_Idle.fbx using Guid(d6cacb3bd38233b4681c9fbb85512258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09daf583a012cdff062688529012bc19') in 0.052191 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.896141 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Stand.fbx
+  artifactKey: Guid(a7932c901a3be4249a0218e86d69af34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Stand.fbx using Guid(a7932c901a3be4249a0218e86d69af34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a813c644506dee547fa84964ed002fb') in 0.048896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@Stand.fbx
+  artifactKey: Guid(3040817c7286fc0458c79629245518da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@Stand.fbx using Guid(3040817c7286fc0458c79629245518da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5b9510ea968020201357339eafb6a98') in 0.047683 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.938481 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@_Stand.fbx
+  artifactKey: Guid(163f41518a8126347b47709fd40d17bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@_Stand.fbx using Guid(163f41518a8126347b47709fd40d17bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d9445d3fa7c6e5fffd09143489ee926') in 0.041843 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007729 seconds.
+Registered in 0.003678 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.055 seconds
+- Completed reload, in  0.627 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1056ms)
-		BeginReloadAssembly (131ms)
+	ReloadAssembly (628ms)
+		BeginReloadAssembly (84ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (32ms)
-		EndReloadAssembly (806ms)
-			LoadAssemblies (84ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (483ms)
+			LoadAssemblies (63ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (268ms)
+			SetupTypeCache (166ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (361ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (198ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (80ms)
-				ProcessInitializeOnLoadAttributes (232ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (37ms)
+				ProcessInitializeOnLoadAttributes (135ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 5.30 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (11.9 MB). Loaded Objects now: 3756.
-Memory consumption went from 174.3 MB to 162.4 MB.
-Total: 20.884500 ms (FindLiveObjects: 0.445300 ms CreateObjectMapping: 0.350000 ms MarkObjects: 5.870200 ms  DeleteObjects: 14.216400 ms)
+Unloading 85 unused Assets / (11.9 MB). Loaded Objects now: 3741.
+Memory consumption went from 173.3 MB to 161.4 MB.
+Total: 6.766500 ms (FindLiveObjects: 0.334300 ms CreateObjectMapping: 0.087200 ms MarkObjects: 1.959100 ms  DeleteObjects: 4.384400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -567,273 +534,264 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007104 seconds.
+Registered in 0.003955 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.10 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.909 seconds
+- Completed reload, in  0.604 seconds
 Domain Reload Profiling:
-	ReloadAssembly (910ms)
-		BeginReloadAssembly (145ms)
+	ReloadAssembly (604ms)
+		BeginReloadAssembly (84ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (461ms)
+			LoadAssemblies (49ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (162ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (196ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (40ms)
+				ProcessInitializeOnLoadAttributes (129ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 1.61 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (11.9 MB). Loaded Objects now: 3744.
+Memory consumption went from 173.3 MB to 161.4 MB.
+Total: 6.846100 ms (FindLiveObjects: 0.176400 ms CreateObjectMapping: 0.047800 ms MarkObjects: 1.973400 ms  DeleteObjects: 4.647700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 46.358785 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@_Stun.fbx
+  artifactKey: Guid(e71ae7afa4b0c704bb00dedfe9b27054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@_Stun.fbx using Guid(e71ae7afa4b0c704bb00dedfe9b27054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acbd148328395656742b15531b2a5098') in 0.133417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.061896 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@_Skill.fbx
+  artifactKey: Guid(eb0307cb8a7008647a590a615e579ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@_Skill.fbx using Guid(eb0307cb8a7008647a590a615e579ce6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3136cf448d347a212465cbfc1feb13fd') in 0.054948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.431576 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@Attack.fbx
+  artifactKey: Guid(bae3c5271054c6b45938c58792983261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@Attack.fbx using Guid(bae3c5271054c6b45938c58792983261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d016879fddab2a1c55022bbef6d86c4') in 0.054311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost01/Ghost01@Attack.fbx
+  artifactKey: Guid(216b94b0fc324684588c38a2f4f31900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost01/Ghost01@Attack.fbx using Guid(216b94b0fc324684588c38a2f4f31900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b1899c753a8d2f6df7f1cafe79855cf') in 0.061155 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.760164 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost01/Ghost01@Die.fbx
+  artifactKey: Guid(e6ddcacba8017ea46911546fd324e314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost01/Ghost01@Die.fbx using Guid(e6ddcacba8017ea46911546fd324e314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8870f5b77a5f1a0e809a895ac49d478f') in 0.050028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Die.fbx
+  artifactKey: Guid(603e2430ad51081439f08ccfd6e9228c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Die.fbx using Guid(603e2430ad51081439f08ccfd6e9228c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3cb9f740a128c6382cdababcdfac3f') in 0.050305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.089714 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@KnockDown.fbx
+  artifactKey: Guid(91d8c3cbd509bdd40a7c4c5b72577ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@KnockDown.fbx using Guid(91d8c3cbd509bdd40a7c4c5b72577ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f676e3e99d6d3e2c517f878c56900c0') in 0.041196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Move.fbx
+  artifactKey: Guid(1ffb922a10c19f54b8cba456da230d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Move.fbx using Guid(1ffb922a10c19f54b8cba456da230d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '648493051d85275d5f3d5da5db6a4547') in 0.047636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@Move.fbx
+  artifactKey: Guid(9a78fccae43cfa749befb3b770726023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@Move.fbx using Guid(9a78fccae43cfa749befb3b770726023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5d1527040dad2b4f8797035880293c5') in 0.056867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.107971 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Skill.fbx
+  artifactKey: Guid(6f58cbe2be637e44b92b68b7e8a9c932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost03/Ghost03@Skill.fbx using Guid(6f58cbe2be637e44b92b68b7e8a9c932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37c3030eea958f1d42adcca9b352fd83') in 0.035514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.012770 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@Sleep.fbx
+  artifactKey: Guid(d8ab5d3e167aa8c43b93b72e2c11af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost04/Ghost04@Sleep.fbx using Guid(d8ab5d3e167aa8c43b93b72e2c11af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45f31b5d67c4ba22659e98eb888fe721') in 0.053609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.013689 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost01/Ghost01@Sleep.fbx
+  artifactKey: Guid(77d6e03e0bd10f447be6c70e52b655c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost01/Ghost01@Sleep.fbx using Guid(77d6e03e0bd10f447be6c70e52b655c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f074ad3dfeb4fe17d8f31aa14d8eb9d8') in 0.036492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.870123 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Awake.fbx
+  artifactKey: Guid(7994b0fa659ba68418cb750edafc77a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Awake.fbx using Guid(7994b0fa659ba68418cb750edafc77a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3a0e6d52302ca82ba65c996fd3ecdc') in 0.062376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Move.fbx
+  artifactKey: Guid(8ea2eed37fad8a045bf103d8428b7f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02@_Move.fbx using Guid(8ea2eed37fad8a045bf103d8428b7f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23a7047ce2a8d1fe8060b3979add01db') in 0.066437 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002530 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.604 seconds
+Domain Reload Profiling:
+	ReloadAssembly (604ms)
+		BeginReloadAssembly (82ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (462ms)
+			LoadAssemblies (49ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (156ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (203ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (35ms)
+				ProcessInitializeOnLoadAttributes (142ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 1.45 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (11.8 MB). Loaded Objects now: 3747.
+Memory consumption went from 173.4 MB to 161.6 MB.
+Total: 7.496200 ms (FindLiveObjects: 0.373200 ms CreateObjectMapping: 0.158300 ms MarkObjects: 1.968400 ms  DeleteObjects: 4.994700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004254 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.619 seconds
+Domain Reload Profiling:
+	ReloadAssembly (620ms)
+		BeginReloadAssembly (84ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (654ms)
-			LoadAssemblies (84ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (472ms)
+			LoadAssemblies (50ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (213ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (291ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (60ms)
-				ProcessInitializeOnLoadAttributes (190ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 2.36 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (12.0 MB). Loaded Objects now: 3759.
-Memory consumption went from 174.3 MB to 162.4 MB.
-Total: 15.773600 ms (FindLiveObjects: 0.306000 ms CreateObjectMapping: 0.171600 ms MarkObjects: 4.410000 ms  DeleteObjects: 10.884400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 179.608408 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02.fbx
-  artifactKey: Guid(95cc412887954bb43b3c6fe3b814be12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02.fbx using Guid(95cc412887954bb43b3c6fe3b814be12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54063d4149f688e621c70ccdc0b468c7') in 0.255493 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006820 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.988 seconds
-Domain Reload Profiling:
-	ReloadAssembly (989ms)
-		BeginReloadAssembly (150ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (35ms)
-		EndReloadAssembly (742ms)
-			LoadAssemblies (79ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (245ms)
+			SetupTypeCache (160ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (321ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (205ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (66ms)
-				ProcessInitializeOnLoadAttributes (210ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (39ms)
+				ProcessInitializeOnLoadAttributes (138ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 4.00 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (12.0 MB). Loaded Objects now: 3762.
-Memory consumption went from 174.5 MB to 162.5 MB.
-Total: 12.168100 ms (FindLiveObjects: 0.306600 ms CreateObjectMapping: 0.193300 ms MarkObjects: 3.260200 ms  DeleteObjects: 8.406600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 10.418479 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02.fbx
-  artifactKey: Guid(95cc412887954bb43b3c6fe3b814be12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Animations/Ghost02/Ghost02.fbx using Guid(95cc412887954bb43b3c6fe3b814be12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18bc76cfb1a7bca153dc3da795c98812') in 0.237649 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010101 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.079 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1080ms)
-		BeginReloadAssembly (143ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (835ms)
-			LoadAssemblies (88ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (294ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (341ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (17ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (62ms)
-				ProcessInitializeOnLoadAttributes (226ms)
-				ProcessInitializeOnLoadMethodAttributes (25ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 2.95 ms, found 4 plugins.
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 1.66 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (12.1 MB). Loaded Objects now: 3765.
-Memory consumption went from 174.6 MB to 162.5 MB.
-Total: 13.334400 ms (FindLiveObjects: 0.433100 ms CreateObjectMapping: 0.218200 ms MarkObjects: 3.798800 ms  DeleteObjects: 8.881900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 374.760205 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Attack.prefab
-  artifactKey: Guid(7f7486554bec6984897796cfb6dc9fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Attack.prefab using Guid(7f7486554bec6984897796cfb6dc9fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12243808e5bad22dd3e9c3d1b4832e56') in 0.163194 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Stand.prefab
-  artifactKey: Guid(84a9f8516fc99df46ad46d03a0012631) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_Stand.prefab using Guid(84a9f8516fc99df46ad46d03a0012631) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ceec05967d976fac904e5d85619aecb') in 0.023696 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_KnockDown.prefab
-  artifactKey: Guid(e2092cb6f89e3904687c341fccb76d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cute Monster Pack (Ghost)/Prefabs/Ghost02@_KnockDown.prefab using Guid(e2092cb6f89e3904687c341fccb76d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '594f164680f81e3e5ac784f3f86c7610') in 0.054937 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011530 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.268 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1269ms)
-		BeginReloadAssembly (155ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (966ms)
-			LoadAssemblies (106ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (321ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (404ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (20ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (78ms)
-				ProcessInitializeOnLoadAttributes (257ms)
-				ProcessInitializeOnLoadMethodAttributes (31ms)
-				AfterProcessingInitializeOnLoad (16ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Platform modules already initialized, skipping
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 7.32 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3198 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 85 unused Assets / (12.0 MB). Loaded Objects now: 3768.
-Memory consumption went from 174.6 MB to 162.5 MB.
-Total: 18.480800 ms (FindLiveObjects: 0.410100 ms CreateObjectMapping: 0.265100 ms MarkObjects: 5.261600 ms  DeleteObjects: 12.541800 ms)
+Unloading 85 unused Assets / (12.0 MB). Loaded Objects now: 3750.
+Memory consumption went from 173.7 MB to 161.6 MB.
+Total: 7.662900 ms (FindLiveObjects: 0.380300 ms CreateObjectMapping: 0.058700 ms MarkObjects: 2.116100 ms  DeleteObjects: 5.107000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

@@ -34,7 +34,7 @@ public class MonsterGhostCharacterButton : MonoBehaviour
     }
 
     
-    /*
+    //
     void OnGUI()
     {
         if (GUI.Button(new Rect(20, 20, 70, 40), "Idle"))
@@ -424,7 +424,7 @@ public class MonsterGhostCharacterButton : MonoBehaviour
             SceneManager.LoadScene("Ghost_04");
         }
     }
-    */
+    //
 
     void hSkinNum()
     {

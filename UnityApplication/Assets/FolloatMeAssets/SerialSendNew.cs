@@ -33,6 +33,7 @@ public class SerialSendNew : MonoBehaviour
     public int MAX_PULSEWIDTH; // パルス幅の最大
     public int MIN_PULSEWIDTH; // パルス幅の最小
     public float a; // パルス幅計算式の係数
+    public float a_positive, a_negative;
     float delta_t; // トラッキングの時間間隔
     public float MoveThreshold;
     long TimeInOneFrameBefore = 0;
@@ -142,6 +143,8 @@ public class SerialSendNew : MonoBehaviour
         // 簡略化した式（２変数関数）で計算
         w_imin1 = pulse_width;
         delta_z = z_i - z_imin1;
+        if (delta_z < 0) a = a_negative;
+        else a = a_positive;
         pulse_width = (int)((a*delta_t) / (1000f*delta_z));
         if (Math.Abs(delta_z) <= MoveThreshold) pulse_width = MAX_PULSEWIDTH;
         CalculationException();
@@ -149,7 +152,7 @@ public class SerialSendNew : MonoBehaviour
         w_i = pulse_width;
         delta_w = w_i - w_imin1;
 
-        UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
         i = 0;
@@ -187,7 +190,7 @@ public class SerialSendNew : MonoBehaviour
         ++i;
 
         CalculationException();
-        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)

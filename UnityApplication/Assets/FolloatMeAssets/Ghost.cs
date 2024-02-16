@@ -433,7 +433,7 @@ public class Ghost : MonoBehaviour
     }
 
     bool DizzyOn = false;
-    public int FaceTextureNumber;
+    public int DizzyFaceTextureNumber;
     public string MotionName;
     public float PoschangeThreshold;
     Vector3 PositionOneFrameBefore;
@@ -441,6 +441,13 @@ public class Ghost : MonoBehaviour
     public float DeltaXThreshold, DeltaYThreshold;
     public int FrameCountBeforeAnimation;
     public int FrameCountBeforeAnimation_Threshold;
+    int DizzyFrameCount = 0;
+    public int DizzyFrameCountThreshold;
+    bool RetrieveFlag = false;
+    public bool AnimationChange;
+
+
+    public int MakeFullOfTextureNumber;
 
     // Update is called once per frame
     void Update()
@@ -449,22 +456,26 @@ public class Ghost : MonoBehaviour
         float DeltaX = Mathf.Abs(PositionCurrentFrame.x - PositionOneFrameBefore.x);
         float DeltaY = Mathf.Abs(PositionCurrentFrame.y - PositionOneFrameBefore.y);
 
+        //Debug.Log("DeltaX = "+DeltaX+", DeltaY = "+DeltaY);
+
         if (DeltaX >= DeltaXThreshold || DeltaY >= DeltaYThreshold) ++FrameCountBeforeAnimation;
-        if (FrameCountBeforeAnimation >= FrameCountBeforeAnimation_Threshold)
+        if (AnimationChange && FrameCountBeforeAnimation >= FrameCountBeforeAnimation_Threshold)
         {
-            Debug.Log("Triggered");
+            //Debug.Log("Triggered");
             Dizzy();
-            FrameCountBeforeAnimation = 0;
-            
         }
-        
+        //if (DizzyOn) ++DizzyFrameCount;
+        //if (DizzyFrameCount >= DizzyFrameCountThreshold) RetrieveFlag = true;
+        //if (RetrieveFlag) Retrieve();
+    
         if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
 
-        /*
+        
         if (Input.GetKeyDown(KeyCode.C))
         {
             DizzyOn = !DizzyOn;
             EffectClear();
+            /*
             if (DizzyOn)
             {
                 Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
@@ -484,24 +495,62 @@ public class Ghost : MonoBehaviour
             }
             // faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[6]);
             // if (GameObject.FindGameObjectWithTag("Effect") == null) GameObject.Instantiate(effPrefabArray[1]);
+            */
+            EffectClear();
+            Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+            // Monster.GetComponent<Animation>().speed = 0.5f;
+            Monster.GetComponent<Animation>().CrossFade("Stand");
+            faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[0]);
+            // BodyNum = 1;
+
+            RetrieveFlag = false;
+            DizzyOn = false;
+            FrameCountBeforeAnimation = 0;
         }
-        */
-        PositionOneFrameBefore = this.transform.position;        
+        
+        PositionOneFrameBefore = this.transform.position;
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            MakeFullOf();
+        }
     }
 
     void Dizzy()
     {
         DizzyOn = !DizzyOn;
-        EffectClear();
+        //EffectClear();
         if (DizzyOn)
         {
             Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
             // Monster.GetComponent<Animation>().speed = 0.5f;
             Monster.GetComponent<Animation>().CrossFade(MotionName);
-            faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[FaceTextureNumber-1]);
+            faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[DizzyFaceTextureNumber-1]);
+            if (GameObject.FindGameObjectWithTag("Effect") == null) GameObject.Instantiate(effPrefabArray[9]);
             // BodyNum = 1;
             // hSkinNum();
         }
+    }
+
+    void Retrieve()
+    {
+            EffectClear();
+            Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+            // Monster.GetComponent<Animation>().speed = 0.5f;
+            Monster.GetComponent<Animation>().CrossFade("Stand");
+            faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[0]);
+            // BodyNum = 1;
+
+            RetrieveFlag = false;
+            DizzyOn = false;
+    }
+
+    void MakeFullOf()
+    {
+            Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+            // Monster.GetComponent<Animation>().speed = 0.5f;
+            Monster.GetComponent<Animation>().CrossFade("_Move");
+            faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[MakeFullOfTextureNumber-1]);
     }
 
 }

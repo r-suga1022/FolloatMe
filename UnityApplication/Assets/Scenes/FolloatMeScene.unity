@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414754, b: 0.12107867, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731706, g: 0.13414723, b: 0.12107849, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -239,6 +239,21 @@ PrefabInstance:
       objectReference: {fileID: 7400000, guid: 86fc6f0ff6bf3cb49a33814885183326, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cca1638c08df9a42a62d44d4e84bf12, type: 3}
+--- !u!137 &176866605 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3224365556929152794, guid: 0cca1638c08df9a42a62d44d4e84bf12, type: 3}
+  m_PrefabInstance: {fileID: 176866604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &176866606 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3224365556929152792, guid: 0cca1638c08df9a42a62d44d4e84bf12, type: 3}
+  m_PrefabInstance: {fileID: 176866604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &176866607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3224365556917651994, guid: 0cca1638c08df9a42a62d44d4e84bf12, type: 3}
+  m_PrefabInstance: {fileID: 176866604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &233560353
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 639163501}
   _character: {fileID: 2033526461}
-  _LookAtTarget: {fileID: 785584934}
+  _LookAtTarget: {fileID: 963194225}
   PositionOffset: {x: 0.2, y: -0.5, z: 0}
   MousePositionOffset: {x: 0.15, y: -0.76, z: 0}
   XPositionRate: 4.878049
@@ -1186,7 +1201,7 @@ MonoBehaviour:
   _CharacterOperation: {fileID: 762647898}
   _SerialSend: {fileID: 1069388187}
   _SerialReceive: {fileID: 1032185113}
-  MousePrototyping: 0
+  MousePrototyping: 1
 --- !u!1 &1118456154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +1920,60 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3224365556917652088, guid: 0cca1638c08df9a42a62d44d4e84bf12, type: 3}
   m_PrefabInstance: {fileID: 176866604}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2033526467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033526461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc1663a983dac243b86c123904a51a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Monster: {fileID: 2033526461}
+  ShootPoint: {fileID: 176866607}
+  bodyMesh: {fileID: 176866606}
+  faceMesh: {fileID: 176866605}
+  faceTextureArray:
+  - {fileID: 2800000, guid: 9d7a62fc029bf9040a70dd7123776bd0, type: 3}
+  - {fileID: 2800000, guid: d8be11f300c7b9a4893c9886d62cb83e, type: 3}
+  - {fileID: 2800000, guid: affea174774dd0145b85f34aa8cd5bb2, type: 3}
+  - {fileID: 2800000, guid: 49751a7bfef6f6547b4d6143a1a7fc88, type: 3}
+  - {fileID: 2800000, guid: 69afd190b7c40f440acdb05a44f66ad8, type: 3}
+  - {fileID: 2800000, guid: f5ce5ee9ec8f6b8498d3a5f3e4026737, type: 3}
+  - {fileID: 2800000, guid: 4c67f65af57ce8e45bb4f6ed1238986b, type: 3}
+  - {fileID: 2800000, guid: 61c4d16d78cb26940ab60015167dd462, type: 3}
+  - {fileID: 2800000, guid: e0cc7cf2ac5e38e45bcfdb5a4b2fcfb1, type: 3}
+  - {fileID: 2800000, guid: 134ffc10ee5c6f84a9eac4875bd3655a, type: 3}
+  - {fileID: 2800000, guid: 2c97754dd32f6db45bbb7af715ff7b11, type: 3}
+  - {fileID: 2800000, guid: 16a9ade3ab33a8c44b5614bbef083531, type: 3}
+  bodyTextureArray:
+  - {fileID: 0}
+  - {fileID: 2800000, guid: 128b0ca194488874e933e2a13a515036, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  effPrefabArray:
+  - {fileID: 1314422735755396, guid: 016e37bc44863a64abd43cfd282ca186, type: 3}
+  - {fileID: 1686476309191194, guid: 4616002b57ed10340b1ee9ebad2559f2, type: 3}
+  - {fileID: 2759896404920554417, guid: 3f8c1e66fa4ee1e46a27c828f310c7c3, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BodyNum: 0
+  HatNum: 0
+  SkinNum: 0
+  FaceTextureNumber: 10
+  MotionName: Stun
+  PoschangeThreshold: 0
+  DeltaXThreshold: 0.05
+  DeltaYThreshold: 0.05
+  FrameCountBeforeAnimation: 0
+  FrameCountBeforeAnimation_Threshold: 200
 --- !u!1001 &2115608205
 PrefabInstance:
   m_ObjectHideFlags: 0

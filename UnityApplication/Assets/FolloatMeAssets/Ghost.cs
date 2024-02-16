@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class MonsterGhostCharacterButton : MonoBehaviour
+public class Ghost : MonoBehaviour
 {
 
     public GameObject Monster;
@@ -432,18 +432,75 @@ public class MonsterGhostCharacterButton : MonoBehaviour
         bodyMesh.materials[0].SetTexture("_MainTex", bodyTextureArray[SkinNum]);
     }
 
+    bool DizzyOn = false;
+    public int FaceTextureNumber;
+    public string MotionName;
+    public float PoschangeThreshold;
+    Vector3 PositionOneFrameBefore;
+    Vector3 PositionCurrentFrame;
+    public float DeltaXThreshold, DeltaYThreshold;
+    public int FrameCountBeforeAnimation;
+    public int FrameCountBeforeAnimation_Threshold;
+
     // Update is called once per frame
     void Update()
     {
+        PositionCurrentFrame = this.transform.position;
+        float DeltaX = Mathf.Abs(PositionCurrentFrame.x - PositionOneFrameBefore.x);
+        float DeltaY = Mathf.Abs(PositionCurrentFrame.y - PositionOneFrameBefore.y);
+
+        if (DeltaX >= DeltaXThreshold || DeltaY >= DeltaYThreshold) ++FrameCountBeforeAnimation;
+        if (FrameCountBeforeAnimation >= FrameCountBeforeAnimation_Threshold)
+        {
+            Debug.Log("Triggered");
+            Dizzy();
+            FrameCountBeforeAnimation = 0;
+            
+        }
+        
         if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
 
+        /*
         if (Input.GetKeyDown(KeyCode.C))
         {
+            DizzyOn = !DizzyOn;
             EffectClear();
-            Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
-            Monster.GetComponent<Animation>().CrossFade("Attack");
+            if (DizzyOn)
+            {
+                Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+                // Monster.GetComponent<Animation>().speed = 0.5f;
+                Monster.GetComponent<Animation>().CrossFade(MotionName);
+                faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[FaceTextureNumber-1]);
+                // BodyNum = 1;
+                // hSkinNum();
+            }
+            else
+            {
+                Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+                Monster.GetComponent<Animation>().CrossFade("Stand");
+                faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[0]);
+                // BodyNum = 0;
+                // hSkinNum();
+            }
             // faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[6]);
             // if (GameObject.FindGameObjectWithTag("Effect") == null) GameObject.Instantiate(effPrefabArray[1]);
+        }
+        */
+        PositionOneFrameBefore = this.transform.position;        
+    }
+
+    void Dizzy()
+    {
+        DizzyOn = !DizzyOn;
+        EffectClear();
+        if (DizzyOn)
+        {
+            Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+            // Monster.GetComponent<Animation>().speed = 0.5f;
+            Monster.GetComponent<Animation>().CrossFade(MotionName);
+            faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[FaceTextureNumber-1]);
+            // BodyNum = 1;
+            // hSkinNum();
         }
     }
 

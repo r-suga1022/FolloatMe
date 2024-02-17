@@ -507,6 +507,15 @@ public class Ghost : MonoBehaviour
             DizzyOn = false;
             FrameCountBeforeAnimation = 0;
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EffectClear();
+            Monster.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+            // Monster.GetComponent<Animation>().speed = 0.5f;
+            Monster.GetComponent<Animation>().CrossFade("Sleep");
+            faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[0]);
+        }
         
         PositionOneFrameBefore = this.transform.position;
 

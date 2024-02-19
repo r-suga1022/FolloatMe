@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class CharacterOperation : MonoBehaviour
 {
     // オブジェクト関係
-    public OptitrackRigidBody _target;
-    public GameObject _character;
+    //public OptitrackRigidBody _target;
+    public GameObject _MouseCharacter;
+    public List<GameObject> _characterlist;
     public GameObject _LookAtTarget;
-
+    public List<OptitrackRigidBody> _targetlist = new List<OptitrackRigidBody>();
+    public int CurrentCharacterNumber;
+ 
     // 座標関係
     private Vector3 xvec_i;
     private Vector3 xvec_imin1;
@@ -51,84 +54,105 @@ public class CharacterOperation : MonoBehaviour
             xvec_i = Input.mousePosition;
             xvec_i.z = 1.0f;
             Vector3 NewPosition = Camera.main.ScreenToWorldPoint(xvec_i);
-            Vector3 CharacterToLookAtTarget = _LookAtTarget.transform.position - _character.transform.position;
+            Vector3 CharacterToLookAtTarget = _LookAtTarget.transform.position - _MouseCharacter.transform.position;
             // Quaternion NewOrientation = Quaternion.LookRotation(CharacterToLookAtTarget);
             // _character.transform.LookAt(_LookAtTarget.transform);
 
             Vector3 NewPositionInScreen = Camera.main.WorldToScreenPoint(NewPosition + MousePositionOffset);
 
             UnityEngine.Debug.Log("screen = "+NewPositionInScreen);
-            _character.transform.position = NewPosition + MousePositionOffset;
-            _character.transform.LookAt(_LookAtTarget.transform);
+            _MouseCharacter.transform.position = NewPosition + MousePositionOffset;
+            _MouseCharacter.transform.LookAt(_LookAtTarget.transform);
             // _character.transform.rotation = NewOrientation;
 
         // トラッキングに基づく追従
         } else {
-            // 座標取得
-            xvec_imin1 = xvec_i;
-            xvec_i = _target.rbStatePosition;
-            rotvec_i = _target.rbStateOrientation;
-
-            // 座標計算
-            if (!_target.TrackingDone) return;
-            BeforePositionX = NewPositionX; BeforePositionY = NewPositionY;
-            NewPositionX = (xvec_i.x + (xvec_i.x - xvec_imin1.x)*25f/1000f)*XPositionRate + PositionOffset.x;
-            NewPositionY = (xvec_i.y + (xvec_i.y - xvec_imin1.y)*25f/1000f)*YPositionRate + PositionOffset.y;
-            //NewPositionX = xvec_imin1.x + (xvec_i.x - xvec_imin1.x)*XPositionRate + PositionOffset.x;
-            //NewPositionY = xvec_imin1.y + (xvec_i.y - xvec_imin1.y)*YPositionRate + PositionOffset.y;
-            //NewPositionX = xvec_i.x*XPositionRate + PositionOffset.x;
-            //NewPositionY = xvec_i.y*YPositionRate + PositionOffset.y;
-            Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, -1f);
-
-            // 姿勢
-            Quaternion new_rot = _target.rbStateOrientation;
-
-            //bool XChanged = Mathf.Abs(NewPositionX - BeforePositionX) > MoveThreshold;
-            //bool YChangedPositive = (NewPositionY - BeforePositionY) > MoveThreshold;
-            bool XChanged = (xvec_i.x - xvec_imin1.x) > MoveThreshold;
-            bool YChanged = false;
-            PositionChanged = XChanged | YChanged;
-
-
-            // 遅延測定の際、色を変える
-            if (_target.LatencyMeasuring)
+            for (CurrentCharacterNumber = 0; CurrentCharacterNumber < _characterlist.Count; ++CurrentCharacterNumber)
+            //foreach (OptitrackRigidBody _target in _targetlist)
             {
-                if (_target.TrackingDone && PositionChanged && !CharacterRed)
+                OptitrackRigidBody _target = _targetlist[CurrentCharacterNumber];
+                GameObject _character = _characterlist[CurrentCharacterNumber];
+
+
+                // 座標取得
+                xvec_imin1 = xvec_i;
+                xvec_i = _target.rbStatePosition;
+                rotvec_i = _target.rbStateOrientation;
+
+                // 座標計算
+                if (!_target.TrackingDone) return;
+                BeforePositionX = NewPositionX; BeforePositionY = NewPositionY;
+                NewPositionX = (xvec_i.x + (xvec_i.x - xvec_imin1.x)*25f/1000f)*XPositionRate + PositionOffset.x;
+                NewPositionY = (xvec_i.y + (xvec_i.y - xvec_imin1.y)*25f/1000f)*YPositionRate + PositionOffset.y;
+                //NewPositionX = xvec_imin1.x + (xvec_i.x - xvec_imin1.x)*XPositionRate + PositionOffset.x;
+                //NewPositionY = xvec_imin1.y + (xvec_i.y - xvec_imin1.y)*YPositionRate + PositionOffset.y;
+                //NewPositionX = xvec_i.x*XPositionRate + PositionOffset.x;
+                //NewPositionY = xvec_i.y*YPositionRate + PositionOffset.y;
+                Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, -1f);
+
+                // 姿勢
+                Quaternion new_rot = _target.rbStateOrientation;
+
+                //bool XChanged = Mathf.Abs(NewPositionX - BeforePositionX) > MoveThreshold;
+                //bool YChangedPositive = (NewPositionY - BeforePositionY) > MoveThreshold;
+                bool XChanged = (xvec_i.x - xvec_imin1.x) > MoveThreshold;
+                bool YChanged = false;
+                PositionChanged = XChanged | YChanged;
+
+
+                // 遅延測定の際、色を変える
+                if (_target.LatencyMeasuring)
                 {
-                    _character.GetComponent<Renderer>().material.color = Color.red;
-                    CharacterRed = true;
+                    if (_target.TrackingDone && PositionChanged && !CharacterRed)
+                    {
+                        _character.GetComponent<Renderer>().material.color = Color.red;
+                        CharacterRed = true;
+                    }
+
+                    else if (_target.TrackingDone && !PositionChanged && CharacterRed)
+                    {
+                        _character.GetComponent<Renderer>().material.color = Color.white;
+                        CharacterRed = false;
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        _character.GetComponent<Renderer>().material.color = Color.white;
+                        CharacterRed = false;
+                    }
                 }
 
-                else if (_target.TrackingDone && !PositionChanged && CharacterRed)
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    _character.GetComponent<Renderer>().material.color = Color.white;
-                    CharacterRed = false;
+                    CharacterActive = !CharacterActive;
+                    _character.SetActive(CharacterActive);
                 }
 
-                if (Input.GetKeyDown(KeyCode.W))
-                {
-                    _character.GetComponent<Renderer>().material.color = Color.white;
-                    CharacterRed = false;
+                /*
+                if (_target.TrackingDone)
+                {  
+                    PositionDifferenceText.text = (xvec_i.x - xvec_imin1.x).ToString();
                 }
-            }
+                */
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                CharacterActive = !CharacterActive;
-                _character.SetActive(CharacterActive);
-            }
+                //if (!PositionChanged) NewPosition = BeforePosition;
+                _character.transform.position = NewPosition;
+                _character.transform.LookAt(_LookAtTarget.transform);
+                _character.transform.rotation = rotvec_i;
 
-            /*
-            if (_target.TrackingDone)
-            {  
-                PositionDifferenceText.text = (xvec_i.x - xvec_imin1.x).ToString();
-            }
-            */
 
-            //if (!PositionChanged) NewPosition = BeforePosition;
-            _character.transform.position = NewPosition;
-            _character.transform.LookAt(_LookAtTarget.transform);
-            _character.transform.rotation = rotvec_i;
+                ChangeOffset();
+            }
         }
     }
+
+    public float PositionOffsetChangeIncrement;
+    void ChangeOffset()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow)) PositionOffset.y += PositionOffsetChangeIncrement;
+        if (Input.GetKeyDown(KeyCode.DownArrow)) PositionOffset.y -= PositionOffsetChangeIncrement;
+        if (Input.GetKeyDown(KeyCode.RightArrow)) PositionOffset.x += PositionOffsetChangeIncrement;
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) PositionOffset.x -= PositionOffsetChangeIncrement;
+    }
+
 }

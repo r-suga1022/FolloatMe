@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.19f1 (c9714fde33b6) revision 13201743'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'ja' Physical Memory: 65224 MB
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'ja' Physical Memory: 16077 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Unity.exe
 -name
 AssetImportWorker2
 -projectPath
-C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
+C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-54383
-Successfully changed project path to: C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
-C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
+54086
+Successfully changed project path to: C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication
+C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,115 +47,115 @@ C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [44512] Host "[IP] 172.21.113.75 [Port] 0 [Flags] 2 [Guid] 3286687629 [EditorId] 3286687629 [Version] 1048832 [Id] WindowsEditor(7,KoizumilabM16R1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [34292] Host "[IP] 192.168.1.44 [Port] 0 [Flags] 2 [Guid] 3109858429 [EditorId] 3109858429 [Version] 1048832 [Id] WindowsEditor(7,Ryo_Sugawara) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [44512] Host "[IP] 172.21.113.75 [Port] 0 [Flags] 2 [Guid] 3286687629 [EditorId] 3286687629 [Version] 1048832 [Id] WindowsEditor(7,KoizumilabM16R1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [34292] Host "[IP] 192.168.1.44 [Port] 0 [Flags] 2 [Guid] 3109858429 [EditorId] 3109858429 [Version] 1048832 [Id] WindowsEditor(7,Ryo_Sugawara) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 50.45 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 144.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.19f1 (c9714fde33b6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/koizu/Sugawara/FolloatMe/UnityApplication/Assets
+[Subsystems] Discovering subsystems at path C:/Users/sugar/Documents/KoizumiLab/研究/ヌルヌル空中像/FolloatMe/UnityApplication/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 4090 Laptop GPU (ID=0x2757)
-    Vendor:   NVIDIA
-    VRAM:     16064 MB
-    Driver:   31.0.15.3209
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x46aa)
+    Vendor:   Intel
+    VRAM:     8038 MB
+    Driver:   31.0.101.4502
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003685 seconds.
+Registered in 0.013981 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 65.28 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 149.57 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.720 seconds
+- Completed reload, in  1.494 seconds
 Domain Reload Profiling:
-	ReloadAssembly (721ms)
-		BeginReloadAssembly (132ms)
+	ReloadAssembly (1495ms)
+		BeginReloadAssembly (291ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (459ms)
-			LoadAssemblies (132ms)
+		EndReloadAssembly (975ms)
+			LoadAssemblies (288ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (139ms)
+			SetupTypeCache (263ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (241ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (522ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (20ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (65ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (122ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
+				RefreshPlugins (150ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (250ms)
+				ProcessInitializeOnLoadMethodAttributes (99ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003966 seconds.
+Registered in 0.018957 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\sugar\Documents\KoizumiLab\研究\ヌルヌル空中像\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.84 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.962 seconds
+- Completed reload, in  2.307 seconds
 Domain Reload Profiling:
-	ReloadAssembly (963ms)
-		BeginReloadAssembly (72ms)
+	ReloadAssembly (2309ms)
+		BeginReloadAssembly (238ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (13ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (12ms)
-		EndReloadAssembly (831ms)
-			LoadAssemblies (44ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1880ms)
+			LoadAssemblies (232ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (397ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (279ms)
+			SetupTypeCache (628ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (118ms)
+			SetupLoadedEditorAssemblies (848ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (54ms)
-				ProcessInitializeOnLoadAttributes (193ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
-				AfterProcessingInitializeOnLoad (4ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (153ms)
+				ProcessInitializeOnLoadAttributes (586ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
+				AfterProcessingInitializeOnLoad (21ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.70 ms, found 4 plugins.
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.18 seconds
+Refreshing native plugins compatible for Editor in 1.37 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3338 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 96 unused Assets / (11.8 MB). Loaded Objects now: 3735.
-Memory consumption went from 170.2 MB to 158.4 MB.
-Total: 7.959600 ms (FindLiveObjects: 0.227700 ms CreateObjectMapping: 0.068500 ms MarkObjects: 3.885700 ms  DeleteObjects: 3.776500 ms)
+Unloading 3339 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 92 unused Assets / (10.8 MB). Loaded Objects now: 3741.
+Memory consumption went from 172.2 MB to 161.4 MB.
+Total: 11.938200 ms (FindLiveObjects: 0.604900 ms CreateObjectMapping: 0.285100 ms MarkObjects: 4.397300 ms  DeleteObjects: 6.648800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,73 +170,31 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 12744.408935 seconds.
-  path: Assets/LITTLE WOOLIES/EFFECTS/Materials/papelitos_mtl.mat
-  artifactKey: Guid(3c84e5be479c0384da16c2f4648c7ba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES/EFFECTS/Materials/papelitos_mtl.mat using Guid(3c84e5be479c0384da16c2f4648c7ba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ae825d3389b9f1c7ed6e0c54ce58aec') in 0.082976 seconds 
+  Time since last request: 310348.658587 seconds.
+  path: Assets/cu_cat2/cu_cat2_model.fbx
+  artifactKey: Guid(3bb5416ce1ff38e4cbf550b8b0ec21a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cu_cat2/cu_cat2_model.fbx using Guid(3bb5416ce1ff38e4cbf550b8b0ec21a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1923ae25ca38e466e507fa88e6c6080f') in 0.576542 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/LITTLE WOOLIES/EFFECTS/Materials/neg_mtl.mat
-  artifactKey: Guid(988d67847a9605a4db596fb3fc9c9410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES/EFFECTS/Materials/neg_mtl.mat using Guid(988d67847a9605a4db596fb3fc9c9410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba3cb639e97eed9e7fcdcee9575d4d60') in 0.015445 seconds 
+  Time since last request: 0.000062 seconds.
+  path: Assets/cu_cat2/Prefabs/prop_feed_model.prefab
+  artifactKey: Guid(32844a72f0f0ace4e9d02430326790eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cu_cat2/Prefabs/prop_feed_model.prefab using Guid(32844a72f0f0ace4e9d02430326790eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc9327a8c3284a2d23a507382a217f73') in 0.059178 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/LITTLE WOOLIES/EFFECTS/Materials/love_mtl.mat
-  artifactKey: Guid(94691e9d1f2c6a441b993c031ead6310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES/EFFECTS/Materials/love_mtl.mat using Guid(94691e9d1f2c6a441b993c031ead6310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42cc200bd219b360ecf679c1b89ba94b') in 0.011863 seconds 
+  Time since last request: 0.000068 seconds.
+  path: Assets/cu_cat2/Prefabs/cu_cat2_model.prefab
+  artifactKey: Guid(bb1d50d6f6113f6449d51161dff1195f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cu_cat2/Prefabs/cu_cat2_model.prefab using Guid(bb1d50d6f6113f6449d51161dff1195f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49771f0fbc76bf4b961323d656900bc7') in 0.062241 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 473.199821 seconds.
-  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaMain.cg
-  artifactKey: Guid(c3d0f1648f39e1a408ca5a56b25e96bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaMain.cg using Guid(c3d0f1648f39e1a408ca5a56b25e96bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bd796ed9703d99ec7299e1ce2bfcf0a') in 0.021050 seconds 
+  Time since last request: 0.000035 seconds.
+  path: Assets/cu_cat2
+  artifactKey: Guid(3a17cb297da234302804a26a1c462272) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cu_cat2 using Guid(3a17cb297da234302804a26a1c462272) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '142214b31aef89c7a49ca265361c2704') in 0.022615 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaSkin.cginc
-  artifactKey: Guid(7aa8548842ea32542bcfa739686e7d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaSkin.cginc using Guid(7aa8548842ea32542bcfa739686e7d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0721bb059676727b7f9a7697b15f1c0') in 0.021917 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaSkin.cg
-  artifactKey: Guid(fe01eae1ec1d1c24b99530833c8c8241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FolloatMeAssets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Shader/CharaSkin.cg using Guid(fe01eae1ec1d1c24b99530833c8c8241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16eb90e6dee8b8492501cb1b1450edad') in 0.004340 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 19.922380 seconds.
-  path: Assets/LITTLE WOOLIES
-  artifactKey: Guid(9d876a7ef0d7376449421582a5fa306c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES using Guid(9d876a7ef0d7376449421582a5fa306c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03eac3ade3504c7e47442ba740e8f0a8') in 0.019796 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 102.954476 seconds.
-  path: Assets/LITTLE WOOLIES/HEDGEHOG
-  artifactKey: Guid(59046033565ffd34fb2fd2625a6fb296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES/HEDGEHOG using Guid(59046033565ffd34fb2fd2625a6fb296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a73c0969dd4ce1d3789cb0016bcb758c') in 0.010246 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.434469 seconds.
-  path: Assets/LITTLE WOOLIES/HEDGEHOG/Prefabs
-  artifactKey: Guid(485d9f6cc7d0dad4b9a44b605778f466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES/HEDGEHOG/Prefabs using Guid(485d9f6cc7d0dad4b9a44b605778f466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9a85fe5c0b4d3581b6ecdc83b61f5b7') in 0.011159 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.058289 seconds.
-  path: Assets/LITTLE WOOLIES/HEDGEHOG/Prefabs/Hedgehog_mod_00.prefab
-  artifactKey: Guid(d57a9836becdb314bbfec20a02e84b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES/HEDGEHOG/Prefabs/Hedgehog_mod_00.prefab using Guid(d57a9836becdb314bbfec20a02e84b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5895dc3977fb5449df70bcf41b08db79') in 0.337652 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/LITTLE WOOLIES/HEDGEHOG/Prefabs/Hedgehog_mod_02.prefab
-  artifactKey: Guid(178f8fc08d949674fa6c0ffbaf09a0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES/HEDGEHOG/Prefabs/Hedgehog_mod_02.prefab using Guid(178f8fc08d949674fa6c0ffbaf09a0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a8ed3f958daddcf623c8d1552957ef5') in 0.301023 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.219884 seconds.
-  path: Assets/LITTLE WOOLIES/HEDGEHOG/README.txt
-  artifactKey: Guid(a11f070d26d91bc4e8daf79072df8c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LITTLE WOOLIES/HEDGEHOG/README.txt using Guid(a11f070d26d91bc4e8daf79072df8c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6975b89119d36f6a6955d004c816037b') in 0.047316 seconds 
+  Time since last request: 0.000061 seconds.
+  path: Assets/cu_cat2/Prefabs/cu_cat2_maker.prefab
+  artifactKey: Guid(608e5fa7cd820114b836b613e8404cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cu_cat2/Prefabs/cu_cat2_maker.prefab using Guid(608e5fa7cd820114b836b613e8404cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1037a0ccfc8ff1600674f74c8935e466') in 0.064271 seconds 

@@ -172,7 +172,7 @@ public class OptitrackRigidBody : MonoBehaviour
         }
         tracking_interval = 1f/120f*1000f;
 
-        // UnityEngine.Debug.Log("Rigidbody:tracking_interval = "+tracking_interval+", position changed = "+PositionChanged+", before.z = "+BeforePosition.z+", after.z = "+rbStatePosition.z);
+        //UnityEngine.Debug.Log("Rigidbody:tracking_interval = "+tracking_interval+", position changed = "+PositionChanged+", before.z = "+BeforePosition.z+", after.z = "+rbStatePosition.z);
         //EventMethod?.Invoke();
     }
 }

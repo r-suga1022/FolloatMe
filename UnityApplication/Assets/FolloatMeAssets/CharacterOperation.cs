@@ -19,6 +19,7 @@ public class CharacterOperation : MonoBehaviour
     private Quaternion rotvec_i;
     public Vector3 PositionOffset;
     public Vector3 MousePositionOffset;
+    public Vector3 OrientationOffset;
     public float XPositionRate;
     public float YPositionRate;
 
@@ -73,14 +74,14 @@ public class CharacterOperation : MonoBehaviour
                 OptitrackRigidBody _target = _targetlist[CurrentCharacterNumber];
                 GameObject _character = _characterlist[CurrentCharacterNumber];
 
-
                 // 座標取得
                 xvec_imin1 = xvec_i;
                 xvec_i = _target.rbStatePosition;
                 rotvec_i = _target.rbStateOrientation;
 
                 // 座標計算
-                if (!_target.TrackingDone) return;
+                //if (!_target.TrackingDone) return;
+                //UnityEngine.Debug.Log("ID = "+_target.RigidBodyId);
                 BeforePositionX = NewPositionX; BeforePositionY = NewPositionY;
                 NewPositionX = (xvec_i.x + (xvec_i.x - xvec_imin1.x)*25f/1000f)*XPositionRate + PositionOffset.x;
                 NewPositionY = (xvec_i.y + (xvec_i.y - xvec_imin1.y)*25f/1000f)*YPositionRate + PositionOffset.y;
@@ -91,6 +92,7 @@ public class CharacterOperation : MonoBehaviour
                 Vector3 NewPosition = new Vector3(NewPositionX, NewPositionY, -1f);
 
                 // 姿勢
+                Vector3 new_rot_vec3 = _target.rbStateOrientation.eulerAngles + OrientationOffset;
                 Quaternion new_rot = _target.rbStateOrientation;
 
                 //bool XChanged = Mathf.Abs(NewPositionX - BeforePositionX) > MoveThreshold;
@@ -98,7 +100,6 @@ public class CharacterOperation : MonoBehaviour
                 bool XChanged = (xvec_i.x - xvec_imin1.x) > MoveThreshold;
                 bool YChanged = false;
                 PositionChanged = XChanged | YChanged;
-
 
                 // 遅延測定の際、色を変える
                 if (_target.LatencyMeasuring)
@@ -138,7 +139,8 @@ public class CharacterOperation : MonoBehaviour
                 //if (!PositionChanged) NewPosition = BeforePosition;
                 _character.transform.position = NewPosition;
                 _character.transform.LookAt(_LookAtTarget.transform);
-                _character.transform.rotation = rotvec_i;
+                //_character.transform.rotation = Quaternion.Euler(new_rot_vec3);
+                _character.transform.rotation = new_rot;
 
 
                 ChangeOffset();

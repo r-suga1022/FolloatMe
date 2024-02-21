@@ -152,13 +152,14 @@ public class SerialSendNew : MonoBehaviour
         w_i = pulse_width;
         delta_w = w_i - w_imin1;
 
-        //UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
         i = 0;
     }
 
 
+    float delta_w2;
     void acceleration()
     {    
         if (i <= n)
@@ -173,13 +174,26 @@ public class SerialSendNew : MonoBehaviour
                 if (w_imin1 == MAX_PULSEWIDTH)
                 {
                     w_imin1 = -MAX_PULSEWIDTH;
+                    delta_w = w_i - w_imin1;
+                    pulse_width = (int)(w_imin1 + (float)(delta_w*i)/ (float)n);
                 }
                 else if (w_i == MAX_PULSEWIDTH)
                 {
                     w_i = -MAX_PULSEWIDTH;
+                    delta_w = w_i - w_imin1;
+                    pulse_width = (int)(w_imin1 + (float)(delta_w*i)/ (float)n);
                 }
-                delta_w = w_i - w_imin1;
-                pulse_width = (int)(w_imin1 + (float)(delta_w*i)/ (float)n);
+                else
+                {
+                    UnityEngine.Debug.Log("negative");
+                    if (i <= n/2) {
+                        delta_w2 = (w_imin1 > 0) ? MAX_PULSEWIDTH - w_imin1 : -MAX_PULSEWIDTH - w_imin1;
+                        pulse_width = (int)(w_imin1 + (delta_w2*i) / (int)(n/2));
+                    } else {
+                        delta_w2 = (w_i > 0) ? MAX_PULSEWIDTH - w_i : -MAX_PULSEWIDTH - w_i;
+                        pulse_width = (int)(w_i + (delta_w2*(n - i))/ (int)(n/2));
+                    }
+                }
             }
         }
         else
@@ -189,7 +203,7 @@ public class SerialSendNew : MonoBehaviour
 
         ++i;
         CalculationException();
-        //UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)

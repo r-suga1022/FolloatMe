@@ -1723,7 +1723,7 @@ MonoBehaviour:
   StepAtTopPosition: 16584
   StepAtBottomPosition: -14151
   WithinStepAtDeccelerationStart: 2000
-  ZWhenReachedToTop: 0
+  ZWhenReachedToTop: -0.1
   ZWhenReachedToBottom: 0.2
   VelocityZero: 0
 --- !u!1 &1116657741

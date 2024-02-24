@@ -131,6 +131,8 @@ public class OptitrackRigidBody : MonoBehaviour
     public Vector3 rbStatePosition;
     public Quaternion rbStateOrientation;
     public Vector3 BeforePosition = Vector3.zero; // 変えるかもしれない
+    public int OutOfRecognitionFrameCountThreshold;
+    int OutOfRecognitionFrameCount = 0;
 
     public float PositionChangeThreshold;
     void UpdatePose()
@@ -159,6 +161,13 @@ public class OptitrackRigidBody : MonoBehaviour
         //bool ZChangePositive = (rbStatePosition.z - BeforePosition.z) > PositionChangeThreshold;
         //PositionChanged = XChanged || YChanged || ZChanged;
         TrackingDone = XTrackingDone | YTrackingDone | ZTrackingDone;
+
+        if (!TrackingDone) ++OutOfRecognitionFrameCount;
+        if (OutOfRecognitionFrameCount >= OutOfRecognitionFrameCountThreshold)
+        {
+            
+        }
+
         //PositionChangePositive = XChangePositive || ZChangePositive;
         //PositionChanged = ZChanged;
         //UnityEngine.Debug.Log("before = "+BeforePosition.z+", rbstate = "+rbStatePosition.z);

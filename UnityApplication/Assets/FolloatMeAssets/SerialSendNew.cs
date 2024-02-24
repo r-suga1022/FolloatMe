@@ -81,6 +81,8 @@ public class SerialSendNew : MonoBehaviour
         });
     }
 
+    bool OnSending = false;
+    bool SendStopDeccelerating = false;
 
     public void CalculatePulseWidth() {
         // 前のパルス幅送信から1ms以上経ってから次のパルス幅を送る
@@ -89,8 +91,31 @@ public class SerialSendNew : MonoBehaviour
         FrameInterval = TimeInCurrentFrame - TimeInOneFrameBefore;
         
         if (FrameInterval < 1) return;
-        if (SendStop) {
-            FirstExecution = true;
+
+        // もしSendStopになったら、減速してから止まりたい
+        if (!SendStop && !OnSending) 
+            OnSending = true;
+        } else if (SendStop && OnSending) {
+            if (pulse_width == MAX_PULSEWIDTH)
+            {
+                SendStopDeccelerating = false;
+                OnSending = false;
+                return;
+            }
+        // if (OnSending) {
+            if (!SendStopDeccelerating)
+            {
+                FirstExecution = true;
+                w_imin1 = pulse_width;
+                w_i = MAX_PULSEWIDTH;
+                i = 0;
+                TrackingDone = false;
+                // pulse_width = MAX_PULSEWIDTH;
+            }
+
+            SendStopDeccelerating = true;
+            // return;
+        } else if (SendStop && !OnSending) {
             pulse_width = MAX_PULSEWIDTH;
             return;
         }

@@ -107,7 +107,7 @@ void loop() {
     */
     
     String data = Serial.readStringUntil('\n');
-    // if (data == "hello\n") WidthRecording = 1;
+    if (data[0] == 's') Serial.println("Sdesu");
     pulse_width = data.toInt();    // 整数値に変換
     /*
     WidthList[i] = pulse_width;

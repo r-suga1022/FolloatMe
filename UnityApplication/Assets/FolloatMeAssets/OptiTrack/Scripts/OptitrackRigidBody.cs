@@ -41,6 +41,7 @@ public class OptitrackRigidBody : MonoBehaviour
     public bool NetworkCompensation = true;
     public Record _record;
     public SerialSendNew _serialsend;
+    public CharacterOperation _characteroperation;
 
     Stopwatch stopWatch;
     float tracking_time_n, tracking_time_n_1;
@@ -162,10 +163,16 @@ public class OptitrackRigidBody : MonoBehaviour
         //PositionChanged = XChanged || YChanged || ZChanged;
         TrackingDone = XTrackingDone | YTrackingDone | ZTrackingDone;
 
+        if (TrackingDone) {
+            OutOfRecognitionFrameCount = 0;
+            //_serialsend.SendStop = true;
+        }
         if (!TrackingDone) ++OutOfRecognitionFrameCount;
         if (OutOfRecognitionFrameCount >= OutOfRecognitionFrameCountThreshold)
         {
-            
+            _serialsend.SendStop = true;
+            _characteroperation.TrackingStop = true;
+            OutOfRecognitionFrameCount = 0;
         }
 
         //PositionChangePositive = XChangePositive || ZChangePositive;

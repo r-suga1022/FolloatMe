@@ -191,7 +191,7 @@ MonoBehaviour:
   NetworkCompensation: 1
   _record: {fileID: 286224546}
   _serialsend: {fileID: 1069388187}
-  _characteroperation: {fileID: 0}
+  _characteroperation: {fileID: 762647898}
   tracking_interval: 0
   PositionChanged: 0
   TrackingDone: 0
@@ -745,7 +745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7764310312502527262, guid: 5fea1b45f6eca1443a9a1ec164abf082, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fea1b45f6eca1443a9a1ec164abf082, type: 3}
@@ -994,6 +994,11 @@ SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 988141386193582484, guid: 8fbbb05a214a19040b1b95e44878c8d9, type: 3}
   m_PrefabInstance: {fileID: 1779031208}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &584413082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7764310312502527262, guid: 5fea1b45f6eca1443a9a1ec164abf082, type: 3}
+  m_PrefabInstance: {fileID: 298444207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &639163500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamingClient: {fileID: 1192506194}
-  RigidBodyId: 2
+  RigidBodyId: 5
   NetworkCompensation: 1
   _record: {fileID: 286224546}
   _serialsend: {fileID: 1069388187}
@@ -1056,7 +1061,7 @@ MonoBehaviour:
   rbStatePosition: {x: 0, y: 0, z: 0}
   rbStateOrientation: {x: 0, y: 0, z: 0, w: 0}
   BeforePosition: {x: 0, y: 0, z: 0}
-  OutOfRecognitionFrameCountThreshold: 30
+  OutOfRecognitionFrameCountThreshold: 10
   PositionChangeThreshold: 0.00004
 --- !u!65 &639163502
 BoxCollider:
@@ -1264,11 +1269,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamingClient: {fileID: 1192506194}
-  RigidBodyId: 3
+  RigidBodyId: 4
   NetworkCompensation: 1
   _record: {fileID: 286224546}
   _serialsend: {fileID: 1069388187}
-  _characteroperation: {fileID: 0}
+  _characteroperation: {fileID: 762647898}
   tracking_interval: 0
   PositionChanged: 0
   TrackingDone: 0
@@ -1293,7 +1298,7 @@ MonoBehaviour:
   rbStatePosition: {x: 0, y: 0, z: 0}
   rbStateOrientation: {x: 0, y: 0, z: 0, w: 0}
   BeforePosition: {x: 0, y: 0, z: 0}
-  OutOfRecognitionFrameCountThreshold: 0
+  OutOfRecognitionFrameCountThreshold: 10
   PositionChangeThreshold: 0.00004
 --- !u!65 &754772567
 BoxCollider:
@@ -1420,13 +1425,15 @@ MonoBehaviour:
   _MouseCharacter: {fileID: 0}
   _characterlist:
   - {fileID: 2033526461}
+  - {fileID: 584413082}
   _LookAtTarget: {fileID: 785584934}
   _targetlist:
   - {fileID: 639163501}
+  - {fileID: 754772566}
   CurrentCharacterNumber: 0
-  PositionOffset: {x: 0.15, y: -0.25, z: 0}
+  PositionOffset: {x: 0.15, y: -0.4, z: 0}
   MousePositionOffset: {x: 0.15, y: -0.76, z: 0}
-  OrientationOffset: {x: -90, y: 0, z: 0}
+  OrientationOffset: {x: 0, y: 0, z: 0}
   XPositionRate: 4.878049
   YPositionRate: 4.878049
   MoveThreshold: 0.0002
@@ -1706,7 +1713,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serialHandler: {fileID: 233560355}
+  _targetlist_in_serialsend:
+  - {fileID: 639163501}
+  - {fileID: 754772566}
   _target: {fileID: 639163501}
+  CurrentTargetNumber: 0
   _record: {fileID: 286224546}
   TrackedPosition: {x: 0, y: 0, z: 0}
   n: 5
@@ -1722,10 +1733,12 @@ MonoBehaviour:
   Exception: 0
   StepAtTopPosition: 16584
   StepAtBottomPosition: -14151
-  WithinStepAtDeccelerationStart: 2000
-  ZWhenReachedToTop: -0.1
-  ZWhenReachedToBottom: 0.2
+  WithinStepAtDeccelerationStart: 3000
   VelocityZero: 0
+  AKeyOn: 0
+  n_default: 5
+  n_decceleration: 5
+  DebugOn: 0
 --- !u!1 &1116657741
 GameObject:
   m_ObjectHideFlags: 0

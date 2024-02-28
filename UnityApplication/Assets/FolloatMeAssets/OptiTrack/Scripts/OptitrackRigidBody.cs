@@ -165,7 +165,13 @@ public class OptitrackRigidBody : MonoBehaviour
 
         if (TrackingDone) {
             OutOfRecognitionFrameCount = 0;
-            //_serialsend.SendStop = true;
+            //
+            if (_serialsend.AKeyOn) 
+            {
+                //_serialsend.SendStop = false;
+                //_characteroperation.TrackingStop = false;
+            }
+            //
         }
         if (!TrackingDone) ++OutOfRecognitionFrameCount;
         if (OutOfRecognitionFrameCount >= OutOfRecognitionFrameCountThreshold)

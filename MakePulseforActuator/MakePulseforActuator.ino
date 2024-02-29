@@ -19,11 +19,15 @@
 // ------ 広域変数 -----
 //--- 各ピン番号指定 ---
 // Raspberry Pi Pico
-int InputPin = 6;
-int OutputPlusPin = 16;
-int OutputMinusPin = 19;
-int OutputDirPlusPin = 22;
-int OutputDirMinusPin = 27;
+//int InputPin = 6;
+//int OutputPlusPin = 16;
+//int OutputMinusPin = 19;
+//int OutputDirPlusPin = 22;
+//int OutputDirMinusPin = 27;
+int OutputPlusPin = 0;
+int OutputMinusPin = 3;
+int OutputDirPlusPin = 6;
+int OutputDirMinusPin = 10;
 int LEDPin = 15;
 int FrameCountPin = 14;
 
@@ -65,7 +69,7 @@ int i = 0;
 // ------ setup関数 ------
 void setup() {
   // 各種ピン設定
-  pinMode(InputPin, INPUT);
+  //pinMode(InputPin, INPUT);
   pinMode(OutputPlusPin, OUTPUT);
   pinMode(OutputMinusPin, OUTPUT);
   pinMode(OutputDirPlusPin, OUTPUT);
@@ -88,7 +92,7 @@ void setup() {
 void loop() {
   //if (i >= MaxWidthNumber) return;
   FrameCheck = !FrameCheck;
-  digitalWrite(FrameCountPin, FrameCheck);
+  //digitalWrite(FrameCountPin, FrameCheck);
 
   // 回転方向の指定（DIR入力）
   digitalWrite(OutputDirPlusPin, direction_flag);

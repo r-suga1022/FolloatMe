@@ -152,20 +152,25 @@ public class SerialSendNew : MonoBehaviour
         //else if (ReachedToTop && ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart))
         else if (ReachedToTop && (TrackedPosition.z > ZWhenReachedToTop))
         {
-            SendStop = false;
-            Dassyutsushita = true;
-            ReachedToTop = false;
-            BeforeActuatorStep = ActuatorStep;
+            if (pulse_width == MAX_PULSEWIDTH)
+            {
+                SendStop = false;
+                Dassyutsushita = true;
+                ReachedToTop = false;
+                BeforeActuatorStep = ActuatorStep;
+            }
         // 最低地点
         //} else if (ReachedToBottom && ActuatorStep < (StepAtBottomPosition - WithinStepAtDeccelerationStart))
         } else if (ReachedToBottom && (TrackedPosition.z < ZWhenReachedToBottom))
         {
-            UnityEngine.Debug.Log("exe2");
-            SendStop = false;
-            Dassyutsushita = true;
-            ReachedToBottom = false;
-            BeforeActuatorStep = ActuatorStep;
-
+            if (pulse_width == MAX_PULSEWIDTH)
+            {
+                UnityEngine.Debug.Log("exe2");
+                SendStop = false;
+                Dassyutsushita = true;
+                ReachedToBottom = false;
+                BeforeActuatorStep = ActuatorStep;
+            }
             //ReachedToBottom = false;
         }
         //if (!SendStop && ((ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart)) || (ActuatorStep > (StepAtBottomPosition + WithinStepAtDeccelerationStart))))
@@ -183,9 +188,13 @@ public class SerialSendNew : MonoBehaviour
         // もしSendStopになったら、減速してから止まりたい
         if (!SendStop && !OnSending) {
             OnSending = true;
+            delta_z = 0f;
+            FirstExecution = true;
             n = n_default;
+            pulse_width = MAX_PULSEWIDTH;
+            UnityEngine.Debug.Log("n = "+n);
             //_serialHandler.Write("s"+ActuatorStep.ToString()+"\n");
-            return;
+            //return;
         } else if (SendStop && OnSending) {
             // 端に到達した場合ではないとき
             if (!ReachedToBottom && !ReachedToTop) AKeyOn = false;
@@ -210,11 +219,11 @@ public class SerialSendNew : MonoBehaviour
                 w_i = MAX_PULSEWIDTH;
                 delta_w = w_i - w_imin1;
                 i = 0;
+                n = n_decceleration;
                 // pulse_width = MAX_PULSEWIDTH;
             }
             //UnityEngine.Debug.Log("Deccelerating with others, sendstopdeccelerating = "+SendStopDeccelerating);
             SendStopDeccelerating = true;
-            n = n_decceleration;
             TrackingDone = false;
             // return;
         } else if (SendStop && !OnSending) {

@@ -20,6 +20,7 @@ public class MainOperation : MonoBehaviour
 
         // マウスプロトタイピングか、Optiによるトラッキングか
         _CharacterOperation.MousePrototyping = this.MousePrototyping;
+        _SerialSend.MousePrototyping = this.MousePrototyping;
     }
 
     // Update is called once per frame

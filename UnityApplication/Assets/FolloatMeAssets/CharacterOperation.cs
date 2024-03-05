@@ -14,7 +14,7 @@ public class CharacterOperation : MonoBehaviour
     public int CurrentCharacterNumber;
  
     // 座標関係
-    private Vector3 xvec_i;
+    public Vector3 xvec_i;
     private Vector3 xvec_imin1;
     private Quaternion rotvec_i;
     public Vector3 PositionOffset;

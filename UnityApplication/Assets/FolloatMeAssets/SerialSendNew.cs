@@ -1,6 +1,4 @@
 /* 別スレッドでパルス幅を計算し、シリアル通信で送信する */
-
-
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Profiling;
@@ -17,6 +15,7 @@ public class SerialSendNew : MonoBehaviour
     // シリアル通信関係
     // SynchronizationContextを使っていたこともあった
     public SerialHandler _serialHandler;
+    public CharacterOperation _character;
     public List<OptitrackRigidBody> _targetlist_in_serialsend= new List<OptitrackRigidBody>();
     public OptitrackRigidBody _target;
     public int CurrentTargetNumber;
@@ -52,6 +51,9 @@ public class SerialSendNew : MonoBehaviour
     bool PulseWidthWasSent = false; // パルス幅が送信されたか否か
     public bool Exception = false; // 例外があるか否か
 
+    public bool MousePrototyping;
+    Vector3 BeforeTrackedPosition;
+
 
     void Start()
     {
@@ -85,6 +87,9 @@ public class SerialSendNew : MonoBehaviour
         });
     }
 
+
+
+    /*
     bool OnSending = false;
     bool SendStopDeccelerating = false;
     public int StepAtTopPosition, StepAtBottomPosition; // 最高地点と最低地点のステップ数
@@ -98,172 +103,68 @@ public class SerialSendNew : MonoBehaviour
     bool ReachedToTop = false;
     bool ReachedToBottom = false;
     public bool AKeyOn;
-
     bool Dassyutsushita = false;
-
     public int n_default;
     public int n_decceleration;
-
     public bool DebugOn = false;
-    
     int BeforeActuatorStep;
+    */
 
+    // 毎回のloopで実行
     public void CalculatePulseWidth() {
         // 複数のRigidBodyがあることを想定
         _target = _targetlist_in_serialsend[CurrentTargetNumber];
+
         // 前のパルス幅送信から1ms以上経ってから次のパルス幅を送る
         TimeInOneFrameBefore = TimeInCurrentFrame;
         TimeInCurrentFrame = stopWatch.ElapsedMilliseconds;
         FrameInterval = TimeInCurrentFrame - TimeInOneFrameBefore;
-
-        pulse_width_oneframebefore = pulse_width;
-
-        // トラッキングされた座標、時間を取得
-        delta_t = _target.tracking_interval;
-        TrackedPosition = _target.rbStatePosition;
-        
         if (FrameInterval < 1) return;
 
+
+        // pulse_width_oneframebefore = pulse_width;
+
+
+        // トラッキングされた座標、時間を取得
+        if (!MousePrototyping)
+        {
+            delta_t = _target.tracking_interval;
+            TrackedPosition = _target.rbStatePosition;
+        }
+        else
+        {
+            BeforeTrackedPosition = TrackedPosition;
+            delta_t = 1000f/120f;
+            //UnityEngine.Debug.Log("TrackingDone = "+TrackingDone);
+            TrackedPosition = _character.xvec_i;
+            TrackedPosition.z = TrackedPosition.x*0.0001f;
+            TrackingDone = (TrackedPosition.x != BeforeTrackedPosition.x);
+        }
+
         // アクチュエータの端に到達したときの処理
-        // 最高地点
-        //
-        if ((ActuatorStep != BeforeActuatorStep) && (ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart)) || ((ActuatorStep > (StepAtBottomPosition + WithinStepAtDeccelerationStart))))
-        {
-            Dassyutsushita = false;
-            //UnityEngine.Debug.Log("ToFalse");
-        }
-        //
-        if (!SendStop && !Dassyutsushita && !ReachedToTop && (ActuatorStep >= (StepAtTopPosition - WithinStepAtDeccelerationStart)))
-        //if (!SendStop && TrackedPosition.z <= ZWhenReachedToTop)
-        {
-            ReachedToTop = true;
-            SendStop = true;
-            ZWhenReachedToTop = TrackedPosition.z;
-        } 
-        else if (!SendStop && !Dassyutsushita && !ReachedToBottom && (ActuatorStep <= (StepAtBottomPosition + WithinStepAtDeccelerationStart)))
-        //} else if (!SendStop && TrackedPosition.z >= ZWhenReachedToBottom)
-        {
-            ReachedToBottom = true;
-            SendStop = true;
-            ZWhenReachedToBottom = TrackedPosition.z;
-            UnityEngine.Debug.Log("bottom at z = "+ZWhenReachedToBottom);
-        }
-        // アクチュエータの端から脱したときの処理
-        //else if (ReachedToTop && ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart))
-        else if (ReachedToTop && (TrackedPosition.z > ZWhenReachedToTop))
-        {
-            if (pulse_width == MAX_PULSEWIDTH)
-            {
-                SendStop = false;
-                Dassyutsushita = true;
-                ReachedToTop = false;
-                BeforeActuatorStep = ActuatorStep;
-            }
-        // 最低地点
-        //} else if (ReachedToBottom && ActuatorStep < (StepAtBottomPosition - WithinStepAtDeccelerationStart))
-        } else if (ReachedToBottom && (TrackedPosition.z < ZWhenReachedToBottom))
-        {
-            if (pulse_width == MAX_PULSEWIDTH)
-            {
-                UnityEngine.Debug.Log("exe2");
-                SendStop = false;
-                Dassyutsushita = true;
-                ReachedToBottom = false;
-                BeforeActuatorStep = ActuatorStep;
-            }
-            //ReachedToBottom = false;
-        }
-        //if (!SendStop && ((ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart)) || (ActuatorStep > (StepAtBottomPosition + WithinStepAtDeccelerationStart))))
-        /*
-        if ( SendStop && ( (TrackedPosition.z > ZWhenReachedToTop) || (TrackedPosition.z < ZWhenReachedToBottom) ) )
-        {
-            ReachedToTop = false;
-            ReachedToBottom = false;
-            Dassyutsushita = true;
-        }
-        */
-        
-        //if (ReachedToBottom) UnityEngine.Debug.Log("Bottom z = "+TrackedPosition.z);
+        WhenReachedToEdge();
 
         // もしSendStopになったら、減速してから止まりたい
-        if (!SendStop && !OnSending) {
-            OnSending = true;
-            delta_z = 0f;
-            FirstExecution = true;
-            n = n_default;
-            pulse_width = MAX_PULSEWIDTH;
-            UnityEngine.Debug.Log("n = "+n);
-            //_serialHandler.Write("s"+ActuatorStep.ToString()+"\n");
-            //return;
-        } else if (SendStop && OnSending) {
-            // 端に到達した場合ではないとき
-            if (!ReachedToBottom && !ReachedToTop) AKeyOn = false;
-            if (pulse_width == MAX_PULSEWIDTH)
-            {
-                //if (ReachedToBottom || ReachedToTop)
-                    //UnityEngine.(Debug.Log("Deccelerating with top or bottom");
-                //else
-                    //UnityEngine.Debug.Log("Deccelerating with others");
-                SendStopDeccelerating = false;
-                OnSending = false;
-                w_imin1 = w_i = MAX_PULSEWIDTH;
-                delta_w = 0;
-                return;
-            }
-        // if (OnSending) {
-            if (!SendStopDeccelerating)
-            {
-                //UnityEngine.Debug.Log("execute if sendstopdeccelerating");
-                //FirstExecution = true;
-                w_imin1 = pulse_width;
-                w_i = MAX_PULSEWIDTH;
-                delta_w = w_i - w_imin1;
-                i = 0;
-                n = n_decceleration;
-                // pulse_width = MAX_PULSEWIDTH;
-            }
-            //UnityEngine.Debug.Log("Deccelerating with others, sendstopdeccelerating = "+SendStopDeccelerating);
-            SendStopDeccelerating = true;
-            TrackingDone = false;
-            // return;
-        } else if (SendStop && !OnSending) {
-            pulse_width = MAX_PULSEWIDTH;
-            return;
-        } else {
-            SendStopDeccelerating = false;
-        }
-
+        WhenSendStopChanged();
+        
         // パルス幅計算
         if (TrackingDone && !VelocityZero)
         {
+            // トラッキング結果に基づいてパルス幅計算
             iequalszero();
             pulse_width = w_imin1;
-            //return;
         }
-        else acceleration();
-        if (_target.LatencyMeasuring)
-        {
-            //pulse_width = MAX_PULSEWIDTH;
-        }
-
-        /*
-        if (pulse_width == MIN_PULSEWIDTH && pulse_width_oneframebefore == MIN_PULSEWIDTH);
-        {
-            ++FrameCountWhileMaxVelocity;
-        } else if (pulse_width != MIN_PULSEWIDTH && pulse_width_oneframebefore == MIN_PULSEWIDTH)
-        {
-            
-        }
-        */
+        // 加減速処理
+        else acceleration();        
 
         // パルス幅送信
         _serialHandler.Write(pulse_width.ToString()+"\n");
         PulseWidthWasSent = true;
-        // _record.pulsewidth_list.Add(pulse_width);
+        UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
     }
 
 
-
+    // トラッキング結果に基づいてパルス幅計算
     void iequalszero()
     {
         // トラッキングされた座標、時間を取得
@@ -300,8 +201,7 @@ public class SerialSendNew : MonoBehaviour
         w_i = pulse_width;
         delta_w = w_i - w_imin1;
 
-        //if (DebugOn)
-            //UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        //UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
         i = 0;
@@ -309,6 +209,7 @@ public class SerialSendNew : MonoBehaviour
 
 
     float delta_w2;
+    // 加減速処理
     void acceleration()
     {    
         if (i <= n)
@@ -352,20 +253,13 @@ public class SerialSendNew : MonoBehaviour
 
         ++i;
         CalculationException();
-        //if (DebugOn)
-            UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
     }
 
     public void SetWasTrackingDone(bool flag)
     {
         TrackingDone = flag;
     }
-
-    void WaitForStabilization()
-    {
-        Thread.Sleep(100);
-    }
-
 
     void CalculationException()
     {
@@ -374,5 +268,182 @@ public class SerialSendNew : MonoBehaviour
             if (pulse_width >= 0 ) pulse_width = MIN_PULSEWIDTH;
             else pulse_width = -MIN_PULSEWIDTH;
         }
+    }
+
+
+    bool OnSending = false;
+    bool SendStopDeccelerating = false;
+    bool SendStopAccelerating = false;
+    public int StepAtTopPosition, StepAtBottomPosition; // 最高地点と最低地点のステップ数
+    public int WithinStepAtDeccelerationStart; // 現在位置が最高・最低地点からどれくらいの範囲に入ったら減速をはじめるか
+    float ZWhenReachedToTop; // 最高地点からwithinの範囲に入ったときのZ座標
+    float ZWhenReachedToBottom; // 最低地点からwithinの範囲に入ったときのZ座標
+    public bool VelocityZero = false;
+    bool TopOrBottomOperationDone = false;
+    int FrameCountWhileMaxVelocity = 0;
+    int pulse_width_oneframebefore;
+    bool ReachedToTop = false;
+    bool ReachedToBottom = false;
+    public bool AKeyOn;
+    bool Dassyutsushita = false;
+    public int n_default;
+    public int n_decceleration;
+    public bool DebugOn = false;
+    int BeforeActuatorStep;
+
+    // アクチュエータが端に到達した時の処理
+    void WhenReachedToEdge()
+    {
+        if ((ActuatorStep != BeforeActuatorStep) && (ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart)) || ((ActuatorStep > (StepAtBottomPosition + WithinStepAtDeccelerationStart))))
+        {
+            Dassyutsushita = false;
+        }
+        // 最高地点の範囲に到達したら
+        if (!SendStop && !Dassyutsushita && !ReachedToTop && (ActuatorStep >= (StepAtTopPosition - WithinStepAtDeccelerationStart)))
+        {
+            ReachedToTop = true;
+            SendStop = true;
+            ZWhenReachedToTop = TrackedPosition.z;
+        }
+        // 最低地点の範囲に到達したら
+        else if (!SendStop && !Dassyutsushita && !ReachedToBottom && (ActuatorStep <= (StepAtBottomPosition + WithinStepAtDeccelerationStart)))
+        {
+            ReachedToBottom = true;
+            SendStop = true;
+            ZWhenReachedToBottom = TrackedPosition.z;
+            UnityEngine.Debug.Log("bottom at z = "+ZWhenReachedToBottom);
+        }
+        // アクチュエータの端から脱したときの処理
+        // 最高地点から
+        else if (ReachedToTop && (TrackedPosition.z > ZWhenReachedToTop))
+        {
+            // if (pulse_width == MAX_PULSEWIDTH)
+            // もともとこのifの中に入れていたが、それをやめた
+            SendStop = false;
+            Dassyutsushita = true;
+            ReachedToTop = false;
+            BeforeActuatorStep = ActuatorStep;
+        // 最低地点から
+        }
+        else if (ReachedToBottom && (TrackedPosition.z < ZWhenReachedToBottom))
+        {
+            // if (pulse_width == MAX_PULSEWIDTH)
+            // もともとこのifの中に入れていたが、それをやめた
+            UnityEngine.Debug.Log("exe2");
+            SendStop = false;
+            Dassyutsushita = true;
+            ReachedToBottom = false;
+            BeforeActuatorStep = ActuatorStep;
+        }
+    }
+
+
+    // もしSendStopになったら、減速してから止まりたい
+    void WhenSendStopChanged()
+    {
+        // 動いている && 送っていない（動き始めたばかりのとき）
+        if (!SendStop && !OnSending) {
+            // 端から脱出した時の加速（問題があったら消す）
+            //
+            if (!SendStopAccelerating && Dassyutsushita)
+            {
+                SendStopAccelerating = true;
+                if (pulse_width == MAX_PULSEWIDTH)
+                {
+                    // 一応符号を確認
+                    if (TrackedPosition.z > ZWhenReachedToTop) pulse_width = -1000;
+                    else pulse_width = 1000;
+                    w_imin1 = w_i = pulse_width;
+                    n = n_decceleration;
+                    i = 0;
+                }   
+            }
+            if (i == n_decceleration-1)
+            {
+                SendStopAccelerating = false;
+            }
+            if (!SendStopAccelerating)
+            {
+                OnSending = true;
+                delta_z = 0f;
+                FirstExecution = true;
+                n = n_default;
+                i = 0;
+                // pulse_width = MAX_PULSEWIDTH; // これでは減速中の時対処できない
+                w_imin1 = w_i = pulse_width;
+                // UnityEngine.Debug.Log("n = "+n);
+                //return;
+            }
+            
+
+        
+        // 動いていない && 送っている（止まるときの減速中）
+        } else if (SendStop && OnSending) {
+            // 端に到達した場合ではないとき
+            if (!ReachedToBottom && !ReachedToTop) AKeyOn = false;
+            if (pulse_width == MAX_PULSEWIDTH)
+            {
+                //if (ReachedToBottom || ReachedToTop)
+                    //UnityEngine.(Debug.Log("Deccelerating with top or bottom");
+                //else
+                    //UnityEngine.Debug.Log("Deccelerating with others");
+                SendStopDeccelerating = false;
+                OnSending = false;
+                w_imin1 = w_i = MAX_PULSEWIDTH;
+                delta_w = 0;
+                i = 0;
+                return;
+            }
+            if (!SendStopDeccelerating)
+            {
+                w_imin1 = pulse_width;
+                // w_iを変更
+                // w_i = MAX_PULSEWIDTH;
+                if (pulse_width > 0) w_i = 1000;
+                else w_i = -1000;
+                delta_w = w_i - w_imin1;
+                i = 0;
+                n = n_decceleration;
+            }
+            if (Mathf.Abs((float)pulse_width) >= 1000f)
+            {
+                pulse_width = MAX_PULSEWIDTH;
+                UnityEngine.Debug.Log("aaaa");
+                i = 0;
+                w_imin1 = w_i = MAX_PULSEWIDTH;
+                n = n_default;
+            }
+            //UnityEngine.Debug.Log("Deccelerating with others, sendstopdeccelerating = "+SendStopDeccelerating);
+            SendStopDeccelerating = true;
+            TrackingDone = false;
+            // return;
+
+        
+        // 動いていない && 送っていない
+        } else if (SendStop && !OnSending) {
+            pulse_width = MAX_PULSEWIDTH;
+            i = 0;
+            return;
+
+        
+        // 動いている && 送っている
+        } else {
+            SendStopDeccelerating = false;
+        }
+    }
+
+
+    // 最高速度を超えたときの処理
+    void WhenExceededMaxVelocity()
+    {
+        // ひょっとしたらこれが最高速度を超えたときに間に合わせる処理につながるか
+        if (pulse_width == MIN_PULSEWIDTH && pulse_width_oneframebefore == MIN_PULSEWIDTH);
+        {
+            ++FrameCountWhileMaxVelocity;
+        } 
+        //else if (pulse_width != MIN_PULSEWIDTH && pulse_width_oneframebefore == MIN_PULSEWIDTH)
+        //{
+            
+        //}
     }
 }

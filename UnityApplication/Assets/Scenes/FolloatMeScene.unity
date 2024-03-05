@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414754, b: 0.12107867, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731706, g: 0.13414723, b: 0.12107849, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1018,7 +1018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &639163501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840b6332ce1628e4d97dd4a4e77059b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MouseCharacter: {fileID: 0}
+  _MouseCharacter: {fileID: 2033526461}
   _characterlist:
   - {fileID: 2033526461}
   - {fileID: 584413082}
@@ -1431,6 +1431,7 @@ MonoBehaviour:
   - {fileID: 639163501}
   - {fileID: 754772566}
   CurrentCharacterNumber: 0
+  xvec_i: {x: 0, y: 0, z: 0}
   PositionOffset: {x: 0.15, y: -0.4, z: 0}
   MousePositionOffset: {x: 0.15, y: -0.76, z: 0}
   OrientationOffset: {x: 0, y: 0, z: 0}
@@ -1713,6 +1714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serialHandler: {fileID: 233560355}
+  _character: {fileID: 762647898}
   _targetlist_in_serialsend:
   - {fileID: 639163501}
   - {fileID: 754772566}
@@ -1731,13 +1733,14 @@ MonoBehaviour:
   MoveThreshold: 0.00004
   SendStop: 1
   Exception: 0
+  MousePrototyping: 0
   StepAtTopPosition: 16584
   StepAtBottomPosition: -14151
   WithinStepAtDeccelerationStart: 3000
   VelocityZero: 0
   AKeyOn: 0
   n_default: 5
-  n_decceleration: 5
+  n_decceleration: 100
   DebugOn: 0
 --- !u!1 &1116657741
 GameObject:
@@ -1786,7 +1789,7 @@ MonoBehaviour:
   _CharacterOperation: {fileID: 762647898}
   _SerialSend: {fileID: 1069388187}
   _SerialReceive: {fileID: 1032185113}
-  MousePrototyping: 0
+  MousePrototyping: 1
 --- !u!1 &1118456154
 GameObject:
   m_ObjectHideFlags: 0

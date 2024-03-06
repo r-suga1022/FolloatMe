@@ -187,6 +187,8 @@ public class SerialSendNew : MonoBehaviour
             return;
         }
 
+        if (SendStopAccelerating) return;
+
         z_imin1 = z_i;
         z_i = -TrackedPosition.z;
 
@@ -364,23 +366,25 @@ public class SerialSendNew : MonoBehaviour
                 FirstExecution = true;
                 i = 0;
             // 端から脱出した場合ではないとき
-            } else {
+            } else if (!SendStopAccelerating) {
                 UnityEngine.Debug.Log("WhenAcceleration");
-                SendStopAccelerating = false;
-                OnSending = true;
+                SendStopAccelerating = true;
+                // OnSending = true;
                 delta_z = 0f;
                 FirstExecution = true;
-                n = n_default;
+                // n = n_default;
+                n = n_decceleration;
                 i = 0;
                 // pulse_width = MAX_PULSEWIDTH; // これでは減速中の時対処できない
                 w_imin1 = w_i = pulse_width;
             }
-            if (i == n_decceleration-1 && Dassyutsushita)
+            // if (i == n-1 && Dassyutsushita)
+            if (i == n-1)
             {
                 SendStopAccelerating = false;
                 OnSending = true;
                 delta_z = 0f;
-                FirstExecution = true;
+                // FirstExecution = true;
                 n = n_default;
                 i = 0;
                 // pulse_width = MAX_PULSEWIDTH; // これでは減速中の時対処できない

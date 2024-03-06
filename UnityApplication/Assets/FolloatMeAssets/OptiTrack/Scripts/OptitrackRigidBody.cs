@@ -168,8 +168,8 @@ public class OptitrackRigidBody : MonoBehaviour
             //
             if (_serialsend.AKeyOn) 
             {
-                //_serialsend.SendStop = false;
-                //_characteroperation.TrackingStop = false;
+                _serialsend.SendStop = false;
+                _characteroperation.TrackingStop = false;
             }
             //
         }

@@ -160,7 +160,7 @@ public class SerialSendNew : MonoBehaviour
         // パルス幅送信
         _serialHandler.Write(pulse_width.ToString()+"\n");
         PulseWidthWasSent = true;
-        UnityEngine.Debug.Log("PulseWidth = "+pulse_width);
+        UnityEngine.Debug.Log("PulseWidth = "+pulse_width+", n = "+n+", SendStop = "+SendStop+", OnSending = "+OnSending);
     }
 
 
@@ -175,11 +175,13 @@ public class SerialSendNew : MonoBehaviour
         if (FirstExecution) {
             // トラッキング座標が初期値のままだったらまだ計算しない
             // （いきなり最高速度で動き出すことを防ぐため）
+            UnityEngine.Debug.Log("FirstExecution");
             if (TrackedPosition.z == 0) return;
             FirstExecution = false;
             z_i = -TrackedPosition.z;
             z_imin1 = -TrackedPosition.z;
-            pulse_width = MAX_PULSEWIDTH;
+            if (!DeccelerationToAcceleration) pulse_width = MAX_PULSEWIDTH;
+            DeccelerationToAcceleration = false;
             w_i = pulse_width;
             w_imin1 = pulse_width;
             return;
@@ -201,7 +203,7 @@ public class SerialSendNew : MonoBehaviour
         w_i = pulse_width;
         delta_w = w_i - w_imin1;
 
-        //UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        UnityEngine.Debug.Log("IEqualsZero:pulse_width = "+pulse_width+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
 
         TrackingDone = false;
         i = 0;
@@ -235,7 +237,6 @@ public class SerialSendNew : MonoBehaviour
                 }
                 else
                 {
-                    //UnityEngine.Debug.Log("negative");
                     if (i <= n/2) {
                         delta_w2 = (w_imin1 > 0) ? MAX_PULSEWIDTH - w_imin1 : -MAX_PULSEWIDTH - w_imin1;
                         pulse_width = (int)(w_imin1 + (delta_w2*i) / (int)(n/2));
@@ -290,6 +291,7 @@ public class SerialSendNew : MonoBehaviour
     public int n_decceleration;
     public bool DebugOn = false;
     int BeforeActuatorStep;
+    bool DeccelerationToAcceleration = false;
 
     // アクチュエータが端に到達した時の処理
     void WhenReachedToEdge()
@@ -346,24 +348,25 @@ public class SerialSendNew : MonoBehaviour
             // 端から脱出した時の加速（問題があったら消す）
             //
             if (!SendStopAccelerating && Dassyutsushita)
+            // if (!SendStopAccelerating)
             {
+                AKeyOn = true;
                 SendStopAccelerating = true;
                 if (pulse_width == MAX_PULSEWIDTH)
                 {
                     // 一応符号を確認
-                    if (TrackedPosition.z > ZWhenReachedToTop) pulse_width = -1000;
+                    // if (TrackedPosition.z > ZWhenReachedToTop) pulse_width = -1000;
+                    if (w_i < 0) pulse_width = -1000;
                     else pulse_width = 1000;
-                    w_imin1 = w_i = pulse_width;
-                    n = n_decceleration;
-                    i = 0;
-                }   
-            }
-            if (i == n_decceleration-1)
-            {
+                }
+                w_imin1 = w_i = pulse_width;
+                n = n_decceleration;
+                FirstExecution = true;
+                i = 0;
+            // 端から脱出した場合ではないとき
+            } else {
+                UnityEngine.Debug.Log("WhenAcceleration");
                 SendStopAccelerating = false;
-            }
-            if (!SendStopAccelerating)
-            {
                 OnSending = true;
                 delta_z = 0f;
                 FirstExecution = true;
@@ -371,10 +374,18 @@ public class SerialSendNew : MonoBehaviour
                 i = 0;
                 // pulse_width = MAX_PULSEWIDTH; // これでは減速中の時対処できない
                 w_imin1 = w_i = pulse_width;
-                // UnityEngine.Debug.Log("n = "+n);
-                //return;
             }
-            
+            if (i == n_decceleration-1 && Dassyutsushita)
+            {
+                SendStopAccelerating = false;
+                OnSending = true;
+                delta_z = 0f;
+                FirstExecution = true;
+                n = n_default;
+                i = 0;
+                // pulse_width = MAX_PULSEWIDTH; // これでは減速中の時対処できない
+                w_imin1 = w_i = pulse_width;
+            }
 
         
         // 動いていない && 送っている（止まるときの減速中）
@@ -428,7 +439,17 @@ public class SerialSendNew : MonoBehaviour
         
         // 動いている && 送っている
         } else {
+            // SendStopで減速中にSendStopが切り替わり、加速に転じたとき
+            if (SendStopDeccelerating)
+            {
+                // UnityEngine.Debug.Log("減速から加速に転じた");
+                DeccelerationToAcceleration = true;
+                FirstExecution = true;
+                SendStopDeccelerating = false;
+            }
             SendStopDeccelerating = false;
+            SendStopAccelerating = false;
+            n = n_default;
         }
     }
 

@@ -1740,7 +1740,7 @@ MonoBehaviour:
   VelocityZero: 0
   AKeyOn: 0
   n_default: 5
-  n_decceleration: 100
+  n_decceleration: 50
   DebugOn: 0
 --- !u!1 &1116657741
 GameObject:

@@ -36,6 +36,7 @@ public class MainOperation : MonoBehaviour
             _CharacterOperation.TrackingStop = !TrackingStop;
             _SerialSend.SendStop = !SendStop;
             _SerialSend.AKeyOn = !AKeyOn;
+            Debug.Log("AkeyPressed"+", sendstop = "+_SerialSend.SendStop);
         }
 
         //

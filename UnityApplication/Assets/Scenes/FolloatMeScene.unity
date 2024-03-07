@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12731706, g: 0.13414723, b: 0.12107849, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414754, b: 0.12107867, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -305,7 +305,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3224365556917556760, guid: 0cca1638c08df9a42a62d44d4e84bf12, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 3224365556917556760, guid: 0cca1638c08df9a42a62d44d4e84bf12, type: 3}
       propertyPath: m_LocalScale.x
@@ -625,7 +625,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286224545
 GameObject:
@@ -685,7 +685,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7764310312502303038, guid: 5fea1b45f6eca1443a9a1ec164abf082, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7764310312502303038, guid: 5fea1b45f6eca1443a9a1ec164abf082, type: 3}
       propertyPath: m_LocalScale.x
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   VelocityZero: 0
   AKeyOn: 0
   n_default: 5
-  n_decceleration: 50
+  n_decceleration: 1000
   DebugOn: 0
 --- !u!1 &1116657741
 GameObject:
@@ -1953,7 +1953,7 @@ RectTransform:
   - {fileID: 1904739492}
   - {fileID: 202484179}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2204,7 +2204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378, type: 3}
       propertyPath: m_LocalScale.x
@@ -2413,7 +2413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2210457024192557614, guid: e782187331c9d2849b89a333311ecef9, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 2210457024192557614, guid: e782187331c9d2849b89a333311ecef9, type: 3}
       propertyPath: m_LocalScale.x
@@ -2493,6 +2493,93 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e782187331c9d2849b89a333311ecef9, type: 3}
+--- !u!1 &1393905030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393905032}
+  - component: {fileID: 1393905031}
+  m_Layer: 0
+  m_Name: GhostOperation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1393905031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393905030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc1663a983dac243b86c123904a51a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Monster: {fileID: 2033526461}
+  ShootPoint: {fileID: 176866607}
+  bodyMesh: {fileID: 176866606}
+  faceMesh: {fileID: 176866605}
+  faceTextureArray:
+  - {fileID: 2800000, guid: ead34a14f5fbbbe4db3b7c1ab302e0d9, type: 3}
+  - {fileID: 2800000, guid: 35a7fc40ac033d143b43c4db9e254e16, type: 3}
+  - {fileID: 2800000, guid: 1aade578a5f980744b35ea6a96266e6b, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  bodyTextureArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effPrefabArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 647434170791180271, guid: 0e4b42d5b37894047bea9962e025d438, type: 3}
+  BodyNum: 0
+  HatNum: 0
+  SkinNum: 0
+  DizzyFaceTextureNumber: 0
+  MotionName: _Stun
+  PoschangeThreshold: 0
+  DeltaXThreshold: 0.004
+  DeltaYThreshold: 0.004
+  FrameCountBeforeAnimation: 0
+  FrameCountBeforeAnimation_Threshold: 800
+  DizzyFrameCountThreshold: 3000
+  AnimationChange: 0
+  MakeFullOfTextureNumber: 5
+--- !u!4 &1393905032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393905030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.021633483, y: -0.005813077, z: 0.014477633}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1423676466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2510,7 +2597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: e0a97170532f66b4b822e92402758157, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: e0a97170532f66b4b822e92402758157, type: 3}
       propertyPath: m_LocalScale.x
@@ -2595,7 +2682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832750714773668, guid: 25093a0593dc83043a7bc17ebba0e95d, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4832750714773668, guid: 25093a0593dc83043a7bc17ebba0e95d, type: 3}
       propertyPath: m_LocalScale.x
@@ -2890,7 +2977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: bb1d50d6f6113f6449d51161dff1195f, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: bb1d50d6f6113f6449d51161dff1195f, type: 3}
       propertyPath: m_LocalScale.x
@@ -2955,7 +3042,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 988141386181716140, guid: 8fbbb05a214a19040b1b95e44878c8d9, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 988141386181716140, guid: 8fbbb05a214a19040b1b95e44878c8d9, type: 3}
       propertyPath: m_LocalScale.x
@@ -3168,7 +3255,7 @@ Transform:
   - {fileID: 542739771}
   - {fileID: 1249157255}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1904739491
 GameObject:
@@ -3346,7 +3433,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &2033526461 stripped
 GameObject:
@@ -3397,7 +3484,7 @@ MonoBehaviour:
   - {fileID: 2759896404920554417, guid: bfc208cc00e6f174492810bb859ddcd6, type: 3}
   - {fileID: 2759896404920554417, guid: 169d77576e6e6b34a811f1e756e35634, type: 3}
   - {fileID: 647434170791180271, guid: 0e4b42d5b37894047bea9962e025d438, type: 3}
-  - {fileID: 1642725698666694, guid: 0064747e1307d5d41b1b36477c259466, type: 3}
+  - {fileID: 647434170791180271, guid: 0e4b42d5b37894047bea9962e025d438, type: 3}
   - {fileID: 1551861676394254, guid: 053d61ad296aa9c42bd215c18b5575bc, type: 3}
   - {fileID: 1588384315933098, guid: d89152accb676bd46bb8c89edc6c10b8, type: 3}
   - {fileID: 1604728341012434, guid: 5238ecaab769ea74d933ae7f107994f5, type: 3}
@@ -3410,8 +3497,8 @@ MonoBehaviour:
   DeltaXThreshold: 0.004
   DeltaYThreshold: 0.004
   FrameCountBeforeAnimation: 0
-  FrameCountBeforeAnimation_Threshold: 800
-  DizzyFrameCountThreshold: 0
+  FrameCountBeforeAnimation_Threshold: 100
+  DizzyFrameCountThreshold: 2000
   AnimationChange: 1
   MakeFullOfTextureNumber: 5
 --- !u!1001 &2115608205
@@ -3647,7 +3734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5962506490023211491, guid: 99f7c8f093b0a53498977df82047195b, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5962506490023211491, guid: 99f7c8f093b0a53498977df82047195b, type: 3}
       propertyPath: m_LocalScale.x

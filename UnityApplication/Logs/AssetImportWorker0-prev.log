@@ -1,0 +1,1265 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.19f1 (c9714fde33b6) revision 13201743'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'ja' Physical Memory: 65224 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50216
+Successfully changed project path to: C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
+C:/Users/koizu/Sugawara/FolloatMe/UnityApplication
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [22940] Host "[IP] 192.168.1.39 [Port] 0 [Flags] 2 [Guid] 3848171571 [EditorId] 3848171571 [Version] 1048832 [Id] WindowsEditor(7,KoizumilabM16R1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [22940] Host "[IP] 192.168.1.39 [Port] 0 [Flags] 2 [Guid] 3848171571 [EditorId] 3848171571 [Version] 1048832 [Id] WindowsEditor(7,KoizumilabM16R1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 93.23 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.19f1 (c9714fde33b6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/koizu/Sugawara/FolloatMe/UnityApplication/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics (ID=0xa788)
+    Vendor:   Intel
+    VRAM:     32612 MB
+    Driver:   31.0.101.4575
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56180
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005495 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 91.29 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.748 seconds
+Domain Reload Profiling:
+	ReloadAssembly (749ms)
+		BeginReloadAssembly (81ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (540ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (132ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (312ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (91ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (148ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006792 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.108 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1109ms)
+		BeginReloadAssembly (126ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (875ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (283ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (394ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (264ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3340 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 92 unused Assets / (10.9 MB). Loaded Objects now: 3742.
+Memory consumption went from 171.6 MB to 160.6 MB.
+Total: 9.529400 ms (FindLiveObjects: 0.277500 ms CreateObjectMapping: 0.081200 ms MarkObjects: 3.176000 ms  DeleteObjects: 5.993500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1425851.895353 seconds.
+  path: Assets/LITTLE WOOLIES/HEDGEHOG/Model/erizo.fbx
+  artifactKey: Guid(17acb98811b84fe4bb374ea781666fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LITTLE WOOLIES/HEDGEHOG/Model/erizo.fbx using Guid(17acb98811b84fe4bb374ea781666fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e4a1fa452227b90f213cc9745caa1f4') in 0.445240 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007733 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.048 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1049ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (787ms)
+			LoadAssemblies (105ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (281ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (320ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (215ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.26 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.9 MB). Loaded Objects now: 3757.
+Memory consumption went from 174.6 MB to 163.7 MB.
+Total: 9.147600 ms (FindLiveObjects: 0.283500 ms CreateObjectMapping: 0.080400 ms MarkObjects: 2.807700 ms  DeleteObjects: 5.974800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005656 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.998 seconds
+Domain Reload Profiling:
+	ReloadAssembly (999ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (752ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (272ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (297ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (58ms)
+				ProcessInitializeOnLoadAttributes (200ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.49 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.9 MB). Loaded Objects now: 3760.
+Memory consumption went from 174.6 MB to 163.7 MB.
+Total: 20.539500 ms (FindLiveObjects: 0.213700 ms CreateObjectMapping: 0.072900 ms MarkObjects: 2.515600 ms  DeleteObjects: 17.735900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 193.923658 seconds.
+  path: Assets/FolloatMeAssets/CharacterOperation.cs
+  artifactKey: Guid(840b6332ce1628e4d97dd4a4e77059b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FolloatMeAssets/CharacterOperation.cs using Guid(840b6332ce1628e4d97dd4a4e77059b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43c158a6fe940c1a9190f63dfa83c20a') in 0.030083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.261435 seconds.
+  path: Assets/FolloatMeAssets/Ghost.cs
+  artifactKey: Guid(ddc1663a983dac243b86c123904a51a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FolloatMeAssets/Ghost.cs using Guid(ddc1663a983dac243b86c123904a51a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f65e961f3fd16bd298e380656780df1a') in 0.033160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 87.084107 seconds.
+  path: Assets/great_clubtail_dragonfly_s._albardae/textures/body_baseColor.jpeg
+  artifactKey: Guid(899966a0acd5fa84c90c9cdf61009149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/great_clubtail_dragonfly_s._albardae/textures/body_baseColor.jpeg using Guid(899966a0acd5fa84c90c9cdf61009149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '830c95359b617f8b673bb486968bb39c') in 0.155563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.029618 seconds.
+  path: Assets/LITTLE WOOLIES/Textures/cara4paint.0003_cara_boca_mtl_AlbedoTransparency.png
+  artifactKey: Guid(a5b5bb61b6eaff1458e374392f3b0c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LITTLE WOOLIES/Textures/cara4paint.0003_cara_boca_mtl_AlbedoTransparency.png using Guid(a5b5bb61b6eaff1458e374392f3b0c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ba25205aa9ff5b1e82bbc73ddffbf1a') in 0.034009 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/LITTLE WOOLIES/Textures/cara4paint.0003_cara_boca_mtl_Normal.png
+  artifactKey: Guid(427a497e0d2aeec4182d0e5aa1ddcbea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LITTLE WOOLIES/Textures/cara4paint.0003_cara_boca_mtl_Normal.png using Guid(427a497e0d2aeec4182d0e5aa1ddcbea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fc41fd8715dd363640eec35c6ea34ec') in 0.058699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/LITTLE WOOLIES/Textures/cara4paint.0003_Geo_cara_ojos_mtl_MetallicSmoothness.png
+  artifactKey: Guid(d67f3b1c1285b9e4598f3509577b6c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LITTLE WOOLIES/Textures/cara4paint.0003_Geo_cara_ojos_mtl_MetallicSmoothness.png using Guid(d67f3b1c1285b9e4598f3509577b6c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac0a848d5b35be41a72cd425dbd637a1') in 0.101158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/LITTLE WOOLIES/BG/Rocks/Standard Assets/Effects/ImageEffects/Textures/color correction ramp.png
+  artifactKey: Guid(d440902fad11e807d00044888d76c639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LITTLE WOOLIES/BG/Rocks/Standard Assets/Effects/ImageEffects/Textures/color correction ramp.png using Guid(d440902fad11e807d00044888d76c639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53b1ddfbabbe60cabc7ef770d1013011') in 0.038764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Height.png
+  artifactKey: Guid(db368c1c85b12fe48aba6cc9bcd41f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Height.png using Guid(db368c1c85b12fe48aba6cc9bcd41f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd44066f019ad35a37f01efeee377f7c5') in 0.036067 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab.png
+  artifactKey: Guid(1b13dc101cf2ac7418019fd776161658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab.png using Guid(1b13dc101cf2ac7418019fd776161658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958437a2ef8a4dbaef30a8521947e1c9') in 0.038231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.032296 seconds.
+  path: Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_MetallicSmoothness.png
+  artifactKey: Guid(a685c8f461a651a46a2631ea3decafae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FolloatMeAssets/Hovl Studio/Procedural fire/Demo scene/Concrete slab_MetallicSmoothness.png using Guid(a685c8f461a651a46a2631ea3decafae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39df61571843cfc2653507b7bf01f99d') in 0.043373 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/cu_cat2/Textures/lowTex/cu_cat2_a_low.tga
+  artifactKey: Guid(33d8266356c970c4c9338363318efeeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cu_cat2/Textures/lowTex/cu_cat2_a_low.tga using Guid(33d8266356c970c4c9338363318efeeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c90daebc39728d89ed23a05cb9bd35') in 0.109127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/cu_cat2/Textures/lowTex/cu_cat2_b_low.tga
+  artifactKey: Guid(a0ee4093e92546e4eb4722fbbea9a63f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cu_cat2/Textures/lowTex/cu_cat2_b_low.tga using Guid(a0ee4093e92546e4eb4722fbbea9a63f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efe2adde40de78ddf83fc679f6082bb') in 0.047162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.318491 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face02/Face 01.png
+  artifactKey: Guid(9d7a62fc029bf9040a70dd7123776bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face02/Face 01.png using Guid(9d7a62fc029bf9040a70dd7123776bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53d6125d3e779d0e5c1bbd6918727354') in 0.037699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 02.png
+  artifactKey: Guid(35a7fc40ac033d143b43c4db9e254e16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 02.png using Guid(35a7fc40ac033d143b43c4db9e254e16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51fa49d746f529d77e46c90aa7d82cf6') in 0.046269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face03/Face 02.png
+  artifactKey: Guid(dad97dde24070a947ad67d8509eb3870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face03/Face 02.png using Guid(dad97dde24070a947ad67d8509eb3870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ddeb0c2d9c6d03ccfc58bca92d0b921') in 0.031190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.761874 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 03.png
+  artifactKey: Guid(1cafc21d1838d8545997603d77947001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 03.png using Guid(1cafc21d1838d8545997603d77947001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a5b9d40ea64447e7c63e526866a206b') in 0.039440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.070387 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face02/Face 04.png
+  artifactKey: Guid(49751a7bfef6f6547b4d6143a1a7fc88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face02/Face 04.png using Guid(49751a7bfef6f6547b4d6143a1a7fc88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ac69e7beefdabb600863e2ac82dcb6e') in 0.031808 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.116370 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 05.png
+  artifactKey: Guid(543d62492d49e6b4a81228ae769092ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 05.png using Guid(543d62492d49e6b4a81228ae769092ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21181fe50ccde0b0973233ac7d6df1f0') in 0.037338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008743 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face03/Face 06.png
+  artifactKey: Guid(dbf84ae2806d6444c90b9e0f071eb00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face03/Face 06.png using Guid(dbf84ae2806d6444c90b9e0f071eb00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526c7075754b4d0941893d5af4e53c08') in 0.037862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face02/Face 07.png
+  artifactKey: Guid(4c67f65af57ce8e45bb4f6ed1238986b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face02/Face 07.png using Guid(4c67f65af57ce8e45bb4f6ed1238986b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85ca56304ab0462c1f3f519a0c185e52') in 0.133334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 09.png
+  artifactKey: Guid(956e19bbc41e75c4ea09067fca2ea3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 09.png using Guid(956e19bbc41e75c4ea09067fca2ea3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc36605d8ddb6563758cfa6e3fc4ed4') in 0.039628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face02/Face 10.png
+  artifactKey: Guid(134ffc10ee5c6f84a9eac4875bd3655a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face02/Face 10.png using Guid(134ffc10ee5c6f84a9eac4875bd3655a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '993b44d760f9558059e76dc20f8c9ae6') in 0.031775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face03/Face 09.png
+  artifactKey: Guid(6e10c984623d54f408815732312f9eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face03/Face 09.png using Guid(6e10c984623d54f408815732312f9eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '442f0759b116d845110a9f9f1928b4e6') in 0.009571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.048428 seconds.
+  path: Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 11.png
+  artifactKey: Guid(10eb41ab6a9213f4abebcf1570eecb63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cute Monster Pack (Ghost)/Textures/Face01/Face 11.png using Guid(10eb41ab6a9213f4abebcf1570eecb63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8d074e260af7d7a632fff84ab382e8c') in 0.028393 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005739 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.048 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1048ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (796ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (281ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (326ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (59ms)
+				ProcessInitializeOnLoadAttributes (227ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.30 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.9 MB). Loaded Objects now: 3769.
+Memory consumption went from 174.8 MB to 163.8 MB.
+Total: 9.634200 ms (FindLiveObjects: 0.268500 ms CreateObjectMapping: 0.076200 ms MarkObjects: 3.019200 ms  DeleteObjects: 6.268800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005830 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.069 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1070ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (774ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (275ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (309ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (203ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.24 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.9 MB). Loaded Objects now: 3772.
+Memory consumption went from 174.7 MB to 163.8 MB.
+Total: 9.333800 ms (FindLiveObjects: 0.299900 ms CreateObjectMapping: 0.113000 ms MarkObjects: 2.847200 ms  DeleteObjects: 6.072100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007260 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.070 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1071ms)
+		BeginReloadAssembly (182ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (782ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (276ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (313ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (200ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.23 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.9 MB). Loaded Objects now: 3775.
+Memory consumption went from 174.7 MB to 163.8 MB.
+Total: 9.350000 ms (FindLiveObjects: 0.276500 ms CreateObjectMapping: 0.076700 ms MarkObjects: 2.769300 ms  DeleteObjects: 6.226200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008922 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.050 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1051ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (802ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (270ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (347ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (244ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.9 MB). Loaded Objects now: 3778.
+Memory consumption went from 174.8 MB to 163.8 MB.
+Total: 10.042500 ms (FindLiveObjects: 0.312400 ms CreateObjectMapping: 0.110900 ms MarkObjects: 3.205100 ms  DeleteObjects: 6.412900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006918 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.056 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1056ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (797ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (279ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (324ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (223ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.33 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.8 MB). Loaded Objects now: 3781.
+Memory consumption went from 174.6 MB to 163.9 MB.
+Total: 9.467500 ms (FindLiveObjects: 0.250000 ms CreateObjectMapping: 0.080600 ms MarkObjects: 2.869700 ms  DeleteObjects: 6.265800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005646 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.193 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1194ms)
+		BeginReloadAssembly (155ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (915ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (381ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (332ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (59ms)
+				ProcessInitializeOnLoadAttributes (232ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (11.0 MB). Loaded Objects now: 3784.
+Memory consumption went from 174.8 MB to 163.9 MB.
+Total: 10.150000 ms (FindLiveObjects: 0.275300 ms CreateObjectMapping: 0.082500 ms MarkObjects: 3.150500 ms  DeleteObjects: 6.640300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006163 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.089 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1090ms)
+		BeginReloadAssembly (151ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (835ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (275ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (323ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (59ms)
+				ProcessInitializeOnLoadAttributes (223ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.32 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.9 MB). Loaded Objects now: 3787.
+Memory consumption went from 174.8 MB to 163.9 MB.
+Total: 9.918900 ms (FindLiveObjects: 0.255300 ms CreateObjectMapping: 0.086400 ms MarkObjects: 2.785400 ms  DeleteObjects: 6.790100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006720 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.062 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1063ms)
+		BeginReloadAssembly (172ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (763ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (267ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (295ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (194ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 4.89 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.8 MB). Loaded Objects now: 3790.
+Memory consumption went from 174.7 MB to 163.9 MB.
+Total: 12.569200 ms (FindLiveObjects: 0.316200 ms CreateObjectMapping: 0.089700 ms MarkObjects: 3.651700 ms  DeleteObjects: 8.510200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005724 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.037 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1038ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (783ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (307ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (200ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.99 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.8 MB). Loaded Objects now: 3793.
+Memory consumption went from 174.7 MB to 163.9 MB.
+Total: 9.885900 ms (FindLiveObjects: 0.259700 ms CreateObjectMapping: 0.084400 ms MarkObjects: 3.015500 ms  DeleteObjects: 6.525000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005868 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.075 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1076ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (820ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (278ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (345ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (243ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (11.0 MB). Loaded Objects now: 3796.
+Memory consumption went from 174.9 MB to 163.9 MB.
+Total: 9.794200 ms (FindLiveObjects: 0.246600 ms CreateObjectMapping: 0.097100 ms MarkObjects: 2.824200 ms  DeleteObjects: 6.624100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006125 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.035 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1036ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (789ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (286ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (307ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (206ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 3.34 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.9 MB). Loaded Objects now: 3799.
+Memory consumption went from 174.8 MB to 163.9 MB.
+Total: 13.772900 ms (FindLiveObjects: 1.102300 ms CreateObjectMapping: 0.173500 ms MarkObjects: 4.168700 ms  DeleteObjects: 8.326600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007424 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.102 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1103ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (855ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (284ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (370ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (226ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 2.77 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.8 MB). Loaded Objects now: 3802.
+Memory consumption went from 174.7 MB to 163.9 MB.
+Total: 11.410800 ms (FindLiveObjects: 0.344400 ms CreateObjectMapping: 0.133200 ms MarkObjects: 3.256700 ms  DeleteObjects: 7.675100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006766 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\koizu\Sugawara\FolloatMe\UnityApplication\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.055 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1056ms)
+		BeginReloadAssembly (152ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (799ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (280ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (326ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (220ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Heat_Haze_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Fire_Flames_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Shader 'SH_Vefects_VFX_URP_Particles_Erosion_01': fallback shader 'Hidden/Shader Graph/FallbackError' not found
+Refreshing native plugins compatible for Editor in 3.00 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 85 unused Assets / (10.8 MB). Loaded Objects now: 3805.
+Memory consumption went from 174.8 MB to 163.9 MB.
+Total: 11.852300 ms (FindLiveObjects: 0.361200 ms CreateObjectMapping: 0.094600 ms MarkObjects: 3.234100 ms  DeleteObjects: 8.161100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

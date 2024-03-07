@@ -426,6 +426,8 @@ public class Ghost : MonoBehaviour
     }
     */
 
+    //public GameObject _ghost;
+
     void hSkinNum()
     {
         SkinNum = BodyNum * 10 + HatNum;
@@ -449,6 +451,8 @@ public class Ghost : MonoBehaviour
 
     public int MakeFullOfTextureNumber;
 
+    bool DizzyFlag = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -463,15 +467,21 @@ public class Ghost : MonoBehaviour
         {
             //Debug.Log("Triggered");
             Dizzy();
+            DizzyFlag = true;
         }
-        //if (DizzyOn) ++DizzyFrameCount;
-        //if (DizzyFrameCount >= DizzyFrameCountThreshold) RetrieveFlag = true;
+        if (DizzyFlag) ++DizzyFrameCount;
+        if (DizzyFrameCount >= DizzyFrameCountThreshold)
+        {
+            RetrieveFlag = true;
+            DizzyFrameCount = 0;
+        }
         //if (RetrieveFlag) Retrieve();
     
         if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
 
         
-        if (Input.GetKeyDown(KeyCode.C))
+        //if (Input.GetKeyDown(KeyCode.C))
+        if (RetrieveFlag)
         {
             DizzyOn = !DizzyOn;
             EffectClear();
@@ -536,6 +546,7 @@ public class Ghost : MonoBehaviour
             Monster.GetComponent<Animation>().CrossFade(MotionName);
             faceMesh.materials[0].SetTexture("_MainTex", faceTextureArray[DizzyFaceTextureNumber-1]);
             if (GameObject.FindGameObjectWithTag("Effect") == null) GameObject.Instantiate(effPrefabArray[9]);
+            GameObject.Instantiate(effPrefabArray[9]);
             // BodyNum = 1;
             // hSkinNum();
         }

@@ -384,7 +384,7 @@ public class SerialSendNew : MonoBehaviour
                 SendStopAccelerating = false;
                 OnSending = true;
                 delta_z = 0f;
-                // FirstExecution = true;
+                FirstExecution = true;
                 n = n_default;
                 i = 0;
                 // pulse_width = MAX_PULSEWIDTH; // これでは減速中の時対処できない

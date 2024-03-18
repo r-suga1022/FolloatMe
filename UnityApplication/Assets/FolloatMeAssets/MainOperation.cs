@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MainOperation : MonoBehaviour
 {
     public CharacterOperation _CharacterOperation;
-    public SerialSendNew _SerialSend;
+    public SerialSend _SerialSend;
     public SerialReceive _SerialReceive;
 
     public bool MousePrototyping;
@@ -25,30 +25,6 @@ public class MainOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _CharacterOperation.TrackingStop = _SerialSend.SendStop;
 
-        if (Input.GetKeyDown(KeyCode.A)) {
-            bool TrackingStop = _CharacterOperation.TrackingStop;
-            bool SendStop = _SerialSend.SendStop;
-            bool AKeyOn = _SerialSend.AKeyOn;
-
-            _CharacterOperation.TrackingStop = !TrackingStop;
-            _SerialSend.SendStop = !SendStop;
-            _SerialSend.AKeyOn = !AKeyOn;
-        }
-
-        //
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            bool DebugOn = _SerialSend.DebugOn;
-            _SerialSend.DebugOn = DebugOn;
-        }
-        //
-
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            ++_SerialSend.CurrentTargetNumber;
-            if (_SerialSend.CurrentTargetNumber == _SerialSend._targetlist_in_serialsend.Count) _SerialSend.CurrentTargetNumber = 0;
-        }
     }
 }

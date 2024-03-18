@@ -8,7 +8,7 @@ public class SerialReceive : MonoBehaviour
     //上記URLのSerialHandler.cのクラス
     public SerialHandler serialHandler;
 
-    public SerialSendNew _serialsend;
+    public SerialSend _serialsend;
 
     public Record _Record;
 
@@ -32,7 +32,7 @@ public class SerialReceive : MonoBehaviour
             Debug.Log(received_data);
 
             if (received_data == "Exception!") {
-                _serialsend.Exception = true;
+                //_serialsend.Exception = true;
                 return;
             }
             _serialsend.ActuatorStep = int.Parse(received_data);

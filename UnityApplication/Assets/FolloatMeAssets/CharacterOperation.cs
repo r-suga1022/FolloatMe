@@ -11,7 +11,9 @@ public class CharacterOperation : MonoBehaviour
     public List<GameObject> _characterlist;
     public GameObject _LookAtTarget;
     public List<OptitrackRigidBody> _targetlist = new List<OptitrackRigidBody>();
+    public OptitrackRigidBody _target;
     public int CurrentCharacterNumber;
+    public GameObject _character;
  
     // 座標関係
     private Vector3 xvec_i;
@@ -48,31 +50,18 @@ public class CharacterOperation : MonoBehaviour
     // void FixedUpdate()
     // void LateUpdate()
     {
-        if (TrackingStop) return;
+        //if (TrackingStop) return;
 
         // マウスに追従させるテスト
         if (MousePrototyping) {
-            xvec_i = Input.mousePosition;
-            xvec_i.z = 1.0f;
-            Vector3 NewPosition = Camera.main.ScreenToWorldPoint(xvec_i);
-            Vector3 CharacterToLookAtTarget = _LookAtTarget.transform.position - _MouseCharacter.transform.position;
-            // Quaternion NewOrientation = Quaternion.LookRotation(CharacterToLookAtTarget);
-            // _character.transform.LookAt(_LookAtTarget.transform);
-
-            Vector3 NewPositionInScreen = Camera.main.WorldToScreenPoint(NewPosition + MousePositionOffset);
-
-            UnityEngine.Debug.Log("screen = "+NewPositionInScreen);
-            _MouseCharacter.transform.position = NewPosition + MousePositionOffset;
-            _MouseCharacter.transform.LookAt(_LookAtTarget.transform);
-            // _character.transform.rotation = NewOrientation;
-
+            FollowToMouse();
         // トラッキングに基づく追従
         } else {
             for (CurrentCharacterNumber = 0; CurrentCharacterNumber < _characterlist.Count; ++CurrentCharacterNumber)
             //foreach (OptitrackRigidBody _target in _targetlist)
             {
-                OptitrackRigidBody _target = _targetlist[CurrentCharacterNumber];
-                GameObject _character = _characterlist[CurrentCharacterNumber];
+                _target = _targetlist[CurrentCharacterNumber];
+                _character = _characterlist[CurrentCharacterNumber];
 
                 // 座標取得
                 xvec_imin1 = xvec_i;
@@ -101,41 +90,6 @@ public class CharacterOperation : MonoBehaviour
                 bool YChanged = false;
                 PositionChanged = XChanged | YChanged;
 
-                // 遅延測定の際、色を変える
-                if (_target.LatencyMeasuring)
-                {
-                    if (_target.TrackingDone && PositionChanged && !CharacterRed)
-                    {
-                        _character.GetComponent<Renderer>().material.color = Color.red;
-                        CharacterRed = true;
-                    }
-
-                    else if (_target.TrackingDone && !PositionChanged && CharacterRed)
-                    {
-                        _character.GetComponent<Renderer>().material.color = Color.white;
-                        CharacterRed = false;
-                    }
-
-                    if (Input.GetKeyDown(KeyCode.W))
-                    {
-                        _character.GetComponent<Renderer>().material.color = Color.white;
-                        CharacterRed = false;
-                    }
-                }
-
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    CharacterActive = !CharacterActive;
-                    _character.SetActive(CharacterActive);
-                }
-
-                /*
-                if (_target.TrackingDone)
-                {  
-                    PositionDifferenceText.text = (xvec_i.x - xvec_imin1.x).ToString();
-                }
-                */
-
                 //if (!PositionChanged) NewPosition = BeforePosition;
                 _character.transform.position = NewPosition;
                 _character.transform.LookAt(_LookAtTarget.transform);
@@ -143,6 +97,7 @@ public class CharacterOperation : MonoBehaviour
                 _character.transform.rotation = new_rot;
 
 
+                LatencyMeasure();
                 ChangeOffset();
             }
         }
@@ -157,4 +112,46 @@ public class CharacterOperation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow)) PositionOffset.x -= PositionOffsetChangeIncrement;
     }
 
+
+    void FollowToMouse()
+    {
+        xvec_i = Input.mousePosition;
+        xvec_i.z = 1.0f;
+        Vector3 NewPosition = Camera.main.ScreenToWorldPoint(xvec_i);
+        Vector3 CharacterToLookAtTarget = _LookAtTarget.transform.position - _MouseCharacter.transform.position;
+        // Quaternion NewOrientation = Quaternion.LookRotation(CharacterToLookAtTarget);
+        // _character.transform.LookAt(_LookAtTarget.transform);
+
+        Vector3 NewPositionInScreen = Camera.main.WorldToScreenPoint(NewPosition + MousePositionOffset);
+
+        UnityEngine.Debug.Log("screen = "+NewPositionInScreen);
+        _MouseCharacter.transform.position = NewPosition + MousePositionOffset;
+        _MouseCharacter.transform.LookAt(_LookAtTarget.transform);
+        // _character.transform.rotation = NewOrientation;}
+    }
+
+    void LatencyMeasure()
+    {
+        // 遅延測定の際、色を変える
+        if (_target.LatencyMeasuring)
+        {
+            if (_target.TrackingDone && PositionChanged && !CharacterRed)
+            {
+                _character.GetComponent<Renderer>().material.color = Color.red;
+                CharacterRed = true;
+            }
+
+            else if (_target.TrackingDone && !PositionChanged && CharacterRed)
+            {
+                _character.GetComponent<Renderer>().material.color = Color.white;
+                CharacterRed = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                _character.GetComponent<Renderer>().material.color = Color.white;
+                CharacterRed = false;
+            }
+        }
+    }
 }

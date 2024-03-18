@@ -40,7 +40,7 @@ public class OptitrackRigidBody : MonoBehaviour
 
     public bool NetworkCompensation = true;
     public Record _record;
-    public SerialSendNew _serialsend;
+    public SerialSend _serialsend;
     public CharacterOperation _characteroperation;
 
     Stopwatch stopWatch;

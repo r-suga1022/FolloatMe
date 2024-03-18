@@ -190,7 +190,7 @@ MonoBehaviour:
   RigidBodyId: 4
   NetworkCompensation: 1
   _record: {fileID: 286224546}
-  _serialsend: {fileID: 1069388187}
+  _serialsend: {fileID: 0}
   _characteroperation: {fileID: 762647898}
   tracking_interval: 0
   PositionChanged: 0
@@ -1035,7 +1035,7 @@ MonoBehaviour:
   RigidBodyId: 5
   NetworkCompensation: 1
   _record: {fileID: 286224546}
-  _serialsend: {fileID: 1069388187}
+  _serialsend: {fileID: 1069388181}
   _characteroperation: {fileID: 762647898}
   tracking_interval: 0
   PositionChanged: 0
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   RigidBodyId: 4
   NetworkCompensation: 1
   _record: {fileID: 286224546}
-  _serialsend: {fileID: 1069388187}
+  _serialsend: {fileID: 0}
   _characteroperation: {fileID: 762647898}
   tracking_interval: 0
   PositionChanged: 0
@@ -1430,7 +1430,9 @@ MonoBehaviour:
   _targetlist:
   - {fileID: 639163501}
   - {fileID: 754772566}
+  _target: {fileID: 0}
   CurrentCharacterNumber: 0
+  _character: {fileID: 0}
   PositionOffset: {x: 0.15, y: -0.4, z: 0}
   MousePositionOffset: {x: 0.15, y: -0.76, z: 0}
   OrientationOffset: {x: 0, y: 0, z: 0}
@@ -1607,7 +1609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serialHandler: {fileID: 233560355}
-  _serialsend: {fileID: 1069388187}
+  _serialsend: {fileID: 1069388181}
   _Record: {fileID: 286224546}
   received_data: 
 --- !u!1 &1053847132
@@ -1651,7 +1653,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1069388180}
   - component: {fileID: 1069388181}
-  - component: {fileID: 1069388187}
   m_Layer: 0
   m_Name: SerialSend
   m_TagString: Untagged
@@ -1681,44 +1682,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069388179}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ac8758bb28200c4e9e7abc7dd8fae2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MAX_PULSEWIDTH: 10000
-  MIN_PULSEWIDTH: 10
-  target: {fileID: 639163500}
-  serialHandler: {fileID: 233560355}
-  pulsewidth_text_object: {fileID: 0}
-  IsSendStop: 1
-  n: 5
-  step_max: 35000
-  z_max: 0.75
-  pos_rate: 750
-  w_i_threshold: 700
-  followdelay: 0
-  tinypulse_framecount_threshold: 5
-  rapidpulse_framecount_threshould: 10
---- !u!114 &1069388187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069388179}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9e4baa34db232a40af4fce187e34c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _serialHandler: {fileID: 233560355}
-  _targetlist_in_serialsend:
-  - {fileID: 639163501}
-  - {fileID: 754772566}
+  _targetlist_in_serialsend: []
   _target: {fileID: 639163501}
   CurrentTargetNumber: 0
-  _record: {fileID: 286224546}
   TrackedPosition: {x: 0, y: 0, z: 0}
   n: 5
   i: 0
@@ -1729,11 +1701,11 @@ MonoBehaviour:
   a_positive: 4
   a_negative: 4
   MoveThreshold: 0.00004
-  SendStop: 1
+  SendStop: 0
   Exception: 0
-  StepAtTopPosition: 16584
-  StepAtBottomPosition: -14151
-  WithinStepAtDeccelerationStart: 3000
+  StepAtTopPosition: 0
+  StepAtBottomPosition: 0
+  WithinStepAtDeccelerationStart: 0
   VelocityZero: 0
   AKeyOn: 0
   n_default: 5
@@ -1784,7 +1756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _CharacterOperation: {fileID: 762647898}
-  _SerialSend: {fileID: 1069388187}
+  _SerialSend: {fileID: 1069388181}
   _SerialReceive: {fileID: 1032185113}
   MousePrototyping: 0
 --- !u!1 &1118456154

@@ -43,9 +43,7 @@ public class OptitrackRigidBody : MonoBehaviour
     public SerialSend _serialsend;
     public CharacterOperation _characteroperation;
 
-    Stopwatch stopWatch;
     float tracking_time_n, tracking_time_n_1;
-    public float tracking_interval;
     bool Recording = false;
 
 
@@ -83,10 +81,9 @@ public class OptitrackRigidBody : MonoBehaviour
 
         this.StreamingClient.RegisterRigidBody( this, RigidBodyId );
 
-        stopWatch = new Stopwatch();
-        stopWatch.Start();
-        tracking_time_n_1 = 0f;
-
+        _StopWatch = new Stopwatch();
+        _StopWatch.Start();
+        TimeCurrentFrame = TimeOneTrackingBefore = 0;
 
         //Thread_1();
     }
@@ -123,7 +120,6 @@ public class OptitrackRigidBody : MonoBehaviour
     void Update()
     {
         UpdatePose();
-
         _serialsend.SetWasTrackingDone(TrackingDone);
     }
     
@@ -134,6 +130,13 @@ public class OptitrackRigidBody : MonoBehaviour
     public Vector3 BeforePosition = Vector3.zero; // 変えるかもしれない
     public int OutOfRecognitionFrameCountThreshold;
     int OutOfRecognitionFrameCount = 0;
+    public bool Active = true;
+
+    Stopwatch _StopWatch;
+    long TimeOneTrackingBefore = 0;
+    long TimeCurrentFrame = 0;
+    //public long tracking_interval = 0;
+    public float tracking_interval;
 
     public float PositionChangeThreshold;
     void UpdatePose()
@@ -151,50 +154,25 @@ public class OptitrackRigidBody : MonoBehaviour
             rbStateOrientation = rbState.Pose.Orientation;
         }
 
-        // OptiTrackのノイズ対策（座標の変化量がある閾値以上であれば、動いたとみなす）
-        //bool XChanged = Mathf.Abs(BeforePosition.x - rbStatePosition.x) > PositionChangeThreshold;
-        //bool YChanged = Mathf.Abs(BeforePosition.y - rbStatePosition.y) > PositionChangeThreshold;
-        //bool ZChanged = Mathf.Abs(BeforePosition.z - rbStatePosition.z) > PositionChangeThreshold;
         bool XTrackingDone = (BeforePosition.x != rbStatePosition.x);
         bool YTrackingDone = (BeforePosition.y != rbStatePosition.y);
         bool ZTrackingDone = (BeforePosition.z != rbStatePosition.z);
-        //bool XChangePositive = (rbStatePosition.x - BeforePosition.x) > PositionChangeThreshold;
-        //bool ZChangePositive = (rbStatePosition.z - BeforePosition.z) > PositionChangeThreshold;
-        //PositionChanged = XChanged || YChanged || ZChanged;
         TrackingDone = XTrackingDone | YTrackingDone | ZTrackingDone;
 
         if (TrackingDone) {
             OutOfRecognitionFrameCount = 0;
-            //
-            if (_serialsend.AKeyOn) 
-            {
-                //_serialsend.SendStop = false;
-                //_characteroperation.TrackingStop = false;
-            }
-            //
+            Active = true;
+
+            TimeOneTrackingBefore = TimeCurrentFrame;
+            TimeCurrentFrame = _StopWatch.ElapsedMilliseconds;
+            //tracking_interval = TimeCurrentFrame - TimeOneTrackingBefore;
         }
         if (!TrackingDone) ++OutOfRecognitionFrameCount;
         if (OutOfRecognitionFrameCount >= OutOfRecognitionFrameCountThreshold)
         {
-            _serialsend.SendStop = true;
-            _characteroperation.TrackingStop = true;
             OutOfRecognitionFrameCount = 0;
-        }
-
-        //PositionChangePositive = XChangePositive || ZChangePositive;
-        //PositionChanged = ZChanged;
-        //UnityEngine.Debug.Log("before = "+BeforePosition.z+", rbstate = "+rbStatePosition.z);
-
-        // if ( rbState != null && PositionChanged)
-        if (PositionChanged)
-        {
-            tracking_time_n_1 = tracking_time_n;
-            tracking_time_n = stopWatch.ElapsedMilliseconds;
-            //tracking_interval = tracking_time_n - tracking_time_n_1;
+            Active = false;
         }
         tracking_interval = 1f/120f*1000f;
-
-        //UnityEngine.Debug.Log("Rigidbody:tracking_interval = "+tracking_interval+", position changed = "+PositionChanged+", before.z = "+BeforePosition.z+", after.z = "+rbStatePosition.z);
-        //EventMethod?.Invoke();
     }
 }

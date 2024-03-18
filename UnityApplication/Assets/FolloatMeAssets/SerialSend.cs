@@ -80,7 +80,7 @@ public class SerialSend : MonoBehaviour
                     // 1フレーム = 1ms
                     if (!PassedOneFrameBefore(1.0f)) continue;
                     FrameLoop();
-                    // UnityEngine.Debug.Log("thread ID = "+Thread.CurrentThread.ManagedThreadId.ToString());
+                    //UnityEngine.Debug.Log("thread ID = "+Thread.CurrentThread.ManagedThreadId.ToString());
                 }
                 catch (System.Exception e)//例外をチェック
                 {
@@ -89,24 +89,6 @@ public class SerialSend : MonoBehaviour
             }
         });
     }
-
-    bool OnSending = false;
-    bool SendStopDeccelerating = false;
-    public int StepAtTopPosition, StepAtBottomPosition; // 最高地点と最低地点のステップ数
-    public int WithinStepAtDeccelerationStart; // 現在位置が最高・最低地点からどれくらいの範囲に入ったら減速をはじめるか
-    float ZWhenReachedToTop; // 最高地点からwithinの範囲に入ったときのZ座標
-    float ZWhenReachedToBottom; // 最低地点からwithinの範囲に入ったときのZ座標
-    public bool VelocityZero = false;
-    bool TopOrBottomOperationDone = false;
-    int FrameCountWhileMaxVelocity = 0;
-    bool ReachedToTop = false;
-    bool ReachedToBottom = false;
-    public bool AKeyOn;
-    bool Dassyutsushita = false;
-    public int n_default;
-    public int n_decceleration;
-    public bool DebugOn = false;
-    int BeforeActuatorStep;
 
     // 1フレーム内で行う処理
     public void FrameLoop() {
@@ -140,6 +122,7 @@ public class SerialSend : MonoBehaviour
     {
         // ---- パルス幅の計算 ----
         // 簡略化した式（２変数関数）で計算
+        //TrackingDone = _target.TrackingDone;
         if (TrackingDone)
         {
             z_imin1 = z_i;
@@ -150,7 +133,7 @@ public class SerialSend : MonoBehaviour
             if (delta_z < 0) a = a_negative;
             else a = a_positive;
             pulse_width = (int)((a*delta_t) / (1000f*delta_z));
-            //if (Math.Abs(delta_z) <= MoveThreshold) pulse_width = MAX_PULSEWIDTH;
+            if (Math.Abs(delta_z) <= MoveThreshold) pulse_width = MAX_PULSEWIDTH;
 
             // 各種値のセット
             w_i = pulse_width;
@@ -199,7 +182,7 @@ public class SerialSend : MonoBehaviour
             pulse_width = w_i;
         }
         ++i;
-        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone);
+        UnityEngine.Debug.Log("Acceleration:pulse_width = "+pulse_width+", w_imin1 = "+w_imin1+", w_i = "+w_i+", delta_t = "+delta_t+", delta_z = "+delta_z+", z_i = "+z_i+", z_imin1 = "+z_imin1+", tracking = "+TrackingDone+"i = "+i);
     }
 
     // --- 例外処理 ---
@@ -207,20 +190,64 @@ public class SerialSend : MonoBehaviour
     {
         // トラッキングし始めて一番最初の実行の時
         if (FirstExecution) {
-            if (PulseWidthAbsoluteIsSmallerThan(MAX_PULSEWIDTH)) {
-                pulse_width = MAX_PULSEWIDTH;
-                w_i = w_imin1 = pulse_width;
-                delta_w = 0;
-                z_imin1 = z_i;
-                delta_z = 0f;
-                FirstExecution = false;
-            }
+            ExceptionInFirstExecution();
+        }
+
+        // RigidBodyが認識対象から外れた時など
+        if (!_target.Active) {
+            ExceptionInOutOfRecognition();
         }
 
         if (Math.Abs((float)pulse_width) >= MAX_PULSEWIDTH) pulse_width = MAX_PULSEWIDTH;
         if (Mathf.Abs((float)pulse_width) <= (float)MIN_PULSEWIDTH) {
             if (pulse_width >= 0 ) pulse_width = MIN_PULSEWIDTH;
             else pulse_width = -MIN_PULSEWIDTH;
+        }
+
+        // 各種例外処理で使ったフラグを元に戻す処理
+        TurnExceptionFlagsDefaultState();
+    }
+
+    // 最初の実行時はtargetが不安定のため、工夫が必要
+    private int FirstTrackingDoneCount = 0;
+    private void ExceptionInFirstExecution()
+    {
+        if (PulseWidthAbsoluteIsSmallerThan(MAX_PULSEWIDTH)) {
+            pulse_width = MAX_PULSEWIDTH;
+            w_i = w_imin1 = pulse_width;
+            delta_w = 0;
+            z_imin1 = z_i;
+            delta_z = 0f;
+
+            ++FirstTrackingDoneCount;
+            if (FirstTrackingDoneCount >= 2) FirstExecution = false;
+        }
+    }
+
+    // targetが認識対象から外れた時の例外処理
+    // 速度ゼロに向かって減速するように
+    private bool OnTheWayOfOutOfRecognitionExecution = false;
+    private void ExceptionInOutOfRecognition()
+    {
+        if (OnTheWayOfOutOfRecognitionExecution) return;
+        //w_imin1 = pulse_width;
+        w_i = MAX_PULSEWIDTH;
+        delta_w = w_i - w_imin1;
+        z_imin1 = z_i;
+        delta_z = 0f;
+        i = 0;
+        n = n_decceleration;
+
+        OnTheWayOfOutOfRecognitionExecution = true;
+        UnityEngine.Debug.Log("Inactive");
+    }
+
+    // 例外処理に使ったフラグたちをデフォルトに戻す
+    private void TurnExceptionFlagsDefaultState()
+    {
+        if (_target.Active) {
+            OnTheWayOfOutOfRecognitionExecution = false;
+            n = n_default;
         }
     }
 
@@ -248,69 +275,14 @@ public class SerialSend : MonoBehaviour
     {
         return Mathf.Abs(pulse_width) < (float)w2;
     }
+    
 
-    // アクチュエータの端に到達したとき
-    void WhenReachedToTopOrBottom()
-    {
-        // 最高地点
-        //
-        if ((ActuatorStep != BeforeActuatorStep) && (ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart)) || ((ActuatorStep > (StepAtBottomPosition + WithinStepAtDeccelerationStart))))
-        {
-            Dassyutsushita = false;
-            //UnityEngine.Debug.Log("ToFalse");
-        }
-        //
-        if (!SendStop && !Dassyutsushita && !ReachedToTop && (ActuatorStep >= (StepAtTopPosition - WithinStepAtDeccelerationStart)))
-        //if (!SendStop && TrackedPosition.z <= ZWhenReachedToTop)
-        {
-            ReachedToTop = true;
-            SendStop = true;
-            ZWhenReachedToTop = TrackedPosition.z;
-        } 
-        else if (!SendStop && !Dassyutsushita && !ReachedToBottom && (ActuatorStep <= (StepAtBottomPosition + WithinStepAtDeccelerationStart)))
-        //} else if (!SendStop && TrackedPosition.z >= ZWhenReachedToBottom)
-        {
-            ReachedToBottom = true;
-            SendStop = true;
-            ZWhenReachedToBottom = TrackedPosition.z;
-            UnityEngine.Debug.Log("bottom at z = "+ZWhenReachedToBottom);
-        }
-        // アクチュエータの端から脱したときの処理
-        //else if (ReachedToTop && ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart))
-        else if (ReachedToTop && (TrackedPosition.z > ZWhenReachedToTop))
-        {
-            if (pulse_width == MAX_PULSEWIDTH)
-            {
-                SendStop = false;
-                Dassyutsushita = true;
-                ReachedToTop = false;
-                BeforeActuatorStep = ActuatorStep;
-            }
-        // 最低地点
-        //} else if (ReachedToBottom && ActuatorStep < (StepAtBottomPosition - WithinStepAtDeccelerationStart))
-        } else if (ReachedToBottom && (TrackedPosition.z < ZWhenReachedToBottom))
-        {
-            if (pulse_width == MAX_PULSEWIDTH)
-            {
-                UnityEngine.Debug.Log("exe2");
-                SendStop = false;
-                Dassyutsushita = true;
-                ReachedToBottom = false;
-                BeforeActuatorStep = ActuatorStep;
-            }
-            //ReachedToBottom = false;
-        }
-        //if (!SendStop && ((ActuatorStep < (StepAtTopPosition - WithinStepAtDeccelerationStart)) || (ActuatorStep > (StepAtBottomPosition + WithinStepAtDeccelerationStart))))
-        /*
-        if ( SendStop && ( (TrackedPosition.z > ZWhenReachedToTop) || (TrackedPosition.z < ZWhenReachedToBottom) ) )
-        {
-            ReachedToTop = false;
-            ReachedToBottom = false;
-            Dassyutsushita = true;
-        }
-        */
-    }
-
+    bool OnSending = false;
+    bool SendStopDeccelerating = false;
+    public bool VelocityZero = false;
+    int FrameCountWhileMaxVelocity = 0;
+    public int n_default;
+    public int n_decceleration;
     // 例外中の加減速
     void AccelerationAndDeccelerationinException()
     {
@@ -326,7 +298,6 @@ public class SerialSend : MonoBehaviour
             //return;
         } else if (SendStop && OnSending) {
             // 端に到達した場合ではないとき
-            if (!ReachedToBottom && !ReachedToTop) AKeyOn = false;
             if (pulse_width == MAX_PULSEWIDTH)
             {
                 //if (ReachedToBottom || ReachedToTop)

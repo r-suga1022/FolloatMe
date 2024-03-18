@@ -51,9 +51,9 @@ int ExecutionStart = true; // 実行開始時であるか否か
 
 // --- 数値関係 ---
 int default_intvl_us = 6000; // デフォルトのパルス幅
-int pulse_width = 10000; // 現在のパルス幅
+int pulse_width = 2000; // 現在のパルス幅
 int step_count = 0; // 現在のステップ数（座標）
-int MAX_PULSEWIDTH = 10000;
+int MAX_PULSEWIDTH = 2000;
 
 int count = 0;
 int LEDValue = 0;

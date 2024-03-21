@@ -1698,6 +1698,8 @@ MonoBehaviour:
   TrackedPosition: {x: 0, y: 0, z: 0}
   n: 5
   i: 0
+  n_default: 5
+  n_decceleration: 250
   ActuatorStep: 0
   MAX_PULSEWIDTH: 2000
   MIN_PULSEWIDTH: 10
@@ -1707,9 +1709,6 @@ MonoBehaviour:
   MoveThreshold: 0.00004
   SendStop: 0
   Exception: 0
-  VelocityZero: 0
-  n_default: 5
-  n_decceleration: 500
 --- !u!1 &1116657741
 GameObject:
   m_ObjectHideFlags: 0

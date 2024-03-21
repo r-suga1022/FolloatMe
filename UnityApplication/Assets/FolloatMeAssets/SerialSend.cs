@@ -30,7 +30,11 @@ public class SerialSend : MonoBehaviour
     int pulse_width; // パルス幅
     int w_i, w_imin1, delta_w;
     public int n, i;
+    public int n_default;
+    public int n_decceleration;
     public int ActuatorStep; // アクチュエータの現在位置（ステップ数）
+    public int TopStep; // アクチュエータの上端のステップ数
+    public int BottomStep; // アクチュエータの下端のステップ数
 
     // 数値関係
     public int MAX_PULSEWIDTH; // パルス幅の最大
@@ -198,6 +202,9 @@ public class SerialSend : MonoBehaviour
             ExceptionInOutOfRecognition();
         }
 
+        // アクチュエータの端に到達した時
+        ExceptionInReachedEdge();
+
         if (Math.Abs((float)pulse_width) >= MAX_PULSEWIDTH) pulse_width = MAX_PULSEWIDTH;
         if (Mathf.Abs((float)pulse_width) <= (float)MIN_PULSEWIDTH) {
             if (pulse_width >= 0 ) pulse_width = MIN_PULSEWIDTH;
@@ -207,6 +214,7 @@ public class SerialSend : MonoBehaviour
         // 各種例外処理で使ったフラグを元に戻す処理
         TurnExceptionFlagsDefaultState();
     }
+
 
     // 最初の実行時はtargetが不安定のため、工夫が必要
     private int FirstTrackingDoneCount = 0;
@@ -224,6 +232,7 @@ public class SerialSend : MonoBehaviour
         }
     }
 
+
     // targetが認識対象から外れた時の例外処理
     // 速度ゼロに向かって減速するように
     private bool OnTheWayOfOutOfRecognitionExecution = false;
@@ -236,20 +245,65 @@ public class SerialSend : MonoBehaviour
         z_imin1 = z_i;
         delta_z = 0f;
         i = 0;
-        n = n_decceleration;
+        n = N_Decceleration();
 
         OnTheWayOfOutOfRecognitionExecution = true;
-        UnityEngine.Debug.Log("Inactive");
+        UnityEngine.Debug.Log("Inactive, n = "+n);
+    }
+
+    // アクチュエータの端に到達したとき
+    private int ReachedToEdgeFlag = 0; // トップなら1、ボトムなら2
+    private float ZValueWhenReachedToEdge; // 端に到達したときのRigidBodyのz座標
+    private void ExceptionInReachedEdge()
+    {
+        bool NowTop = ReachedToTop();
+        bool NowBottom = ReachedToBottom();
+        if (NowTop || NowBottom)
+        {
+            w_i = MAX_PULSEWIDTH;
+            delta_w = w_i - w_imin1;
+            z_imin1 = z_i;
+            delta_z = 0f;
+            i = 0;
+            n = N_Decceleration();
+            ZValueWhenReachedToEdge = z_i;
+
+            if (NowTop) ReachedToEdgeFlag = 1;
+            if (NowBottom) ReachedToEdgeFlag = 2;
+        }
+        return;
     }
 
     // 例外処理に使ったフラグたちをデフォルトに戻す
     private void TurnExceptionFlagsDefaultState()
     {
-        if (_target.Active) {
-            OnTheWayOfOutOfRecognitionExecution = false;
+        if (TurnedToActive()) {
+            if (!PulseWidthAbsoluteIsSmallerThan(MAX_PULSEWIDTH)) return;
             n = n_default;
+            z_imin1 = z_i;
+            w_imin1 = w_i = pulse_width = MAX_PULSEWIDTH;
+            delta_w = 0;
+
+            // ノイズに対処するため
+            ++FirstTrackingDoneCount;
+            if (FirstTrackingDoneCount >= 2) OnTheWayOfOutOfRecognitionExecution = false;
+
+            UnityEngine.Debug.Log("Turned To Active");
         }
     }
+
+    private bool TurnedToActive() {
+        return _target.Active && OnTheWayOfOutOfRecognitionExecution;
+    }
+
+    private bool ReachedToTop() {
+        return (ActuatorStep >= TopStep);
+    }
+
+    private bool ReachedToBottom() {
+        return (ActuatorStep <= BottomStep);
+    }
+
 
 
 
@@ -276,61 +330,11 @@ public class SerialSend : MonoBehaviour
         return Mathf.Abs(pulse_width) < (float)w2;
     }
     
-
-    bool OnSending = false;
-    bool SendStopDeccelerating = false;
-    public bool VelocityZero = false;
-    int FrameCountWhileMaxVelocity = 0;
-    public int n_default;
-    public int n_decceleration;
-    // 例外中の加減速
-    void AccelerationAndDeccelerationinException()
-    {
-        // もしSendStopになったら、減速してから止まりたい
-        if (!SendStop && !OnSending) {
-            OnSending = true;
-            delta_z = 0f;
-            FirstExecution = true;
-            n = n_default;
-            pulse_width = MAX_PULSEWIDTH;
-            UnityEngine.Debug.Log("n = "+n);
-            //_serialHandler.Write("s"+ActuatorStep.ToString()+"\n");
-            //return;
-        } else if (SendStop && OnSending) {
-            // 端に到達した場合ではないとき
-            if (pulse_width == MAX_PULSEWIDTH)
-            {
-                //if (ReachedToBottom || ReachedToTop)
-                    //UnityEngine.(Debug.Log("Deccelerating with top or bottom");
-                //else
-                    //UnityEngine.Debug.Log("Deccelerating with others");
-                SendStopDeccelerating = false;
-                OnSending = false;
-                w_imin1 = w_i = MAX_PULSEWIDTH;
-                delta_w = 0;
-                return;
-            }
-        // if (OnSending) {
-            if (!SendStopDeccelerating)
-            {
-                //UnityEngine.Debug.Log("execute if sendstopdeccelerating");
-                //FirstExecution = true;
-                w_imin1 = pulse_width;
-                w_i = MAX_PULSEWIDTH;
-                delta_w = w_i - w_imin1;
-                i = 0;
-                n = n_decceleration;
-                // pulse_width = MAX_PULSEWIDTH;
-            }
-            //UnityEngine.Debug.Log("Deccelerating with others, sendstopdeccelerating = "+SendStopDeccelerating);
-            SendStopDeccelerating = true;
-            TrackingDone = false;
-            // return;
-        } else if (SendStop && !OnSending) {
-            pulse_width = MAX_PULSEWIDTH;
-            return;
-        } else {
-            SendStopDeccelerating = false;
-        }
+    int N_Decceleration() {
+        float w = Mathf.Abs(pulse_width);
+        n_decceleration = (int)(
+            ( (MIN_PULSEWIDTH - MAX_PULSEWIDTH) / (MAX_PULSEWIDTH - MIN_PULSEWIDTH) )*(w - MAX_PULSEWIDTH) + MIN_PULSEWIDTH
+        );
+        return n_decceleration;
     }
 }

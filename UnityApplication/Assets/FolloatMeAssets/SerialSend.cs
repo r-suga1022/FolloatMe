@@ -127,7 +127,7 @@ public class SerialSend : MonoBehaviour
         // ---- パルス幅の計算 ----
         // 簡略化した式（２変数関数）で計算
         //TrackingDone = _target.TrackingDone;
-        if (TrackingDone)
+        if (TrackingDone && !ThereIsSomeException)
         {
             z_imin1 = z_i;
             z_i = -TrackedPosition.z;
@@ -190,6 +190,7 @@ public class SerialSend : MonoBehaviour
     }
 
     // --- 例外処理 ---
+    bool ThereIsSomeException = false;
     void CalculationException()
     {
         // トラッキングし始めて一番最初の実行の時
@@ -205,15 +206,13 @@ public class SerialSend : MonoBehaviour
         // アクチュエータの端に到達した時
         ExceptionInReachedEdge();
 
-        if (Math.Abs((float)pulse_width) >= MAX_PULSEWIDTH) pulse_width = MAX_PULSEWIDTH;
-        if (Mathf.Abs((float)pulse_width) <= (float)MIN_PULSEWIDTH) {
-            if (pulse_width >= 0 ) pulse_width = MIN_PULSEWIDTH;
-            else pulse_width = -MIN_PULSEWIDTH;
-        }
+        // パルス幅の値に関する例外が発生した時
+        ExceptionInPulseWidthValue();
 
         // 各種例外処理で使ったフラグを元に戻す処理
         TurnExceptionFlagsDefaultState();
     }
+
 
 
     // 最初の実行時はtargetが不安定のため、工夫が必要
@@ -270,13 +269,33 @@ public class SerialSend : MonoBehaviour
 
             if (NowTop) ReachedToEdgeFlag = 1;
             if (NowBottom) ReachedToEdgeFlag = 2;
+            ThereIsSomeException = true;
         }
         return;
+    }
+    private int N_Decceleration() {
+        float w = Mathf.Abs(pulse_width);
+        n_decceleration = (int)(
+            ( (MIN_PULSEWIDTH - MAX_PULSEWIDTH) / (MAX_PULSEWIDTH - MIN_PULSEWIDTH) )*(w - MAX_PULSEWIDTH) + MIN_PULSEWIDTH
+        );
+        return n_decceleration;
+    }
+
+
+    // パルス幅の値が最小値・最大値を超えたなどの例外が発生したとき
+    private void ExceptionInPulseWidthValue()
+    {
+        if (Math.Abs((float)pulse_width) >= MAX_PULSEWIDTH) pulse_width = MAX_PULSEWIDTH;
+        if (Mathf.Abs((float)pulse_width) <= (float)MIN_PULSEWIDTH) {
+            if (pulse_width >= 0 ) pulse_width = MIN_PULSEWIDTH;
+            else pulse_width = -MIN_PULSEWIDTH;
+        }
     }
 
     // 例外処理に使ったフラグたちをデフォルトに戻す
     private void TurnExceptionFlagsDefaultState()
     {
+        // RigidBodyが認識対象に戻ったとき
         if (TurnedToActive()) {
             if (!PulseWidthAbsoluteIsSmallerThan(MAX_PULSEWIDTH)) return;
             n = n_default;
@@ -289,6 +308,11 @@ public class SerialSend : MonoBehaviour
             if (FirstTrackingDoneCount >= 2) OnTheWayOfOutOfRecognitionExecution = false;
 
             UnityEngine.Debug.Log("Turned To Active");
+        }
+
+        // アクチュエータの端から脱したとき
+        if (true) {
+            
         }
     }
 
@@ -328,13 +352,5 @@ public class SerialSend : MonoBehaviour
     bool PulseWidthAbsoluteIsSmallerThan(int w2)
     {
         return Mathf.Abs(pulse_width) < (float)w2;
-    }
-    
-    int N_Decceleration() {
-        float w = Mathf.Abs(pulse_width);
-        n_decceleration = (int)(
-            ( (MIN_PULSEWIDTH - MAX_PULSEWIDTH) / (MAX_PULSEWIDTH - MIN_PULSEWIDTH) )*(w - MAX_PULSEWIDTH) + MIN_PULSEWIDTH
-        );
-        return n_decceleration;
     }
 }

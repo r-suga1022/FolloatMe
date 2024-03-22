@@ -1436,7 +1436,7 @@ MonoBehaviour:
   _target: {fileID: 0}
   CurrentCharacterNumber: 0
   _character: {fileID: 0}
-  PositionOffset: {x: 0.15, y: -0.4, z: 0}
+  PositionOffset: {x: 0, y: -0.4, z: 0}
   MousePositionOffset: {x: 0.15, y: -0.76, z: 0}
   OrientationOffset: {x: 0, y: 0, z: 0}
   XPositionRate: 4.878049

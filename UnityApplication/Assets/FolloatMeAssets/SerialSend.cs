@@ -238,7 +238,7 @@ public class SerialSend : MonoBehaviour
     private void ExceptionInOutOfRecognition()
     {
         if (OnTheWayOfOutOfRecognitionExecution) return;
-        //w_imin1 = pulse_width;
+        w_imin1 = pulse_width;
         w_i = MAX_PULSEWIDTH;
         delta_w = w_i - w_imin1;
         z_imin1 = z_i;
@@ -253,23 +253,29 @@ public class SerialSend : MonoBehaviour
     // アクチュエータの端に到達したとき
     private int ReachedToEdgeFlag = 0; // トップなら1、ボトムなら2
     private float ZValueWhenReachedToEdge; // 端に到達したときのRigidBodyのz座標
+    private int ActuatorStepWhenReachedToEdge;
     private void ExceptionInReachedEdge()
     {
         bool NowTop = ReachedToTop();
         bool NowBottom = ReachedToBottom();
         if (NowTop || NowBottom)
         {
+            //if (ThereIsSomeException) return; // OutOfRecognitionと競合しないか
+            if (ReachedToEdgeFlag != 0) return;
+
+            w_imin1 = pulse_width;
             w_i = MAX_PULSEWIDTH;
             delta_w = w_i - w_imin1;
             z_imin1 = z_i;
             delta_z = 0f;
             i = 0;
             n = N_Decceleration();
-            ZValueWhenReachedToEdge = z_i;
+            ZValueWhenReachedToEdge = TrackedPosition.z;
+            ActuatorStepWhenReachedToEdge = ActuatorStep;
 
             if (NowTop) ReachedToEdgeFlag = 1;
             if (NowBottom) ReachedToEdgeFlag = 2;
-            ThereIsSomeException = true;
+            ThereIsSomeException = true; // トラッキング座標に基づいて計算しないようにする
         }
         return;
     }
@@ -311,25 +317,45 @@ public class SerialSend : MonoBehaviour
         }
 
         // アクチュエータの端から脱したとき
-        if (true) {
-            
+        if (RigidBodyGetOutOfTop() || RigidBodyGetOutOfBottom()) {
+            UnityEngine.Debug.Log("RigidBody Get Out of Edge");
+            ThereIsSomeException = false; // RigidBodyが認識対象に戻った時と干渉しないか
+            n = n_default;
+            if (GetOutOfTop() || GetOutOfBottom()) {
+                UnityEngine.Debug.Log("Actuator Get Out of Edge");
+                ReachedToEdgeFlag = 0;
+                w_i = w_imin1 = pulse_width;
+                delta_w = 0;
+                //n = n_default;
+            }
         }
     }
 
     private bool TurnedToActive() {
         return _target.Active && OnTheWayOfOutOfRecognitionExecution;
     }
-
     private bool ReachedToTop() {
         return (ActuatorStep >= TopStep);
     }
-
     private bool ReachedToBottom() {
         return (ActuatorStep <= BottomStep);
     }
-
-
-
+    private bool RigidBodyGetOutOfTop() {
+        // -TrackedPosition.zの値は、ボトムに向かう程小さい
+        // TrackedPosition.zの値は、ボトムに向かうほど大きい
+        return ((ReachedToEdgeFlag == 1) && (TrackedPosition.z > ZValueWhenReachedToEdge));
+    }
+    private bool RigidBodyGetOutOfBottom() {
+        // -TrackedPosition.zの値は、ボトムに向かう程小さい
+        // TrackedPosition.zの値は、ボトムに向かうほど大きい
+        return ((ReachedToEdgeFlag == 2) && (TrackedPosition.z < ZValueWhenReachedToEdge));
+    }
+    private bool GetOutOfTop() {
+        return ((ReachedToEdgeFlag == 1) && (ActuatorStep < TopStep));
+    }
+    private bool GetOutOfBottom() {
+        return ((ReachedToEdgeFlag == 2) && (ActuatorStep > BottomStep));
+    }
 
 
     // 前のフレームからt_ms[ms]経っているか否か

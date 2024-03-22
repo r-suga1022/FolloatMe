@@ -1701,6 +1701,8 @@ MonoBehaviour:
   n_default: 5
   n_decceleration: 250
   ActuatorStep: 0
+  TopStep: 13000
+  BottomStep: -21000
   MAX_PULSEWIDTH: 2000
   MIN_PULSEWIDTH: 10
   a: 4

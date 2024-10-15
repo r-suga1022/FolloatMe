@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c785f211b7d45584ea0c042940a59108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM3
+  portName: COM4
   baudRate: 115200
 --- !u!1 &245546994
 GameObject:
@@ -1442,8 +1442,8 @@ MonoBehaviour:
   XPositionRate: 4.878049
   YPositionRate: 4.878049
   MoveThreshold: 0.0002
-  TrackingStop: 1
-  MousePrototyping: 1
+  TrackingStop: 0
+  MousePrototyping: 0
   PositionDifferenceText: {fileID: 1904739493}
   PositionOffsetChangeIncrement: 0.01
 --- !u!1 &785584934

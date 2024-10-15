@@ -120,10 +120,6 @@ public class OptitrackRigidBody : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A)) {
-            Active = !Active;
-            //if (!Active) TrackingDone = false;
-        }
         UpdatePose();
         _serialsend.SetWasTrackingDone(TrackingDone);
     }
@@ -145,7 +141,7 @@ public class OptitrackRigidBody : MonoBehaviour
     public float PositionChangeThreshold;
     void UpdatePose()
     {
-        if (!Active) return;
+        //if (!Active) return;
 
         BeforePosition = rbStatePosition;
         if (MousePrototyping)

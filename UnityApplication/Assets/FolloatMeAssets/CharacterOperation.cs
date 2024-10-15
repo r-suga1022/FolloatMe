@@ -31,11 +31,11 @@ public class CharacterOperation : MonoBehaviour
     
 
     // フラグ関係
-    public bool TrackingStop = false;
+    public bool TrackingStop;
     public bool MousePrototyping;
     bool CharacterRed = false;
     bool PositionChanged = false;
-    bool CharacterActive = true;
+    bool CharacterActive = false;
 
     public Text PositionDifferenceText;
 
@@ -50,7 +50,7 @@ public class CharacterOperation : MonoBehaviour
     // void FixedUpdate()
     // void LateUpdate()
     {
-        if (TrackingStop) return;
+        //if (TrackingStop) return;
 
         // マウスに追従させるテスト
         if (MousePrototyping) {

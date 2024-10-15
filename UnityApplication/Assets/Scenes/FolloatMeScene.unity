@@ -212,11 +212,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Active: 1
   rbStatePosition: {x: 0, y: 0, z: 0}
   rbStateOrientation: {x: 0, y: 0, z: 0, w: 0}
   BeforePosition: {x: 0, y: 0, z: 0}
   OutOfRecognitionFrameCountThreshold: 0
-  Active: 1
   tracking_interval: 0
   PositionChangeThreshold: 0.00004
 --- !u!65 &101645071
@@ -1033,7 +1033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamingClient: {fileID: 1192506194}
-  RigidBodyId: 5
+  RigidBodyId: 6
   NetworkCompensation: 1
   _record: {fileID: 286224546}
   _serialsend: {fileID: 1069388181}
@@ -1058,11 +1058,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Active: 1
   rbStatePosition: {x: 0, y: 0, z: 0}
   rbStateOrientation: {x: 0, y: 0, z: 0, w: 0}
   BeforePosition: {x: 0, y: 0, z: 0}
   OutOfRecognitionFrameCountThreshold: 10
-  Active: 1
   tracking_interval: 0
   PositionChangeThreshold: 0.00004
 --- !u!65 &639163502
@@ -1296,11 +1296,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Active: 1
   rbStatePosition: {x: 0, y: 0, z: 0}
   rbStateOrientation: {x: 0, y: 0, z: 0, w: 0}
   BeforePosition: {x: 0, y: 0, z: 0}
   OutOfRecognitionFrameCountThreshold: 10
-  Active: 1
   tracking_interval: 0
   PositionChangeThreshold: 0.00004
 --- !u!65 &754772567
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840b6332ce1628e4d97dd4a4e77059b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MouseCharacter: {fileID: 0}
+  _MouseCharacter: {fileID: 2033526461}
   _characterlist:
   - {fileID: 2033526461}
   - {fileID: 584413082}
@@ -1443,7 +1443,7 @@ MonoBehaviour:
   YPositionRate: 4.878049
   MoveThreshold: 0.0002
   TrackingStop: 1
-  MousePrototyping: 0
+  MousePrototyping: 1
   PositionDifferenceText: {fileID: 1904739493}
   PositionOffsetChangeIncrement: 0.01
 --- !u!1 &785584934
@@ -1759,6 +1759,7 @@ MonoBehaviour:
   _SerialSend: {fileID: 1069388181}
   _SerialReceive: {fileID: 1032185113}
   MousePrototyping: 0
+  Active: 0
 --- !u!1 &1118456154
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,7 +51,7 @@ public class SerialSend : MonoBehaviour
     // フラグ関係
     bool ThreadExecution = true; // 別スレッドを実行し続けるか否か
     bool FirstExecution = true; // これが一番最初の実行であるか否か
-    public bool SendStop; // シリアル通信で送るのをストップしているか否か
+    public bool SendStop = false; // シリアル通信で送るのをストップしているか否か
     bool TrackingDone = false; // トラッキングが完了したか否か
     bool PulseWidthWasSent = false; // パルス幅が送信されたか否か
     public bool Exception = false; // 例外があるか否か
@@ -124,6 +124,10 @@ public class SerialSend : MonoBehaviour
     float delta_w2;
     void CalculatePulseWidth()
     {
+        if (SendStop) {
+            pulse_width = MAX_PULSEWIDTH;
+            return;
+        }
         // ---- パルス幅の計算 ----
         // 簡略化した式（２変数関数）で計算
         //TrackingDone = _target.TrackingDone;

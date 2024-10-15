@@ -50,7 +50,7 @@ public class CharacterOperation : MonoBehaviour
     // void FixedUpdate()
     // void LateUpdate()
     {
-        //if (TrackingStop) return;
+        if (TrackingStop) return;
 
         // マウスに追従させるテスト
         if (MousePrototyping) {

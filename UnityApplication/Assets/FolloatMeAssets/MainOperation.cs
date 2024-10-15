@@ -11,6 +11,8 @@ public class MainOperation : MonoBehaviour
 
     public bool MousePrototyping;
 
+    public bool Active = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,10 @@ public class MainOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.A)) {
+            Active = !Active;
+            _CharacterOperation.TrackingStop = Active;
+            _SerialSend.SendStop = Active;
+        } 
     }
 }

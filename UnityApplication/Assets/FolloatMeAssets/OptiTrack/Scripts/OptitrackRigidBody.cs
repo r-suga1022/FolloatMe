@@ -116,9 +116,14 @@ public class OptitrackRigidBody : MonoBehaviour
 
 
     //void FixedUpdate()
+    public bool Active = false;
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.A)) {
+            Active = !Active;
+            //if (!Active) TrackingDone = false;
+        }
         UpdatePose();
         _serialsend.SetWasTrackingDone(TrackingDone);
     }
@@ -130,7 +135,6 @@ public class OptitrackRigidBody : MonoBehaviour
     public Vector3 BeforePosition = Vector3.zero; // 変えるかもしれない
     public int OutOfRecognitionFrameCountThreshold;
     int OutOfRecognitionFrameCount = 0;
-    public bool Active = true;
 
     Stopwatch _StopWatch;
     long TimeOneTrackingBefore = 0;
@@ -141,6 +145,8 @@ public class OptitrackRigidBody : MonoBehaviour
     public float PositionChangeThreshold;
     void UpdatePose()
     {
+        if (!Active) return;
+
         BeforePosition = rbStatePosition;
         if (MousePrototyping)
         {
